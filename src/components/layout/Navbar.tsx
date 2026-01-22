@@ -23,7 +23,7 @@ export default function Navbar() {
         <nav className="hidden lg:flex items-center h-full border-x border-slate-200 dark:border-slate-800">
           <Link
             className="px-6 h-full flex flex-col justify-center border-r border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 group"
-            href="#"
+            href="/"
           >
             <span className="text-xs text-slate-500 dark:text-slate-400">
               209
@@ -31,16 +31,18 @@ export default function Navbar() {
             <span className="font-semibold text-sm">Tutorials</span>
           </Link>
           <Link
-            className="px-6 h-full flex flex-col justify-center border-r border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 relative"
-            href="#"
+            className="px-6 h-full flex flex-col justify-center border-r border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 relative bg-primary/5"
+            href="/courses"
           >
-            <span className="absolute top-4 right-4 bg-lime-400 text-[10px] font-bold text-black px-1 rounded">
+            <span className="absolute top-4 right-4 bg-primary text-[10px] font-bold text-white px-1 rounded">
               NEW
             </span>
-            <span className="text-xs text-slate-500 dark:text-slate-400">
-              4
-            </span>
-            <span className="font-semibold text-sm">Courses</span>
+            <div className="flex items-center gap-1">
+              <span className="text-xs text-slate-500 dark:text-slate-400">
+                4
+              </span>
+            </div>
+            <span className="font-semibold text-sm text-primary">Courses</span>
           </Link>
           <Link
             className="px-6 h-full flex flex-col justify-center border-r border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900"

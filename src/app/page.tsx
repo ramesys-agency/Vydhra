@@ -4,6 +4,7 @@ import HeroSection from "./page-components/home/HeroSection";
 import SocialProofSection from "./page-components/home/SocialProofSection";
 import StudentAreasSection from "./page-components/home/StudentAreasSection";
 import GuaranteeSection from "./page-components/home/GuaranteeSection";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <StudentAreasSection />
         <GuaranteeSection />
       </main>
+      <Footer />
       <MobileNav />
     </div>
   );
