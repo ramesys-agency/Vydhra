@@ -22,6 +22,12 @@ export default function Navbar() {
         </div>
         <nav className="hidden lg:flex items-center h-full border-x border-slate-200 dark:border-slate-800">
           <Link
+            className="px-6 h-full flex flex-col justify-center border-r border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900"
+            href="/"
+          >
+            <span className="font-semibold text-sm">Home</span>
+          </Link>
+          <Link
             className="px-6 h-full flex flex-col justify-center border-r border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 group"
             href="/"
           >
@@ -45,31 +51,13 @@ export default function Navbar() {
             <span className="font-semibold text-sm text-primary">Courses</span>
           </Link>
           <Link
-            className="px-6 h-full flex flex-col justify-center border-r border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900"
-            href="#"
+            className="px-6 h-full flex flex-col justify-center border-r border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 group"
+            href="/reviews"
           >
             <span className="text-xs text-slate-500 dark:text-slate-400">
               50+
             </span>
             <span className="font-semibold text-sm">Reviews</span>
-          </Link>
-          <Link
-            className="px-6 h-full flex flex-col justify-center border-r border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900"
-            href="#"
-          >
-            <span className="text-xs text-slate-500 dark:text-slate-400">
-              43
-            </span>
-            <span className="font-semibold text-sm">Tricks</span>
-          </Link>
-          <Link
-            className="px-6 h-full flex flex-col justify-center hover:bg-slate-50 dark:hover:bg-slate-900"
-            href="#"
-          >
-            <span className="text-xs text-slate-500 dark:text-slate-400">
-              Coming Soon
-            </span>
-            <span className="font-semibold text-sm">Merch</span>
           </Link>
         </nav>
         <div className="flex items-center gap-6 ml-4">

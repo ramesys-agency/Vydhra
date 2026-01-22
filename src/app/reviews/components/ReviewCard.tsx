@@ -1,0 +1,56 @@
+import Image from "next/image";
+import React from "react";
+
+interface ReviewCardProps {
+  name: string;
+  course: string;
+  text: string;
+  rating: number;
+  image: string;
+  verified?: boolean;
+}
+
+export default function ReviewCard({ name, course, text, rating, image, verified }: ReviewCardProps) {
+  const fullStars = Math.floor(rating);
+  const halfStar = rating % 1 !== 0;
+
+  return (
+    <div className="break-inside-avoid bg-white dark:bg-card-dark rounded-2xl p-6 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.08)] border border-slate-100 dark:border-slate-800 flex flex-col gap-5 hover:shadow-xl transition-shadow duration-300 mb-6">
+      <div className="flex items-start justify-between">
+        <div className="flex items-center gap-3">
+          <div className="size-12 rounded-full border-2 border-primary/10 overflow-hidden relative">
+            <Image
+              src={image}
+              alt={name}
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div>
+            <p className="text-slate-900 dark:text-white font-bold text-base">{name}</p>
+            <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest leading-tight">
+              {course}
+            </p>
+          </div>
+        </div>
+        <div className="flex text-primary">
+          {[...Array(fullStars)].map((_, i) => (
+            <span key={i} className="material-icons text-[20px]">star</span>
+          ))}
+          {halfStar && <span className="material-icons text-[20px]">star_half</span>}
+        </div>
+      </div>
+      
+      {verified && (
+        <div className="flex items-center gap-1.5 bg-primary/5 text-primary px-2.5 py-1 rounded-full border border-primary/20 w-fit">
+          <span className="material-icons text-[14px]">verified</span>
+          <span className="text-[10px] font-black uppercase">Verified Purchase</span>
+        </div>
+      )}
+
+      <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed font-medium">
+        &quot;{text}&quot;
+      </p>
+    </div>
+  );
+}

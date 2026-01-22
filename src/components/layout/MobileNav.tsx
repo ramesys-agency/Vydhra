@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function MobileNav() {
@@ -15,10 +16,10 @@ export default function MobileNav() {
           <span className="material-icons">star</span>
           <span className="text-[10px] font-bold mt-1">REVIEWS</span>
         </button>
-        <button className="flex flex-col items-center text-slate-400 dark:text-slate-500 hover:text-primary transition-colors cursor-pointer">
-          <span className="material-icons">lightbulb</span>
-          <span className="text-[10px] font-bold mt-1">TRICKS</span>
-        </button>
+        <Link href="/" className="flex flex-col items-center text-slate-400 dark:text-slate-500 hover:text-primary transition-colors cursor-pointer">
+          <span className="material-icons">home</span>
+          <span className="text-[10px] font-bold mt-1">HOME</span>
+        </Link>
       </div>
     </>
   );
