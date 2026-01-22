@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>All Courses - Formburg</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#ff7a00",
+                        "background-light": "#f9f9f9",
+                        "background-dark": "#121212",
+                        "card-dark": "#1e1e1e",
+                        "border-dark": "#2a2a2a",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white transition-colors duration-300">
+<nav class="border-b border-gray-200 dark:border-border-dark bg-white dark:bg-background-dark sticky top-0 z-50">
+<div class="max-w-[1440px] mx-auto flex items-center justify-between h-20 px-6">
+<div class="flex items-center gap-8 h-full">
+<div class="flex items-center gap-2 font-black text-2xl tracking-tighter">
+<span class="bg-primary p-1 rounded text-white material-icons">layers</span>
+                    FORMBURG
+                </div>
+<div class="hidden md:flex h-full">
+<a class="px-6 flex flex-col justify-center border-x border-gray-100 dark:border-border-dark group" href="#">
+<span class="text-xs text-gray-500 dark:text-gray-400">209</span>
+<span class="font-bold text-sm">Tutorials</span>
+</a>
+<a class="px-6 flex flex-col justify-center border-r border-gray-100 dark:border-border-dark bg-primary/5" href="#">
+<div class="flex items-center gap-1">
+<span class="text-xs text-gray-500 dark:text-gray-400">4</span>
+<span class="text-[10px] bg-primary text-white px-1 rounded font-bold">NEW</span>
+</div>
+<span class="font-bold text-sm text-primary">Courses</span>
+</a>
+<a class="px-6 flex flex-col justify-center border-r border-gray-100 dark:border-border-dark" href="#">
+<span class="text-xs text-gray-500 dark:text-gray-400">50+</span>
+<span class="font-bold text-sm">Reviews</span>
+</a>
+<a class="px-6 flex flex-col justify-center border-r border-gray-100 dark:border-border-dark" href="#">
+<span class="text-xs text-gray-500 dark:text-gray-400">43</span>
+<span class="font-bold text-sm">Tricks</span>
+</a>
+</div>
+</div>
+<div class="flex items-center gap-6 h-full">
+<a class="hidden lg:block bg-primary text-white font-bold px-6 py-3 rounded-none uppercase text-xs tracking-widest hover:bg-orange-600 transition-colors" href="#">
+                    Komplettkurs Kaufen
+                </a>
+<button class="material-icons p-2 text-gray-400 hover:text-primary transition-colors">menu</button>
+</div>
+</div>
+</nav>
+<main class="max-w-[1440px] mx-auto px-6 py-12">
+<div class="flex flex-col md:flex-row gap-12">
+<aside class="w-full md:w-64 flex-shrink-0">
+<div class="sticky top-32">
+<h2 class="text-xs font-black uppercase tracking-[0.2em] mb-8 text-primary">Filter Categories</h2>
+<ul class="space-y-6">
+<li>
+<button class="flex items-center justify-between w-full group text-left">
+<span class="font-bold text-lg group-hover:text-primary transition-colors">All Courses</span>
+<span class="text-xs bg-gray-100 dark:bg-card-dark px-2 py-1 rounded">12</span>
+</button>
+</li>
+<li>
+<button class="flex items-center justify-between w-full group text-left text-gray-500 dark:text-gray-400">
+<span class="font-bold text-lg group-hover:text-primary transition-colors">Web Design</span>
+<span class="text-xs bg-gray-100 dark:bg-card-dark px-2 py-1 rounded">5</span>
+</button>
+</li>
+<li>
+<button class="flex items-center justify-between w-full group text-left text-gray-500 dark:text-gray-400">
+<span class="font-bold text-lg group-hover:text-primary transition-colors">Development</span>
+<span class="text-xs bg-gray-100 dark:bg-card-dark px-2 py-1 rounded">4</span>
+</button>
+</li>
+<li>
+<button class="flex items-center justify-between w-full group text-left text-gray-500 dark:text-gray-400">
+<span class="font-bold text-lg group-hover:text-primary transition-colors">Marketing</span>
+<span class="text-xs bg-gray-100 dark:bg-card-dark px-2 py-1 rounded">3</span>
+</button>
+</li>
+</ul>
+<div class="mt-12 pt-12 border-t border-gray-100 dark:border-border-dark">
+<h3 class="text-xs font-black uppercase tracking-[0.2em] mb-6 text-gray-400">Price Range</h3>
+<div class="space-y-4">
+<label class="flex items-center gap-3 cursor-pointer">
+<input class="form-checkbox rounded border-gray-300 dark:border-border-dark text-primary focus:ring-primary bg-transparent" type="checkbox"/>
+<span class="text-sm font-medium">Free</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input checked="" class="form-checkbox rounded border-gray-300 dark:border-border-dark text-primary focus:ring-primary bg-transparent" type="checkbox"/>
+<span class="text-sm font-medium">Premium</span>
+</label>
+</div>
+</div>
+</div>
+</aside>
+<div class="flex-grow">
+<div class="mb-12">
+<h1 class="text-5xl md:text-7xl font-black uppercase tracking-tight text-primary leading-none mb-6">
+                        Wähle deinen <br/>Weg zum Erfolg
+                    </h1>
+<p class="text-gray-500 dark:text-gray-400 max-w-2xl text-lg">
+                        Lerne von Experten, wie du professionelle Webseiten entwirfst, strukturierst und veröffentlichst. Unsere Kurse sind praxisnah und direkt anwendbar.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden aspect-[4/3] bg-gray-200 dark:bg-card-dark rounded-none mb-4">
+<img alt="Webflow Masterclass" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnXzm2Kf3j9bERb1rtP32C7IcexoCwPcaWiICgT0i5d6zZIsG3_LKf1DvMDxxUYyj2k8qDa4Rdq21XH83F63MqQa4qGCHTcEbxKfxMapyAVNCgK_1qc7L9IJtBVKcVNp4NYpGM32cqy45wyrHl1TLvrrXxL3KpsRxJ6h0dJg6VT5-zH9ZdUQla_8QfQewRIHM4w-30n8phVaxV4rloJWZrEGDK40q6cVTVAOJvIjGzCZDr_4-Y0iHX79-bUHHVcSV3AJgmy7xjptMu"/>
+<div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 text-[10px] font-black uppercase tracking-widest">
+                                Web Design
+                            </div>
+</div>
+<h3 class="text-xl font-extrabold uppercase mb-2 group-hover:text-primary transition-colors">Webflow Masterclass: From Zero to Pro</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-4 line-clamp-2">Master the art of visual web development with the most powerful tool on the market today.</p>
+<div class="flex items-center justify-between">
+<span class="text-2xl font-black">€499,00</span>
+<span class="material-icons text-primary opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden aspect-[4/3] bg-gray-200 dark:bg-card-dark rounded-none mb-4">
+<img alt="Javascript Essentials" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpcJ4b6A-7mXYKa4F7hQhsQogIkLINCATCB7acHQtekROKTYtPyzb7XHQ_RV1-Oy6TaibejnJZB7AFZE9Lq6WkQ0oiGAJ8QXTq4RtXDQwr6vhTQXpWHmH0DXgz2BnRr_YEwHCJCXf9PWBxtXH8UHuz_pE2PQIXi1oSk9puNcx1UC_hMHdiuEyHT6efc40J2HXo_DQ_0yQsRv0Dl0FJ6b_6Ey1DSSz32PxMeFRq3ka33aiydgxo4umR5Zi5GrrvwntuA4biBmQIYy4I"/>
+<div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 text-[10px] font-black uppercase tracking-widest">
+                                Development
+                            </div>
+</div>
+<h3 class="text-xl font-extrabold uppercase mb-2 group-hover:text-primary transition-colors">Modern JavaScript for Designers</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-4 line-clamp-2">The essential programming knowledge every modern web designer needs to build interaction.</p>
+<div class="flex items-center justify-between">
+<span class="text-2xl font-black">€299,00</span>
+<span class="material-icons text-primary opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden aspect-[4/3] bg-gray-200 dark:bg-card-dark rounded-none mb-4">
+<img alt="Marketing Strategy" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqhKCx1j8HKWDDFhyANdjH1vcZQeIP388GzFkuJDcJ_Lj6qYc07HvYWno-07IUpb2cyxtKPofyrDBar3-OtiQDFRBgAaT2Cce4_YFAqezWygC6F-BD40T2zbN3I5gDjupwbW1R1mRvb1lJQFJ1s59By1QMLAQTxT7p3560h6himhQ51R7yEaxGqiMeH_SkT-YTTvW9_geSbcb-na6CrpwutGfFP5PvZ0LSy7GGjwAs3RpQic7b5WxtqFZsdPomPNT5f8FYU_7nmdCG"/>
+<div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 text-[10px] font-black uppercase tracking-widest">
+                                Marketing
+                            </div>
+</div>
+<h3 class="text-xl font-extrabold uppercase mb-2 group-hover:text-primary transition-colors">Freelance Web Design Strategy</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-4 line-clamp-2">How to land premium clients, manage projects, and scale your design business to 6-figures.</p>
+<div class="flex items-center justify-between">
+<span class="text-2xl font-black">€349,00</span>
+<span class="material-icons text-primary opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden aspect-[4/3] bg-gray-200 dark:bg-card-dark rounded-none mb-4">
+<img alt="SEO Basics" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8qup8XEWk1-474CN50mOTRbKQrGEWHlupeoFsXRP-6YxMg2FoLSf6LpMXL5bothnH2N1Q4z0ANagM4VV-EdmUCElu0J0Jzfxc9hfbPCuKGR9HjHMIE2ziIed_aP4oDDv3xDBPsHazDlhGpHg1NhhzrI46KDzSaCD7jmhFPl3XgsumLgT9f6U_X_NSDFMuHqc8K6OD2-Ua9SzXkMaQpDSd622j8ExK551CRW7Iebb0FzVKmxy4-jJm08VZSXgrwEpHx3n-2t297jty"/>
+<div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 text-[10px] font-black uppercase tracking-widest">
+                                Marketing
+                            </div>
+</div>
+<h3 class="text-xl font-extrabold uppercase mb-2 group-hover:text-primary transition-colors">SEO for Web Designers</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-4 line-clamp-2">Learn the secrets of search engine optimization to give your clients more value than ever.</p>
+<div class="flex items-center justify-between">
+<span class="text-2xl font-black">€199,00</span>
+<span class="material-icons text-primary opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden aspect-[4/3] bg-gray-200 dark:bg-card-dark rounded-none mb-4">
+<img alt="Motion Design" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyWKAI6dMimUp-Z8VY8mw5XLHuNiKEwmbRJYrKs8KmnxMnVa-kgZM22O4UL6FnQBwm2Tf_tyb5ZSXXWYJm6rtuW2LnTSThlBSbQDaQ4al3-5SFQpekLolXFXhBAJrY0NZzp1fuvKnHF6NaXFT4WisuLkRgvY4edjjZY258aaspBpy-491lCkNP6x4OoZJC1QdlHOcmv3NDk0wGDCnF7oHF20Nj86oeWoQg58lqPQgyS_tOyoUu9HxtPlwSliLFhlETeJWOLCwAOBFO"/>
+<div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 text-[10px] font-black uppercase tracking-widest">
+                                Web Design
+                            </div>
+</div>
+<h3 class="text-xl font-extrabold uppercase mb-2 group-hover:text-primary transition-colors">Advanced Motion &amp; Interactions</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-4 line-clamp-2">Bring your websites to life with complex animations and immersive user experiences.</p>
+<div class="flex items-center justify-between">
+<span class="text-2xl font-black">€399,00</span>
+<span class="material-icons text-primary opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden aspect-[4/3] bg-gray-200 dark:bg-card-dark rounded-none mb-4">
+<img alt="React for Designers" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz6ybDU2MX3zFPbafB27bHwjRW8h9VKOaQKaEQNt5mIGCstHAZb4mezj_yOc6-0OtUz9omYVxsv1TebMdUwHOGTGJ6HoifnjmpBHLo9NzHmYx84GKsgs7Ahah0Umw2kZ8fgRkVI7Icr0UBT8dm_Vy9J5NQRypfPji0dexrBYvNvcMyBx496BNTmlbnoiLNHPYnSUJxkDSfPu4YS5qHcSt-RwA5VgWM43n_wgaeoeSsQkYbYnniTysCJRkV9TBEJtRXFM0nWFxYIC6Z"/>
+<div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 text-[10px] font-black uppercase tracking-widest">
+                                Development
+                            </div>
+</div>
+<h3 class="text-xl font-extrabold uppercase mb-2 group-hover:text-primary transition-colors">React for UI Designers</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-4 line-clamp-2">Bridging the gap between design systems and code with React and Tailwind CSS.</p>
+<div class="flex items-center justify-between">
+<span class="text-2xl font-black text-gray-400 line-through mr-2 text-base">€450</span>
+<span class="text-2xl font-black">€249,00</span>
+<span class="material-icons text-primary opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="mt-24 bg-card-dark p-12 relative overflow-hidden">
+<div class="relative z-10 max-w-xl">
+<h2 class="text-3xl font-black uppercase tracking-tight text-white mb-4">Immer auf dem Laufenden bleiben</h2>
+<p class="text-gray-400 mb-8">Melde dich für unseren Newsletter an und erhalte exklusive Rabatte und neue Tutorial-Updates direkt in dein Postfach.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<input class="flex-grow bg-background-dark border-border-dark text-white focus:ring-primary focus:border-primary px-6 py-4" placeholder="Deine E-Mail Adresse" type="email"/>
+<button class="bg-primary text-white font-bold px-8 py-4 uppercase tracking-widest hover:bg-orange-600 transition-colors">Abonnieren</button>
+</div>
+</div>
+<div class="absolute right-0 bottom-0 opacity-10 pointer-events-none transform translate-x-1/4 translate-y-1/4">
+<span class="material-icons text-[400px]">auto_awesome</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="border-t border-gray-200 dark:border-border-dark mt-24 py-12">
+<div class="max-w-[1440px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-2 font-black text-xl tracking-tighter">
+<span class="bg-primary p-1 rounded text-white material-icons text-sm">layers</span>
+                FORMBURG
+            </div>
+<div class="flex gap-8 text-xs font-bold uppercase tracking-widest text-gray-500">
+<a class="hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms</a>
+<a class="hover:text-primary transition-colors" href="#">Imprint</a>
+<a class="hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 flex items-center justify-center border border-gray-200 dark:border-border-dark hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-icons text-sm">facebook</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center border border-gray-200 dark:border-border-dark hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-icons text-sm">camera</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center border border-gray-200 dark:border-border-dark hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-icons text-sm">alternate_email</span>
+</a>
+</div>
+</div>
+</footer>
+<div class="fixed bottom-4 left-4 z-50">
+<button class="bg-white dark:bg-card-dark text-[10px] font-black uppercase tracking-widest border border-gray-200 dark:border-border-dark px-4 py-2 rounded-full shadow-lg hover:bg-gray-50 dark:hover:bg-background-dark transition-colors">
+            Cookie-Einstellungen
+        </button>
+</div>
+
+</body></html>
