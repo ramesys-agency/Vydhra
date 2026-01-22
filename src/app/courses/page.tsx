@@ -55,7 +55,6 @@ const courses = [
 export default function CoursesPage() {
   return (
     <div className="min-h-screen">
-      <Navbar />
       <main className="max-w-[1440px] mx-auto px-6 py-12">
         <div className="flex flex-col md:flex-row gap-12">
           <FilterSidebar />

@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "@/components/layout/Navbar";
 import MobileNav from "@/components/layout/MobileNav";
 import Footer from "@/components/layout/Footer";
 import RatingSummary from "./components/RatingSummary";
@@ -9,7 +8,6 @@ import ReviewGrid from "./components/ReviewGrid";
 export default function ReviewsPage() {
   return (
     <div className="min-h-screen grid-bg">
-      <Navbar />
       <main className="flex flex-col items-center">
         <div className="w-full max-w-[1200px] px-6 lg:px-10 py-12 flex flex-col gap-8">
           <div className="flex flex-wrap items-end justify-between gap-6">
