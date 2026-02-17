@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 
@@ -8,6 +9,7 @@ interface CourseCardProps {
   price: string;
   originalPrice?: string;
   image: string;
+  link: string;
 }
 
 export default function CourseCard({
@@ -17,9 +19,10 @@ export default function CourseCard({
   price,
   originalPrice,
   image,
+  link,
 }: CourseCardProps) {
   return (
-    <div className="group cursor-pointer">
+    <Link href={link} className="group cursor-pointer block">
       <div className="relative overflow-hidden aspect-[4/3] bg-gray-200 dark:bg-card-dark rounded-none mb-4">
         <Image
           alt={title}
@@ -51,6 +54,6 @@ export default function CourseCard({
           arrow_forward
         </span>
       </div>
-    </div>
+    </Link>
   );
 }

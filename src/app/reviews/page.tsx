@@ -1,6 +1,4 @@
 import React from "react";
-import MobileNav from "@/components/layout/MobileNav";
-import Footer from "@/components/layout/Footer";
 import RatingSummary from "./components/RatingSummary";
 import ReviewFilters from "./components/ReviewFilters";
 import ReviewGrid from "./components/ReviewGrid";
@@ -39,8 +37,6 @@ export default function ReviewsPage() {
           </div>
         </div>
       </main>
-      <Footer />
-      <MobileNav />
     </div>
   );
 }

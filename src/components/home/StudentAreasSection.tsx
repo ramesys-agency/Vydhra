@@ -10,37 +10,37 @@ export default function StudentAreasSection() {
       </div>
       <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 opacity-40 dark:opacity-60">
         <span className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white">
-          Webdesigner
+          Web Designer
         </span>
         <span className="text-xl md:text-2xl font-medium text-slate-500">
           Marketing
         </span>
         <span className="text-4xl md:text-6xl font-bold text-slate-800 dark:text-slate-200">
-          Kommunikationsdesign
+          Communication Design
         </span>
         <span className="text-lg md:text-xl font-medium text-slate-400">
-          BWL
+          Business Admin
         </span>
         <span className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white">
-          Grafikdesign
+          Graphic Design
         </span>
         <span className="text-xl md:text-2xl font-medium text-slate-500">
-          Medieninformatik
+          Media Informatics
         </span>
         <span className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-slate-200">
-          Schüler
+          Students
         </span>
         <span className="text-lg md:text-xl font-medium text-slate-400">
-          Psychologie
+          Psychology
         </span>
         <span className="text-2xl md:text-3xl font-medium text-slate-500">
-          IT-Systemelektroniker
+          IT Specialist
         </span>
         <span className="text-lg md:text-xl font-medium text-slate-400">
-          Informatik
+          Computer Science
         </span>
         <span className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-slate-200">
-          Studenten
+          Graduates
         </span>
       </div>
     </section>

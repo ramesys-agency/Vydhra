@@ -10,7 +10,7 @@ export default function HeroSection() {
           <span className="mx-8">
             <span className="text-primary">●</span> Recently Joined
           </span>
-          <span className="mx-8">Ralf — Webdesigner Joined</span>
+          <span className="mx-8">Ralf — Web Designer Joined</span>
           <span className="mx-8">Vlad Cirneala — Lead Developer Joined</span>
           <span className="mx-8">Christian B. — Web Strategist Joined</span>
           <span className="mx-8">Sarah Miller — UI/UX Designer Joined</span>

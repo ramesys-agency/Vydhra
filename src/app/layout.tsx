@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Studelyx - Online Courses",
-  description: "Studelyx - Online Courses",
+  title: "vydhra - Online Courses",
+  description: "vydhra - Online Courses",
 };
 
 import Navbar from "@/components/layout/Navbar";

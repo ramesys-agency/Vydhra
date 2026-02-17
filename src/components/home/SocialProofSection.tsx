@@ -7,10 +7,12 @@ export default function SocialProofSection() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-4 flex flex-col justify-center">
-            <h2 className="text-9xl font-black tracking-tighter mb-4">791</h2>
+            <h2 className="text-5xl md:text-6xl font-black tracking-tighter mb-4 text-slate-900 dark:text-white">
+              Student <br /> Feedback
+            </h2>
             <p className="text-xl text-slate-600 dark:text-slate-400 mb-8">
-              More than 791 students from a wide variety of industries have
-              already joined!
+              See what others are saying about their learning journey with us.
+              Join a community of motivated learners.
             </p>
             <button className="w-fit border-2 border-slate-900 dark:border-white py-3 px-8 rounded-full font-bold uppercase text-sm hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all cursor-pointer">
               Read all reviews

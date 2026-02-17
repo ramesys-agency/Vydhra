@@ -1,21 +1,47 @@
 import Image from "next/image";
 import React from "react";
 
-export default function CourseHero() {
+interface CourseHeroProps {
+  title: string;
+  subtitle: string;
+  description: string;
+  live: boolean;
+  image: string;
+  price: string;
+}
+
+export default function CourseHero({
+  title,
+  subtitle,
+  description,
+  live,
+  image,
+  price,
+}: CourseHeroProps) {
   return (
     <section className="relative hero-gradient overflow-hidden py-24">
       <div className="absolute inset-0 grid-bg pointer-events-none opacity-20"></div>
       <div className="max-w-7xl mx-auto px-8 relative z-10 grid lg:grid-cols-2 gap-16 items-center">
         <div>
-          <h1 className="text-6xl md:text-8xl font-black text-primary leading-[0.9] tracking-tighter mb-8 uppercase">
-            WEBFLOW<br />KOMPLETTKURS
+          <div className="mb-6 flex items-center gap-4">
+            {live && (
+              <span className="bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest animate-pulse">
+                Live Interactive Classes
+              </span>
+            )}
+            <span className="bg-white/10 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
+              {subtitle}
+            </span>
+          </div>
+          <h1 className="text-5xl md:text-7xl font-black text-primary leading-[0.9] tracking-tighter mb-8 uppercase">
+            {title}
           </h1>
           <p className="text-xl text-gray-300 max-w-xl leading-relaxed mb-10">
-            Mastering Webflow from Scratch. Everything you need to go from zero to professional websites. Learn how to design, structure, animate and publish responsive, professional websites using Webflow.
+            {description}
           </p>
           <div className="flex items-center gap-4">
             <button className="bg-primary text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-orange-600 transition-all shadow-xl shadow-primary/20 cursor-pointer">
-              Zugang sichern
+              Enroll Now - {price}
             </button>
             <div className="flex -space-x-3">
               {[1, 2, 3].map((i) => (
@@ -37,9 +63,9 @@ export default function CourseHero() {
         <div className="relative group">
           <div className="aspect-video bg-gray-900 rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative flex items-center justify-center">
             <Image
-              alt="Webflow Course Preview"
+              alt={title}
               className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbE-g_pFwT0Wq1S1iOuag7oISnFiQCtjvjyUEhf4p9V1MdrLTjNeealsbf8vYlIjMwA9C46hdaOhlVuWMT-N_MIqUFczIQsQpCLJvyOJ77uHjzpMC36_cnS5sMOPxo4nrgDvgP2uD31MOvwamfVsIipuxaTLsaRXYjhp_pFQ3b6oKLE97OpvXu_GHfg1uDTXlO1g1XY07hfguOyNS3eIrHE1ExowlD7FA5EVaOTHHTGW9p9ThOgb8WmSn6AA9IYTHLInZzC1qaKITV"
+              src={image}
               width={640}
               height={360}
             />
@@ -54,7 +80,7 @@ export default function CourseHero() {
               <div className="w-full h-full rounded-full bg-background-dark flex flex-col items-center justify-center text-center p-4">
                 <span className="material-icons text-primary mb-1">verified</span>
                 <span className="text-[10px] font-bold leading-tight text-white uppercase">
-                  PREMIUM<br />WEBFLOW<br />COURSE
+                  CERTIFIED<br />COURSE
                 </span>
               </div>
             </div>
