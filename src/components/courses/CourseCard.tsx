@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
+import Icon from "@/components/common/Icon";
 
 interface CourseCardProps {
   title: string;
@@ -50,9 +51,11 @@ export default function CourseCard({
           )}
           <span className="text-2xl font-black">{price}</span>
         </div>
-        <span className="material-icons text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-          arrow_forward
-        </span>
+        <Icon 
+          name="arrow_forward" 
+          className="text-primary opacity-0 group-hover:opacity-100 transition-opacity" 
+          size={20}
+        />
       </div>
     </Link>
   );

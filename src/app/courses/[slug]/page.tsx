@@ -4,10 +4,11 @@ import CourseHero from "./components/CourseHero";
 import Curriculum from "./components/Curriculum";
 import PricingSidebar from "./components/PricingSidebar";
 import TestimonialsSection from "./components/TestimonialsSection";
-import ProgramComparison from "./components/ProgramComparison";
+// import ProgramComparison from "./components/ProgramComparison";
 import ProjectsSection from "./components/ProjectsSection";
 import ToolsSection from "./components/ToolsSection";
 import RequirementsSection from "./components/RequirementsSection";
+import FeaturesSection from "./components/FeaturesSection";
 
 interface PageProps {
   params: { slug: string };
@@ -31,43 +32,51 @@ export default async function CourseDetailPage({ params }: PageProps) {
           live={course.liveInteractiveClasses}
           image={course.image}
           price={course.price}
+          level={course.level}
+          duration={course.duration}
+          requirements={course.requirements}
         />
 
-        <div className="max-w-7xl mx-auto px-8 py-20">
-          <div className="grid lg:grid-cols-3 gap-12 items-start">
-            <div className="lg:col-span-2 divide-y divide-gray-200 dark:divide-border-dark">
+        <div className="max-w-7xl mx-auto px-8 py-20 gap-16">
+          <div className="grid lg:grid-cols-3 gap-16 items-start">
+            <div className="lg:col-span-2 space-y-16">
               {/* 1. Course Content */}
-              <div className="pb-8">
-                 <Curriculum modules={course.curriculum} />
-              </div>
+              <Curriculum modules={course.curriculum} />
 
-              {/* 2. Description */}
-              <div className="py-8">
-                 <h2 className="text-3xl font-bold mb-6">About this Course</h2>
-                 <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                   {course.description}
-                 </p>
-              </div>
+              {/* 2. Features (New Section) */}
+              {course.features && (
+                <FeaturesSection features={course.features} />
+              )}
 
-               {/* 3. Prerequisites */}
+              {/* 3. Description */}
+              {/* <div className="py-8">
+                <h2 className="text-3xl font-bold mb-6">About this Course</h2>
+                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed italic">
+                  &ldquo;{course.description}&rdquo;
+                </p>
+              </div> */}
+
+              {/* 4. Prerequisites */}
               <RequirementsSection requirements={course.requirements} />
 
-              {/* 4. Projects */}
+              {/* 5. Projects */}
               <ProjectsSection projects={course.projects} />
-              
-              {/* 5. Tools */}
+
+              {/* 6. Tools */}
               <ToolsSection tools={course.tools} />
 
-              {/* 6. Loopholes */}
-              <ProgramComparison />
+              {/* 7. Comparison */}
+              {/* <ProgramComparison /> */}
             </div>
 
-            {/* Right Sidebar */}
-            <PricingSidebar price={course.price} />
+            {/* Right Sidebar (Sticky) */}
+            <aside className="lg:col-span-1 sticky top-28">
+              <PricingSidebar price={course.price} />
+            </aside>
           </div>
         </div>
 
-        <TestimonialsSection />
+        <TestimonialsSection testimonials={course.testimonials} />
       </main>
     </div>
   );

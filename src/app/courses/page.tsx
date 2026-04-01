@@ -5,6 +5,7 @@ import FilterSidebar from "@/components/courses/FilterSidebar";
 import CourseCard from "@/components/courses/CourseCard";
 // import Newsletter from "@/components/common/Newsletter";
 import { courses } from "@/data/courses";
+import Icon from "@/components/common/Icon";
 
 export default function CoursesPage() {
   const [selectedCategory, setSelectedCategory] = useState("All Courses");
@@ -48,7 +49,7 @@ export default function CoursesPage() {
             {selectedCategory === "Web Design" ? (
               <div className="min-h-[400px] flex flex-col items-center justify-center text-center p-8 bg-gray-50 dark:bg-card-dark rounded-2xl border border-dashed border-gray-300 dark:border-border-dark">
                 <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-6 text-primary animate-pulse">
-                  <span className="material-icons text-4xl">construction</span>
+                  <Icon name="construction" size={40} />
                 </div>
                 <h2 className="text-3xl font-bold mb-4">Courses Coming Soon</h2>
                 <p className="text-gray-500 dark:text-gray-400 max-w-md">

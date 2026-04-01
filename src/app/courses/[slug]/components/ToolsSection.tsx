@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Tool } from "@/data/courses";
+import Icon from "@/components/common/Icon";
 
 interface ToolsSectionProps {
   tools: Tool[];
@@ -19,9 +20,11 @@ export default function ToolsSection({ tools }: ToolsSectionProps) {
             className="flex flex-col items-center gap-3 group"
           >
             <div className="w-16 h-16 bg-gray-50 dark:bg-card-dark rounded-full flex items-center justify-center border border-gray-100 dark:border-border-dark group-hover:border-primary transition-colors duration-300">
-              <span className="material-icons text-3xl text-gray-400 group-hover:text-primary transition-colors duration-300">
-                {tool.icon}
-              </span>
+              <Icon 
+                name={tool.icon} 
+                className="text-3xl text-gray-400 group-hover:text-primary transition-colors duration-300"
+                size={32}
+              />
             </div>
             <span className="font-medium text-sm text-gray-700 dark:text-gray-300">
               {tool.name}
