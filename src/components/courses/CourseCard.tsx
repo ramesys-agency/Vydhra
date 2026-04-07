@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import React from "react";
 import Icon from "@/components/common/Icon";
 
 interface CourseCardProps {
@@ -37,7 +36,7 @@ export default function CourseCard({
             {category}
           </div>
         </div>
-        
+
         <div className="flex flex-col flex-grow px-1">
           <h3 className="text-xl font-black uppercase mb-3 group-hover:text-primary transition-colors leading-tight tracking-tight">
             {title}
@@ -45,7 +44,7 @@ export default function CourseCard({
           <p className="text-sm text-gray-500 dark:text-gray-400 mb-6 line-clamp-2 flex-grow leading-relaxed">
             {description}
           </p>
-          
+
           <div className="flex items-center justify-between pt-5 border-t border-gray-100 dark:border-white/5">
             <div className="flex items-baseline gap-2">
               {originalPrice && (
@@ -56,9 +55,9 @@ export default function CourseCard({
               <span className="text-2xl font-black text-primary">{price}</span>
             </div>
             <div className="w-12 h-12 rounded-2xl bg-gray-50 dark:bg-white/5 flex items-center justify-center group-hover:bg-primary group-hover:text-white group-hover:rotate-[-10deg] transition-all duration-500 shadow-inner">
-              <Icon 
-                name="arrow_forward" 
-                className="transform group-hover:translate-x-0.5 transition-transform" 
+              <Icon
+                name="arrow_forward"
+                className="transform group-hover:translate-x-0.5 transition-transform"
                 size={22}
               />
             </div>

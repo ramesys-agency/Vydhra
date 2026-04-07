@@ -60,8 +60,7 @@ export const courses: Course[] = [
     description:
       "A comprehensive, job-focused bootcamp designed to take you from foundational statistics to advanced deep learning. Build a professional portfolio and get ready for the AI job market.",
     price: "$499.00",
-    image:
-      "https://images.unsplash.com/photo-1527474305487-b87b222841cc?q=80&w=2000&auto=format&fit=crop",
+    image: "/courses/ml-bootcamp.png",
     category: "AI & ML",
     level: "Professional",
     duration: "8 Weeks",
@@ -260,8 +259,7 @@ export const courses: Course[] = [
     description:
       "A 2-month comprehensive program covering Python foundations, advanced algorithms, and modern AI toolkits including APIs, SQL, and LLM-based workflows.",
     price: "$299.00",
-    image:
-      "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2000&auto=format&fit=crop",
+    image: "/courses/python-ai.png",
     category: "Programming",
     level: "Beginner",
     duration: "8 Weeks",
@@ -455,8 +453,7 @@ export const courses: Course[] = [
     description:
       "A comprehensive bootcamp designed to take you from web foundations to building full-stack AI-integrated applications. Master the MERN stack and learn to leverage LLMs in production.",
     price: "$399.00",
-    image:
-      "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=2000&auto=format&fit=crop",
+    image: "/courses/mern-ai.png",
     category: "Fullstack Development",
     level: "Professional",
     duration: "12 Weeks",
@@ -632,8 +629,7 @@ export const courses: Course[] = [
     description:
       "Master the foundation of data with our intensive SQL bootcamp. Learn everything from basic queries to advanced window functions and database design using PostgreSQL.",
     price: "$199.00",
-    image:
-      "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=2000&auto=format&fit=crop",
+    image: "/courses/sql-bootcamp.png",
     category: "Data Engineering",
     level: "Beginner",
     duration: "8 Weeks",
@@ -764,8 +760,7 @@ export const courses: Course[] = [
     description:
       "Learn to build, orchestrate, and deploy autonomous AI agents. Move beyond simple chatbots to multi-agent systems and stateful AI workflows using LangGraph and LangChain.",
     price: "$599.00",
-    image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2000&auto=format&fit=crop",
+    image: "/courses/ai-agents.png",
     category: "AI Engineering",
     level: "Intermediate",
     duration: "8 Weeks",

@@ -19,6 +19,7 @@ export default function CourseHero({
   subtitle,
   description,
   live,
+  image,
   price,
   level,
 }: CourseHeroProps) {
@@ -81,7 +82,7 @@ export default function CourseHero({
       </div>
 
       <div className="max-w-7xl mx-auto px-8 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-16 items-center">
+        <div className="grid lg:grid-cols-10 gap-16 items-center">
           {/* Left Content */}
           <div className="lg:col-span-6">
             <div className="mb-6 flex items-center gap-3">
@@ -127,7 +128,11 @@ export default function CourseHero({
               </div>
               <div className="flex items-center gap-2 text-slate-300">•</div>
               <div className="flex items-center gap-2">
-                <Icon name="sentiment_satisfied_alt" className="text-blue-500" size={18} />
+                <Icon
+                  name="sentiment_satisfied_alt"
+                  className="text-blue-500"
+                  size={18}
+                />
                 <span>{level} friendly</span>
               </div>
               <div className="flex items-center gap-2 text-slate-300">•</div>
@@ -139,14 +144,16 @@ export default function CourseHero({
           </div>
 
           {/* Right Visuals (Static Hero Photo/Graphic) */}
-          <div className="lg:col-span-6 relative flex justify-center items-center">
+          <div className="lg:col-span-4 relative flex justify-center items-center">
+            {/* Background Glow for Blend */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-orange-400/10 rounded-full blur-[100px] pointer-events-none"></div>
             <div className="relative w-full max-w-[850px]">
               <Image
-                src="/hero-section.png"
+                src={image}
                 alt="Course Hero Visual"
                 width={1400}
                 height={1400}
-                className="w-full h-auto object-contain drop-shadow-2xl scale-110 lg:scale-125 transition-transform duration-700"
+                className="w-full h-auto object-contain mix-blend-multiply scale-110 lg:scale-125 transition-transform duration-700"
                 priority
               />
             </div>

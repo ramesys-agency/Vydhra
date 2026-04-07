@@ -8,19 +8,25 @@ export default function ContactPage() {
           Contact Us
         </h1>
         <p className="text-xl text-gray-500 dark:text-gray-400 mb-12 max-w-2xl">
-          Have questions about the course? Need help with your account? We&apos;re here to help.
+          Have questions about the course? Need help with your account?
+          We&apos;re here to help.
         </p>
 
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-8">
             <div className="bg-gray-50 dark:bg-card-dark p-8 rounded-2xl border border-gray-200 dark:border-border-dark">
-              <span className="material-icons text-primary text-4xl mb-4">email</span>
+              <span className="material-icons text-primary text-4xl mb-4">
+                email
+              </span>
               <h3 className="text-xl font-bold mb-2">Email Support</h3>
               <p className="text-gray-500 dark:text-gray-400 mb-4">
                 For general inquiries and support requests.
               </p>
-              <a href="mailto:support@formburg.com" className="font-bold text-primary hover:text-orange-600 transition-colors">
-                support@formburg.com
+              <a
+                href="mailto:support@vydhra.com"
+                className="font-bold text-primary hover:text-orange-600 transition-colors"
+              >
+                support@vydhra.com
               </a>
             </div>
 
@@ -37,12 +43,19 @@ export default function ContactPage() {
             </div> */}
 
             <div className="bg-gray-50 dark:bg-card-dark p-8 rounded-2xl border border-gray-200 dark:border-border-dark">
-              <span className="material-icons text-primary text-4xl mb-4">chat</span>
+              <span className="material-icons text-primary text-4xl mb-4">
+                chat
+              </span>
               <h3 className="text-xl font-bold mb-2">WhatsApp Support</h3>
               <p className="text-gray-500 dark:text-gray-400 mb-4">
-                 Chat with us directly for quick answers to your questions.
+                Chat with us directly for quick answers to your questions.
               </p>
-              <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="font-bold text-primary hover:text-orange-600 transition-colors">
+              <a
+                href="https://wa.me/1234567890"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-primary hover:text-orange-600 transition-colors"
+              >
                 Chat on WhatsApp
               </a>
             </div>
@@ -62,7 +75,10 @@ export default function ContactPage() {
 
           <form className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-bold uppercase tracking-wider mb-2">
+              <label
+                htmlFor="name"
+                className="block text-sm font-bold uppercase tracking-wider mb-2"
+              >
                 Name
               </label>
               <input
@@ -73,7 +89,10 @@ export default function ContactPage() {
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-bold uppercase tracking-wider mb-2">
+              <label
+                htmlFor="email"
+                className="block text-sm font-bold uppercase tracking-wider mb-2"
+              >
                 Email
               </label>
               <input
@@ -84,7 +103,10 @@ export default function ContactPage() {
               />
             </div>
             <div>
-              <label htmlFor="message" className="block text-sm font-bold uppercase tracking-wider mb-2">
+              <label
+                htmlFor="message"
+                className="block text-sm font-bold uppercase tracking-wider mb-2"
+              >
                 Message
               </label>
               <textarea
@@ -94,7 +116,10 @@ export default function ContactPage() {
                 placeholder="How can we help you?"
               ></textarea>
             </div>
-            <button type="button" className="w-full bg-primary text-white font-bold py-4 rounded-xl hover:bg-orange-600 transition-all shadow-lg shadow-primary/20">
+            <button
+              type="button"
+              className="w-full bg-primary text-white font-bold py-4 rounded-xl hover:bg-orange-600 transition-all shadow-lg shadow-primary/20"
+            >
               Send Message
             </button>
           </form>
