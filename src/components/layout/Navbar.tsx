@@ -19,7 +19,7 @@ export default function Navbar() {
       <div className="max-w-[1440px] mx-auto flex items-center h-20 px-4 md:px-8">
         <Link
           href="/"
-          className="flex items-center gap-2 mr-auto px-6 h-full border-x border-slate-200 dark:border-slate-800"
+          className="flex items-center gap-2 mr-auto px-6 h-full border-slate-200 dark:border-slate-800"
         >
           <div className="w-8 h-8 bg-white rounded-md flex items-center justify-center overflow-hidden">
             <Image
@@ -34,9 +34,9 @@ export default function Navbar() {
             vydhra
           </span>
         </Link>
-        <nav className="hidden lg:flex items-center h-full border-x border-slate-200 dark:border-slate-800">
+        <nav className="hidden lg:flex items-center h-full border-slate-200 dark:border-slate-800">
           <Link
-            className={`px-6 h-full flex flex-col justify-center border-r border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors ${isActive("/") ? activeLinkClass : ""}`}
+            className={`px-6 h-full flex flex-col justify-center border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors ${isActive("/") ? activeLinkClass : ""}`}
             href="/"
           >
             <span
@@ -55,17 +55,15 @@ export default function Navbar() {
             <span className={`font-semibold text-sm ${isActive("/tutorials") ? activeTextClass : ""}`}>Tutorials</span>
           </Link> */}
           <Link
-            className={`px-6 h-full flex flex-col justify-center border-r border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 relative transition-colors ${isActive("/courses") ? activeLinkClass : ""}`}
+            className={`px-6 h-full flex flex-col justify-center border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 relative transition-colors ${isActive("/courses") ? activeLinkClass : ""}`}
             href="/courses"
           >
-            <span className="absolute top-4 right-4 bg-primary text-[10px] font-bold text-white px-1 rounded">
+            <span className="absolute top-4 right-4 bg-primary text-[9px] font-black text-white px-1.5 py-0.5 rounded-sm leading-none">
               NEW
             </span>
-            <div className="flex items-center gap-1">
-              <span className="text-xs text-slate-500 dark:text-slate-400">
-                5
-              </span>
-            </div>
+            <span className="absolute top-4 left-6 text-[10px] font-bold text-slate-400">
+              5
+            </span>
             <span
               className={`font-semibold text-sm ${isActive("/courses") ? activeTextClass : ""}`}
             >
@@ -73,10 +71,10 @@ export default function Navbar() {
             </span>
           </Link>
           <Link
-            className={`px-6 h-full flex flex-col justify-center border-r border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors ${isActive("/reviews") ? activeLinkClass : ""}`}
+            className={`px-6 h-full flex flex-col justify-center border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 relative transition-colors ${isActive("/reviews") ? activeLinkClass : ""}`}
             href="/reviews"
           >
-            <span className="text-xs text-slate-500 dark:text-slate-400">
+            <span className="absolute top-4 left-6 text-[10px] font-bold text-slate-400">
               15+
             </span>
             <span
@@ -86,7 +84,7 @@ export default function Navbar() {
             </span>
           </Link>
           <Link
-            className={`px-6 h-full flex flex-col justify-center border-r border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors ${isActive("/about") ? activeLinkClass : ""}`}
+            className={`px-6 h-full flex flex-col justify-center border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors ${isActive("/about") ? activeLinkClass : ""}`}
             href="/about"
           >
             <span
@@ -96,7 +94,7 @@ export default function Navbar() {
             </span>
           </Link>
           <Link
-            className={`px-6 h-full flex flex-col justify-center border-r border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors ${isActive("/contact") ? activeLinkClass : ""}`}
+            className={`px-6 h-full flex flex-col justify-center border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors ${isActive("/contact") ? activeLinkClass : ""}`}
             href="/contact"
           >
             <span
