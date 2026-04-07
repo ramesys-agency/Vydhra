@@ -448,4 +448,446 @@ export const courses: Course[] = [
       },
     ],
   },
+  {
+    slug: "mern-stack-ai",
+    title: "MERN + AI Job-Ready Bootcamp",
+    subtitle: "3-Month Intensive Fullstack AI Journey",
+    description:
+      "A comprehensive bootcamp designed to take you from web foundations to building full-stack AI-integrated applications. Master the MERN stack and learn to leverage LLMs in production.",
+    price: "$399.00",
+    image:
+      "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=2000&auto=format&fit=crop",
+    category: "Fullstack Development",
+    level: "Professional",
+    duration: "12 Weeks",
+    liveInteractiveClasses: true,
+    projects: [
+      {
+        title: "Fullstack Dashboard",
+        description: "Build a responsive dashboard with full CRUD and Auth.",
+        icon: "layout",
+      },
+      {
+        title: "AI Chatbot Integration",
+        description: "Integrate a custom AI chatbot using OpenAI API.",
+        icon: "bot",
+      },
+      {
+        title: "Production Portfolio",
+        description: "Deploy a fleet of production-ready fullstack apps.",
+        icon: "verified",
+      },
+    ],
+    tools: [
+      { name: "React", icon: "react" },
+      { name: "Node.js", icon: "node" },
+      { name: "MongoDB", icon: "mongodb" },
+      { name: "Tailwind", icon: "tailwind" },
+      { name: "OpenAI", icon: "openai" },
+    ],
+    requirements: [
+      "Basic JavaScript knowledge",
+      "Understanding of HTML/CSS",
+      "A laptop and stable internet",
+    ],
+    curriculum: [
+      {
+        id: "01",
+        title: "Web Foundations",
+        meta: "Week 1",
+        lessons: [
+          { title: "Semantic HTML & SEO Basics", type: "video" },
+          { title: "Flexbox & Tailwind CSS", type: "live" },
+        ],
+        practice: "Build a responsive landing page with AI",
+        outcome: "Can build mobile-first layouts using Tailwind.",
+      },
+      {
+        id: "02",
+        title: "JavaScript Mastery",
+        meta: "Week 2",
+        lessons: [
+          { title: "ES6+ Essentials & Async JS", type: "live" },
+          { title: "Handling APIs & Fetch", type: "video" },
+        ],
+        practice: "Build an API-based mini app",
+        outcome: "Can handle asynchronous operations comfortably.",
+      },
+      {
+        id: "03",
+        title: "React Core",
+        meta: "Week 3",
+        lessons: [
+          { title: "JSX, Components & Props", type: "video" },
+          { title: "State Management & useEffect", type: "live" },
+        ],
+        practice: "Build a multi-page interactive React app",
+        outcome: "Can create dynamic SPAs with React hooks.",
+      },
+      {
+        id: "04",
+        title: "Advanced React & State",
+        meta: "Week 4",
+        lessons: [
+          { title: "Context API & Global State", type: "live" },
+          { title: "Auth Flow & Protected Routes", type: "video" },
+        ],
+        practice: "Implement secure authentication flow",
+        outcome: "Can manage global state and secure routes.",
+      },
+      {
+        id: "05",
+        title: "Frontend Production",
+        meta: "Week 5",
+        lessons: [
+          { title: "Project Setup & CRUD Integration", type: "live" },
+          { title: "UX Principles & Polish with AI", type: "video" },
+        ],
+        practice: "Finalize production dashboard frontend",
+        outcome: "Complete a professional-grade frontend system.",
+      },
+      {
+        id: "06",
+        title: "Node.js & Express",
+        meta: "Week 6",
+        lessons: [
+          { title: "Server Setup & Middleware", type: "video" },
+          { title: "REST API Design Principles", type: "live" },
+        ],
+        practice: "Build a scalable backend REST API",
+        outcome: "Can build modular server-side applications.",
+      },
+      {
+        id: "07",
+        title: "Databases & Prisma",
+        meta: "Week 7",
+        lessons: [
+          { title: "MongoDB/SQL Schema Design", type: "live" },
+          { title: "Relational CRUD & ORM", type: "video" },
+        ],
+        practice: "Design relational database schemas",
+        outcome: "Can model data and optimize storage.",
+      },
+      {
+        id: "08",
+        title: "Backend Security",
+        meta: "Week 8",
+        lessons: [
+          { title: "JWT Auth & Password Hashing", type: "video" },
+          { title: "RBAC & API Hardening", type: "live" },
+        ],
+        practice: "Implement a secure login system",
+        outcome: "Can protect backend resources effectively.",
+      },
+      {
+        id: "09",
+        title: "AI Tools & Workflows",
+        meta: "Week 9",
+        lessons: [
+          { title: "Prompt Engineering & Code Gen", type: "live" },
+          { title: "AI-Driven Testing & Docs", type: "video" },
+        ],
+        practice: "Automate tests and docs with AI",
+        outcome: "Adopt AI-first development workflows.",
+      },
+      {
+        id: "10",
+        title: "AI Integration",
+        meta: "Week 10",
+        lessons: [
+          { title: "OpenAI API & Chatbots", type: "video" },
+          { title: "AI Blog & Content Generators", type: "live" },
+        ],
+        practice: "Integrate custom AI features into app",
+        outcome: "Can leverage LLMs for intelligent features.",
+      },
+      {
+        id: "11",
+        title: "Deployment & CI/CD",
+        meta: "Week 11",
+        lessons: [
+          { title: "Vercel & Environment Config", type: "live" },
+          { title: "CI/CD Pipelines & Performance", type: "video" },
+        ],
+        practice: "Deploy fullstack system with CI/CD",
+        outcome: "Understand software release lifecycle.",
+      },
+      {
+        id: "12",
+        title: "Capstone & Portfolio",
+        meta: "Week 12",
+        lessons: [
+          { title: "Capstone Finalization", type: "live" },
+          { title: "Resume & Interview Prep", type: "live" },
+        ],
+        practice: "Complete portfolio-ready fullstack AI app",
+        outcome: "Job-ready with a major live project.",
+      },
+    ],
+  },
+  {
+    slug: "sql-job-ready",
+    title: "SQL Job-Ready Bootcamp",
+    subtitle: "8-Week Intensive SQL Mastery",
+    description:
+      "Master the foundation of data with our intensive SQL bootcamp. Learn everything from basic queries to advanced window functions and database design using PostgreSQL.",
+    price: "$199.00",
+    image:
+      "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=2000&auto=format&fit=crop",
+    category: "Data Engineering",
+    level: "Beginner",
+    duration: "8 Weeks",
+    liveInteractiveClasses: true,
+    projects: [
+      {
+        title: "Sales Analysis",
+        description:
+          "Perform deep dive sales data analysis using aggregations.",
+        icon: "trending_up",
+      },
+      {
+        title: "Schema Design",
+        description: "Design an optimized database schema for an ERP system.",
+        icon: "database",
+      },
+      {
+        title: "Interview Prep",
+        description: "Solve 50+ real-world SQL interview problems.",
+        icon: "verified",
+      },
+    ],
+    tools: [
+      { name: "PostgreSQL", icon: "postgresql" },
+      { name: "Prisma", icon: "prisma" },
+      { name: "GitHub", icon: "github" },
+    ],
+    requirements: [
+      "Basic computer literacy",
+      "Interest in data analysis",
+      "Laptop and internet access",
+    ],
+    curriculum: [
+      {
+        id: "01",
+        title: "SQL Foundations",
+        meta: "Week 1",
+        lessons: [
+          { title: "SELECT, WHERE & Filtering", type: "video" },
+          { title: "Sorting & Query Patterns", type: "live" },
+        ],
+        practice: "Basic data retrieval exercises",
+        outcome: "Write clean SQL queries confidently.",
+      },
+      {
+        id: "02",
+        title: "Aggregations & Analysis",
+        meta: "Week 2",
+        lessons: [
+          { title: "GROUP BY, HAVING & Nulls", type: "live" },
+          { title: "CASE WHEN for Reporting", type: "video" },
+        ],
+        practice: "Sales metrics analysis project",
+        outcome: "Perform complex data aggregations.",
+      },
+      {
+        id: "03",
+        title: "Joins Mastery",
+        meta: "Week 3",
+        lessons: [
+          { title: "INNER, LEFT, RIGHT & FULL Joins", type: "video" },
+          { title: "Multi-table query logic", type: "live" },
+        ],
+        practice: "Business multi-table query tasks",
+        outcome: "Extract insights across diverse tables.",
+      },
+      {
+        id: "04",
+        title: "Subqueries & Advanced Filtering",
+        meta: "Week 4",
+        lessons: [
+          { title: "Exists, In, ANY/ALL", type: "live" },
+          { title: "Nested Query Problems", type: "video" },
+        ],
+        practice: "Complex nested filtering tasks",
+        outcome: "Solve intermediate SQL logic problems.",
+      },
+      {
+        id: "05",
+        title: "Window Functions",
+        meta: "Week 5",
+        lessons: [
+          { title: "Rank, RowNumber, Partition", type: "video" },
+          { title: "Lag/Lead & Running Totals", type: "live" },
+        ],
+        practice: "Ranking and time-trend analysis",
+        outcome: "Solve interview-level analytical SQL.",
+      },
+      {
+        id: "06",
+        title: "Data Transformation",
+        meta: "Week 6",
+        lessons: [
+          { title: "String & Date Functions", type: "live" },
+          { title: "Cleaning Messy Datasets", type: "video" },
+        ],
+        practice: "Transform datasets for reporting",
+        outcome: "Deliver clean, high-quality data reports.",
+      },
+      {
+        id: "07",
+        title: "Database Design Basics",
+        meta: "Week 7",
+        lessons: [
+          { title: "Normalization & Schema Design", type: "video" },
+          { title: "Indexing & Performance", type: "live" },
+        ],
+        practice: "Designing database structures",
+        outcome: "Understand data organization principles.",
+      },
+      {
+        id: "08",
+        title: "Capstone & Interviews",
+        meta: "Week 8",
+        lessons: [
+          { title: "End-to-End SQL Project", type: "live" },
+          { title: "Mock SQL Interviews", type: "live" },
+        ],
+        practice: "Final real-world dataset project",
+        outcome: "Complete portfolio-ready SQL project.",
+      },
+    ],
+  },
+  {
+    slug: "ai-agents-engineering",
+    title: "AI Agents Engineering Bootcamp",
+    subtitle: "8-Week Production AI Agents Journey",
+    description:
+      "Learn to build, orchestrate, and deploy autonomous AI agents. Move beyond simple chatbots to multi-agent systems and stateful AI workflows using LangGraph and LangChain.",
+    price: "$599.00",
+    image:
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2000&auto=format&fit=crop",
+    category: "AI Engineering",
+    level: "Intermediate",
+    duration: "8 Weeks",
+    liveInteractiveClasses: true,
+    projects: [
+      {
+        title: "Autonomous Research Agent",
+        description:
+          "Design an agent system for automated web research and reporting.",
+        icon: "search",
+      },
+      {
+        title: "Multi-Agent System",
+        description: "Orchestrate multiple agents using CrewAI or AutoGen.",
+        icon: "layers",
+      },
+      {
+        title: "PDF Knowledge RAG",
+        description:
+          "Build a state-of-the-art RAG system with complex retrieval.",
+        icon: "cpu",
+      },
+    ],
+    tools: [
+      { name: "OpenAI", icon: "openai" },
+      { name: "LangChain", icon: "langchain" },
+      { name: "Python", icon: "python" },
+    ],
+    requirements: [
+      "Python programming proficiency",
+      "Basic understanding of LLMs",
+      "Willingness to build complex systems",
+    ],
+    curriculum: [
+      {
+        id: "01",
+        title: "Foundations of AI Agents",
+        meta: "Week 1",
+        lessons: [
+          { title: "Agent vs App Architecture", type: "video" },
+          { title: "Reason-Act-Observe Loops", type: "live" },
+        ],
+        practice: "Build basic LLM-based assistant",
+        outcome: "Understand core agent architecture.",
+      },
+      {
+        id: "02",
+        title: "Prompt Engineering & Control",
+        meta: "Week 2",
+        lessons: [
+          { title: "ReAct, Tool Calling & Control", type: "live" },
+          { title: "Prompt Debugging & Tuning", type: "video" },
+        ],
+        practice: "Build reasoning-based agent with tools",
+        outcome: "Control LLM behavior reliably.",
+      },
+      {
+        id: "03",
+        title: "LangChain & Advanced Tools",
+        meta: "Week 3",
+        lessons: [
+          { title: "Memory & Sequential Chains", type: "video" },
+          { title: "Custom Tools & API Integration", type: "live" },
+        ],
+        practice: "Build multi-tool modular agent",
+        outcome: "Build complex agents using toolsets.",
+      },
+      {
+        id: "04",
+        title: "RAG Systems",
+        meta: "Week 4",
+        lessons: [
+          { title: "Embeddings & Vector Databases", type: "live" },
+          { title: "Retrieval Hallucination Reduction", type: "video" },
+        ],
+        practice: "Build PDF knowledge chatbot",
+        outcome: "Create knowledge-aware AI systems.",
+      },
+      {
+        id: "05",
+        title: "LangGraph Workflows",
+        meta: "Week 5",
+        lessons: [
+          { title: "State Machines for Agents", type: "video" },
+          { title: "Planner-Executor Flow Design", type: "live" },
+        ],
+        practice: "Build planner-executor system",
+        outcome: "Design reliable multi-step workflows.",
+      },
+      {
+        id: "06",
+        title: "Multi-Agent Systems",
+        meta: "Week 6",
+        lessons: [
+          { title: "CrewAI & AutoGen Patterns", type: "live" },
+          { title: "Agent Delegation & Task Scaling", type: "video" },
+        ],
+        practice: "Build research multi-agent system",
+        outcome: "Run collaborative AI agent teams.",
+      },
+      {
+        id: "07",
+        title: "Production AI Systems",
+        meta: "Week 7",
+        lessons: [
+          { title: "FastPI, Logging & Monitoring", type: "video" },
+          { title: "Cost & Guardrail Best Practices", type: "live" },
+        ],
+        practice: "Deploy agent web app with logging",
+        outcome: "Deliver production-grade AI tools.",
+      },
+      {
+        id: "08",
+        title: "Evaluation & Capstone",
+        meta: "Week 8",
+        lessons: [
+          { title: "Tracing, Benchmarks & Eval", type: "live" },
+          { title: "Final Capstone Presentation", type: "live" },
+        ],
+        practice: "Final portfolio agent project",
+        outcome: "Deliver portfolio-ready agent system.",
+      },
+    ],
+  },
 ];

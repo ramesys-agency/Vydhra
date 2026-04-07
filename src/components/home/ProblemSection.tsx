@@ -4,18 +4,18 @@ import React from "react";
 const problems = [
   {
     icon: AlertTriangle,
-    title: "Stuck in Tutorial Hell",
-    description: "You follow tutorials perfectly but can’t build anything on your own when the video stops.",
+    title: "Fear of AI Replacing You",
+    description: "You're constantly worried that new AI tools are going to make your current skills obsolete in the job market.",
   },
   {
     icon: Clock,
-    title: "Wasted Months",
-    description: "Spending endless hours trying to stitch fragmented knowledge together from random YouTube videos.",
+    title: "Stuck in a Plateau",
+    description: "You're in a stable but unfulfilling career. You want to move into tech, but you just can't afford to waste years going back to college.",
   },
   {
     icon: Frown,
-    title: "No Expert Feedback",
-    description: "Your code runs, but is it scalable? Clean? Production-ready? You never know until it breaks.",
+    title: "The Tutorial Trap",
+    description: "Pre-recorded bootcamps teach basic syntax, but not how to use modern AI to build scalable, real-world applications.",
   },
 ];
 
@@ -32,7 +32,7 @@ export default function ProblemSection() {
               Is This <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">You?</span>
             </h2>
             <p className="text-xl text-slate-600 dark:text-slate-400 mb-8 leading-relaxed max-w-xl">
-              Learning to code alone is hard. Without a clear path, it&apos;s easy to get lost in the noise and waste valuable time.
+              Switching careers into tech used to mean spending years alone at a computer. Now, without mastering AI development tools, new engineers are falling behind.
             </p>
             
             <div className="flex flex-col gap-4">
@@ -40,19 +40,19 @@ export default function ProblemSection() {
                   <div className="w-6 h-6 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-500">
                     <span className="material-icons text-sm">close</span>
                   </div>
-                  <span>Feeling overwhelmed by choices</span>
+                  <span>Unsure where to start your career transition</span>
                </div>
                <div className="flex items-center gap-3 text-slate-700 dark:text-slate-300 font-medium">
                   <div className="w-6 h-6 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-500">
                     <span className="material-icons text-sm">close</span>
                   </div>
-                  <span>Debugging for hours without progress</span>
+                  <span>Learning outdated, non-AI-augmented tech stacks</span>
                </div>
                <div className="flex items-center gap-3 text-slate-700 dark:text-slate-300 font-medium">
                   <div className="w-6 h-6 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-500">
                     <span className="material-icons text-sm">close</span>
                   </div>
-                  <span>Imposter syndrome kicking in</span>
+                  <span>Missing expert mentorship to guide you</span>
                </div>
             </div>
           </div>

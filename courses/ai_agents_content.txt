@@ -1,0 +1,161 @@
+Vydhra AI Agents Engineering Bootcamp
+Duration: 8 Weeks
+
+Format: 2 Topic Points +
+Practice
+
+Level: Intermediate to
+Production
+
+Course Structure
+Module
+01
+Topics Covered
+
+Week 1 - Foundations of AI Agents
+
+■
+
+AI agents vs LLM apps, real-world use cases, and agent architecture basics
+Reason-act-observe loops, tools, APIs, and system design essentials
+
+Practice
+
+Build a basic AI assistant using an LLM API
+
+Outcome
+
+Students understand agent architecture and build a first working agent.
+
+Module
+02
+Topics Covered
+
+Week 2 - Prompt Engineering and Control
+
+■
+
+Chain-of-thought, ReAct, few-shot prompting, and system prompt design
+Tool calling, structured outputs, prompt debugging, and optimization
+
+Practice
+
+Build a reasoning-based agent with tool usage
+
+Outcome
+
+Students control LLM behavior more reliably and intelligently.
+
+Module
+03
+Topics Covered
+
+Week 3 - LangChain and Tool-Based Agents
+
+■
+
+Chains, tools, memory, execution flow, and decision-making patterns
+Multi-tool agents with search, calculator, and API integrations
+
+Practice
+
+Build a multi-tool agent
+
+Outcome
+
+Students build modular agents using tools and memory.
+
+Module
+04
+Topics Covered
+
+Week 4 - RAG Systems
+Embeddings, vector databases, chunking strategies, and document retrieval
+Retrieval optimization and hallucination-reduction techniques
+
+Practice
+
+Build a PDF knowledge chatbot
+
+Outcome
+
+Students create knowledge-based AI systems for real applications.
+
+■
+
+Module
+05
+Topics Covered
+
+Week 5 - LangGraph Workflows
+
+■
+
+State machines, planner-executor flows, and looping agent workflows
+Fallbacks, error handling, and structured multi-step design
+
+Practice
+
+Build a planner-executor agent system
+
+Outcome
+
+Students design reliable multi-step AI workflows.
+
+Module
+06
+Topics Covered
+
+Week 6 - Multi-Agent Systems
+
+■
+
+AutoGen, CrewAI, collaboration patterns, and agent communication
+Task delegation, role-based agents, and system scaling concepts
+
+Practice
+
+Build a research-plus-writer multi-agent system
+
+Outcome
+
+Students build collaborative AI systems with multiple agents.
+
+Module
+07
+Topics Covered
+
+Week 7 - Production AI Systems
+
+■
+
+Deployment with Streamlit/FastAPI, logging, monitoring, and observability
+Cost optimization, retries, guardrails, and safety handling
+
+Practice
+
+Deploy an AI agent web app with logging
+
+Outcome
+
+Students build production-ready AI applications.
+
+Module
+08
+Topics Covered
+
+Week 8 - Evaluation and Capstone
+Evaluation, debugging, tracing, benchmarking, and optimization workflows
+Final capstone: full AI agent system with deployment and testing
+
+Practice
+
+Build a final portfolio project
+
+Outcome
+
+Students complete a portfolio-ready AI system.
+
+■
+
+

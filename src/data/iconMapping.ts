@@ -4,7 +4,17 @@ import {
   SiTensorflow, 
   SiPandas, 
   SiGit, 
-  SiGithub 
+  SiGithub,
+  SiReact,
+  SiNodedotjs,
+  SiMongodb,
+  SiExpress,
+  SiTailwindcss,
+  SiPostgresql,
+  SiPrisma,
+  SiOpenai,
+  SiLangchain,
+  SiVercel
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { 
@@ -22,7 +32,18 @@ import {
   BadgeCheck,
   Smile,
   Zap,
-  LucideProps
+  LucideProps,
+  Layout,
+  Server,
+  Database,
+  ShieldCheck,
+  Bot,
+  Cpu,
+  Layers,
+  Globe,
+  Monitor,
+  Search,
+  PenTool
 } from "lucide-react";
 import { IconType } from "react-icons";
 
@@ -54,7 +75,32 @@ export const iconMapping: Record<string, IconComponentType> = {
   "sentiment_satisfied_alt": Smile,
   "psychology_alt": Zap,
   
-  // Fallbacks for current material-icons names or aliases
+  // New Course Icons
+  "react": SiReact,
+  "node": SiNodedotjs,
+  "mongodb": SiMongodb,
+  "express": SiExpress,
+  "tailwind": SiTailwindcss,
+  "postgresql": SiPostgresql,
+  "prisma": SiPrisma,
+  "openai": SiOpenai,
+  "langchain": SiLangchain,
+  "vercel": SiVercel,
+
+  // UI Icons
+  "layout": Layout,
+  "server": Server,
+  "database": Database,
+  "secure": ShieldCheck,
+  "bot": Bot,
+  "cpu": Cpu,
+  "layers": Layers,
+  "globe": Globe,
+  "monitor": Monitor,
+  "search": Search,
+  "edit": PenTool,
+
+  // Fallbacks
   "science": SiScikitlearn,
   "psychology": SiTensorflow,
   "table_chart": SiPandas,

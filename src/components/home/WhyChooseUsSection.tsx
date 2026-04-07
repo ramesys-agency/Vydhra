@@ -4,18 +4,18 @@ import React from "react";
 const features = [
   {
     icon: Rocket,
-    title: "Accelerated Learning",
-    description: "Skip the fluff. Learn exactly what you need to build professional websites in record time.",
+    title: "AI-Powered Stack",
+    description: "Learn how to significantly accelerate your career by leveraging AI tools to write modern stack application code.",
   },
   {
     icon: FileCode2,
-    title: "Real-World Projects",
-    description: "Build a portfolio that gets you hired. No toy apps—only production-ready code.",
+    title: "Career Transition Focus",
+    description: "Our syllabus is explicitly designed for working professionals stepping out of non-tech fields.",
   },
   {
     icon: Users,
-    title: "Vibrant Community",
-    description: "Join hundreds of developers helping each other grow. You'll never code alone again.",
+    title: "Live Mentorship",
+    description: "Gain clarity fast. Get unblocked instantly instead of debugging alone for hours in an empty room.",
   },
 ];
 
@@ -28,7 +28,7 @@ export default function WhyChooseUsSection() {
             Why Choose Us
           </h2>
           <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            We don&apos;t just teach code; we teach you how to think like a developer and build products that matter.
+            We offer the highest-ROI learning method for aspiring developers ready for the modern job landscape.
           </p>
         </div>
 

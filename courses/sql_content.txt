@@ -1,0 +1,162 @@
+Vydhra SQL Job-Ready Bootcamp
+Duration: 30-40 Hours
+
+Format: 2 Topic Points +
+Practice
+
+Level: Beginner to
+Job-Ready
+
+Course Structure
+Module
+01
+Topics Covered
+
+Week 1 - SQL Foundations
+
+■
+
+SQL syntax, SELECT, WHERE, ORDER BY, DISTINCT, LIMIT/TOP, and query
+basics
+Relational databases, filtering logic, and real-world query patterns
+
+Practice
+
+Basic data retrieval and filtering exercises
+
+Outcome
+
+Students write clean SQL queries to retrieve and filter data confidently.
+
+Module
+02
+Topics Covered
+
+Week 2 - Aggregations and Analysis
+
+■
+
+COUNT, SUM, AVG, MIN, MAX, GROUP BY, HAVING, and NULL handling
+CASE WHEN for conditional logic and analytical reporting
+
+Practice
+
+Sales and metrics analysis queries
+
+Outcome
+
+Students analyze datasets using aggregations and conditional logic.
+
+Module
+03
+Topics Covered
+
+Week 3 - Joins
+INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN, and SELF JOIN
+Table relationships and real-world multi-table querying
+
+Practice
+
+Business-oriented multi-table query tasks
+
+Outcome
+
+Students combine tables and extract meaningful business insights.
+
+■
+
+Module
+04
+Topics Covered
+
+Week 4 - Subqueries and Advanced Filtering
+
+■
+
+Subqueries, correlated subqueries, EXISTS, IN, and NOT IN
+ANY, ALL, and nested filtering for intermediate SQL problems
+
+Practice
+
+Complex filtering and nested query practice
+
+Outcome
+
+Students solve intermediate SQL problems using nested logic.
+
+Module
+05
+Topics Covered
+
+Week 5 - Window Functions
+
+■
+
+ROW_NUMBER(), RANK(), DENSE_RANK(), PARTITION BY, and ORDER BY in
+windows
+LEAD(), LAG(), running totals, and interview-style analytical SQL
+
+Practice
+
+Ranking, trend, and time-based analysis queries
+
+Outcome
+
+Students solve advanced analytical and interview-level SQL problems.
+
+Module
+06
+Topics Covered
+
+Week 6 - Data Transformation
+
+■
+
+CASE WHEN advanced usage, string functions, date functions, and formatting
+Data cleaning and transformation techniques used in reporting workflows
+
+Practice
+
+Cleaning and transforming messy datasets
+
+Outcome
+
+Students prepare and transform data for analysis and reporting.
+
+Module
+07
+Topics Covered
+
+Week 7 - Database Design Basics
+Tables, schema, normalization basics, primary keys, and foreign keys
+Index basics and performance considerations in SQL systems
+
+Practice
+
+Designing simple database structures
+
+Outcome
+
+Students understand how structured data is organized and optimized.
+
+■
+
+Module
+08
+Topics Covered
+
+Week 8 - Capstone and Interview Preparation
+End-to-end SQL project, query optimization basics, and writing clean SQL
+Interview questions, case-based problems, and timed SQL practice
+
+Practice
+
+Final project using a real-world dataset
+
+Outcome
+
+Students complete a portfolio-ready SQL project and gain interview confidence.
+
+■
+
+
