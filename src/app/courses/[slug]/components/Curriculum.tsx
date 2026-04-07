@@ -7,7 +7,7 @@ interface CurriculumProps {
 
 export default function Curriculum({ modules }: CurriculumProps) {
   return (
-    <section>
+    <section id="curriculum">
       <h2 className="text-4xl font-bold mb-8">Course Content</h2>
       <div className="space-y-4">
         {modules.map((mod) => (
@@ -32,51 +32,26 @@ export default function Curriculum({ modules }: CurriculumProps) {
                 expand_more
               </span>
             </summary>
-            <div className="p-6 pt-0 border-t border-gray-200 dark:border-border-dark space-y-4">
-              {mod.isLocked ? (
-                // Show lessons even if locked for visibility in this demo
-                mod.lessons.map((lesson, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-center justify-between text-sm py-2 group/item"
-                  >
-                    <div className="flex items-center gap-3">
-                      <span className="material-icons text-gray-400 text-sm">
-                        lock
+            <div className="p-6 pt-6 border-t border-gray-200 dark:border-border-dark space-y-6">
+              {/* Topics Covered */}
+              <div className="space-y-3">
+                <h4 className="text-sm font-bold uppercase tracking-wider text-gray-400">Topics Covered</h4>
+                <div className="space-y-2">
+                  {mod.lessons.map((lesson, idx) => (
+                    <div
+                      key={idx}
+                      className="flex items-center gap-3 text-sm"
+                    >
+                      <span className="material-icons text-primary/60 text-sm">
+                        play_circle
                       </span>
-                      <span className="font-medium text-gray-500">
+                      <span className="font-medium text-gray-700 dark:text-gray-300">
                         {lesson.title}
                       </span>
                     </div>
-                  </div>
-                ))
-              ) : (
-                mod.lessons.map((lesson, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-center justify-between text-sm py-2 group/item"
-                  >
-                    <div className="flex items-center gap-3">
-                      <span className="material-icons text-gray-400 text-sm">
-                        {lesson.type === "video"
-                          ? "play_circle"
-                          : lesson.type === "live"
-                          ? "videocam"
-                          : "lock"}
-                      </span>
-                      <span
-                        className={`font-medium ${
-                          lesson.type === "video"
-                            ? "group-hover/item:text-primary transition-colors"
-                            : ""
-                        }`}
-                      >
-                        {lesson.title}
-                      </span>
-                    </div>
-                  </div>
-                ))
-              )}
+                  ))}
+                </div>
+              </div>
             </div>
           </details>
         ))}

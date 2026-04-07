@@ -27,11 +27,11 @@ export default function PricingSidebar({ price }: PricingSidebarProps) {
         <div className="space-y-4 mb-8">
           <div className="flex items-center gap-3 text-sm">
             <span className="material-icons text-green-500">check_circle</span>
-            <span>Lifetime Access</span>
+            <span>Live Interactive Classes</span>
           </div>
           <div className="flex items-center gap-3 text-sm">
             <span className="material-icons text-green-500">check_circle</span>
-            <span>Community Access (Discord)</span>
+            <span>Community Access</span>
           </div>
           <div className="flex items-center gap-3 text-sm">
             <span className="material-icons text-green-500">check_circle</span>
@@ -40,9 +40,12 @@ export default function PricingSidebar({ price }: PricingSidebarProps) {
         </div>
         <div className="pt-8 border-t border-gray-200 dark:border-border-dark">
           <div className="flex items-center gap-4 bg-gray-50 dark:bg-white/5 p-4 rounded-xl">
-            <span className="material-icons text-primary text-3xl">verified_user</span>
+            <span className="material-icons text-primary text-3xl">
+              verified_user
+            </span>
             <div className="text-[12px] font-bold leading-tight uppercase">
-              14-DAY MONEY-BACK GUARANTEE<br />
+              14-DAY MONEY-BACK GUARANTEE
+              <br />
               <span className="text-gray-500 dark:text-gray-400 font-medium normal-case">
                 No questions asked.
               </span>

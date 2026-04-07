@@ -8,27 +8,25 @@ export default function HeroSection() {
       <div className="absolute top-0 left-0 w-full bg-slate-100 dark:bg-black/40 border-b border-slate-200 dark:border-slate-800 py-2 overflow-hidden whitespace-nowrap">
         <div className="inline-block animate-[scroll_30s_linear_infinite] uppercase text-[10px] font-bold tracking-widest text-slate-400">
           <span className="mx-8">
-            <span className="text-primary">●</span> Recently Joined
+            <span className="text-primary">●</span> Live Cohort
           </span>
-          <span className="mx-8">Ralf — Web Designer Joined</span>
-          <span className="mx-8">Vlad Cirneala — Lead Developer Joined</span>
-          <span className="mx-8">Christian B. — Web Strategist Joined</span>
-          <span className="mx-8">Sarah Miller — UI/UX Designer Joined</span>
+          <span className="mx-8">Priya — Educator to Web Developer</span>
+          <span className="mx-8">Vikram — Sales to AI Engineer</span>
+          <span className="mx-8">Sarah — Accountant to Full-Stack</span>
+          <span className="mx-8">James — Retail to Software Engineer</span>
         </div>
       </div>
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
         <div>
           <h1 className="text-6xl md:text-8xl font-extrabold uppercase leading-none tracking-tighter text-primary mb-6">
-            Master Your <br /> Craft
+            Future-Proof <br /> Your Career
           </h1>
           <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-lg mb-10 leading-relaxed">
-            Everything you need to go from zero to professional websites. Learn
-            how to design, structure, animate and publish responsive,
-            professional projects.
+            Transition into tech and become a production-ready developer. Learn how to leverage AI tools and modern tech stacks through intensive, live, instructor-led courses.
           </p>
           <div className="flex flex-wrap gap-4">
             <button className="bg-primary hover:bg-orange-600 text-white font-bold py-4 px-10 rounded-full text-lg transition-all shadow-lg shadow-primary/20 cursor-pointer">
-              Get Started
+              Explore Live Courses
             </button>
             <button className="bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-900 dark:text-white font-bold py-4 px-10 rounded-full text-lg border border-slate-200 dark:border-slate-700 transition-all cursor-pointer">
               View Curriculum
