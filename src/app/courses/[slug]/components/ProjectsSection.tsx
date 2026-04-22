@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Project } from "@/data/courses";
+import { Project } from "@/types/course";
 import Icon from "@/components/common/Icon";
 
 interface ProjectsSectionProps {

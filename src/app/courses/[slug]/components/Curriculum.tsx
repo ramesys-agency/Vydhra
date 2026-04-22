@@ -1,5 +1,5 @@
 import React from "react";
-import { Module } from "@/data/courses";
+import { Module } from "@/types/course";
 
 interface CurriculumProps {
   modules: Module[];

@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Tool } from "@/data/courses";
+import { Tool } from "@/types/course";
 import Icon from "@/components/common/Icon";
 
 interface ToolsSectionProps {

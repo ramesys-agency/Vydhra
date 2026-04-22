@@ -6,7 +6,7 @@ interface ReviewCardProps {
   course: string;
   text: string;
   rating: number;
-  image: string;
+  image?: string;
   verified?: boolean;
 }
 
@@ -18,13 +18,17 @@ export default function ReviewCard({ name, course, text, rating, image, verified
     <div className="break-inside-avoid bg-card rounded-2xl p-6 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.08)] border border-border flex flex-col gap-5 hover:shadow-xl transition-shadow duration-300 mb-6">
       <div className="flex items-start justify-between">
         <div className="flex items-center gap-3">
-          <div className="size-12 rounded-full border-2 border-primary/10 overflow-hidden relative">
-            <Image
-              src={image}
-              alt={name}
-              fill
-              className="object-cover"
-            />
+          <div className="size-12 flex-shrink-0 rounded-full border-2 border-primary/10 overflow-hidden relative bg-primary/5 flex items-center justify-center">
+            {image ? (
+              <Image
+                src={image}
+                alt={name}
+                fill
+                className="object-cover"
+              />
+            ) : (
+              <span className="material-icons text-primary/50 text-2xl">person</span>
+            )}
           </div>
           <div>
             <p className="text-foreground font-bold text-base">{name}</p>
