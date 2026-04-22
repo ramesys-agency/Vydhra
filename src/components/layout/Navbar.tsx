@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ThemeToggle } from "../common/ThemeToggle";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -12,106 +13,87 @@ export default function Navbar() {
     return false;
   };
 
-  const activeLinkClass = "relative bg-primary/5";
+  const activeLinkClass = "relative bg-primary/5 dark:bg-primary/10";
   const activeTextClass = "text-primary";
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
-      <div className="max-w-[1440px] mx-auto flex items-center h-20 px-4 md:px-8">
-        <Link
-          href="/"
-          className="flex items-center gap-2 mr-auto px-6 h-full border-slate-200 dark:border-slate-800"
-        >
-          <div className="w-8 h-8 bg-white rounded-md flex items-center justify-center overflow-hidden">
+    <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
+      <div className="max-w-[1440px] mx-auto flex items-center h-20 px-4 md:px-8 text-foreground">
+        <div className="flex items-center mr-auto px-6 h-full border-border">
+          <Link href="/" className="group inline-flex">
             <Image
-              alt="Logo"
-              className="w-6 h-6 scale-200"
+              alt="Vydhra Logo"
+              className="h-16 w-auto object-contain scale-[3] group-hover:scale-[3.1] transition-transform duration-300"
               src="/logo_vydhra.png"
-              width={24}
-              height={24}
+              width={200}
+              height={250}
+              priority
             />
-          </div>
-          <span className="font-bold text-xl tracking-tighter uppercase">
-            vydhra
-          </span>
-        </Link>
-        <nav className="hidden lg:flex items-center h-full border-slate-200 dark:border-slate-800">
+          </Link>
+        </div>
+        <nav className="hidden lg:flex items-center h-full border-border">
           <Link
-            className={`px-6 h-full flex flex-col justify-center border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors ${isActive("/") ? activeLinkClass : ""}`}
+            className={`px-6 h-full flex flex-col justify-center border-border hover:bg-primary/5 dark:hover:bg-primary/10 group transition-colors ${isActive("/") ? activeLinkClass : ""}`}
             href="/"
           >
             <span
-              className={`font-semibold text-sm ${isActive("/") ? activeTextClass : ""}`}
+              className={`font-semibold text-sm transition-colors group-hover:text-primary ${isActive("/") ? activeTextClass : ""}`}
             >
               Home
             </span>
           </Link>
-          {/* <Link
-            className={`px-6 h-full flex flex-col justify-center border-r border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 group transition-colors ${isActive("/tutorials") ? activeLinkClass : ""}`}
-            href="/"
-          >
-            <span className="text-xs text-slate-500 dark:text-slate-400">
-              209
-            </span>
-            <span className={`font-semibold text-sm ${isActive("/tutorials") ? activeTextClass : ""}`}>Tutorials</span>
-          </Link> */}
           <Link
-            className={`px-6 h-full flex flex-col justify-center border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 relative transition-colors ${isActive("/courses") ? activeLinkClass : ""}`}
+            className={`px-6 h-full flex flex-col justify-center border-border hover:bg-primary/5 dark:hover:bg-primary/10 relative group transition-colors ${isActive("/courses") ? activeLinkClass : ""}`}
             href="/courses"
           >
             <span className="absolute top-4 right-4 bg-primary text-[9px] font-black text-white px-1.5 py-0.5 rounded-sm leading-none">
               NEW
             </span>
-            <span className="absolute top-4 left-6 text-[10px] font-bold text-slate-400">
+            <span className="absolute top-4 left-6 text-[10px] font-bold text-muted-foreground transition-colors group-hover:text-primary/70">
               5
             </span>
             <span
-              className={`font-semibold text-sm ${isActive("/courses") ? activeTextClass : ""}`}
+              className={`font-semibold text-sm transition-colors group-hover:text-primary ${isActive("/courses") ? activeTextClass : ""}`}
             >
               Courses
             </span>
           </Link>
           <Link
-            className={`px-6 h-full flex flex-col justify-center border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 relative transition-colors ${isActive("/reviews") ? activeLinkClass : ""}`}
+            className={`px-6 h-full flex flex-col justify-center border-border hover:bg-primary/5 dark:hover:bg-primary/10 relative group transition-colors ${isActive("/reviews") ? activeLinkClass : ""}`}
             href="/reviews"
           >
-            <span className="absolute top-4 left-6 text-[10px] font-bold text-slate-400">
+            <span className="absolute top-4 left-6 text-[10px] font-bold text-muted-foreground transition-colors group-hover:text-primary/70">
               15+
             </span>
             <span
-              className={`font-semibold text-sm ${isActive("/reviews") ? activeTextClass : ""}`}
+              className={`font-semibold text-sm transition-colors group-hover:text-primary ${isActive("/reviews") ? activeTextClass : ""}`}
             >
               Reviews
             </span>
           </Link>
           <Link
-            className={`px-6 h-full flex flex-col justify-center border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors ${isActive("/about") ? activeLinkClass : ""}`}
+            className={`px-6 h-full flex flex-col justify-center border-border hover:bg-primary/5 dark:hover:bg-primary/10 group transition-colors ${isActive("/about") ? activeLinkClass : ""}`}
             href="/about"
           >
             <span
-              className={`font-semibold text-sm ${isActive("/about") ? activeTextClass : ""}`}
+              className={`font-semibold text-sm transition-colors group-hover:text-primary ${isActive("/about") ? activeTextClass : ""}`}
             >
               About
             </span>
           </Link>
           <Link
-            className={`px-6 h-full flex flex-col justify-center border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors ${isActive("/contact") ? activeLinkClass : ""}`}
+            className={`px-6 h-full flex flex-col justify-center border-border hover:bg-primary/5 dark:hover:bg-primary/10 group transition-colors ${isActive("/contact") ? activeLinkClass : ""}`}
             href="/contact"
           >
             <span
-              className={`font-semibold text-sm ${isActive("/contact") ? activeTextClass : ""}`}
+              className={`font-semibold text-sm transition-colors group-hover:text-primary ${isActive("/contact") ? activeTextClass : ""}`}
             >
               Contact
             </span>
           </Link>
         </nav>
-        {/* <div className="flex items-center gap-6 ml-4">
-          <button className="bg-primary hover:bg-orange-600 text-white font-bold py-3 px-6 rounded uppercase tracking-wide text-sm transition-all cursor-pointer">
-            Buy Course
-          </button>
-          <button className="lg:hidden text-2xl cursor-pointer">
-            <span className="material-icons">menu</span>
-          </button>
-        </div> */}
+        <div className="flex items-center gap-4 ml-6">
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   );

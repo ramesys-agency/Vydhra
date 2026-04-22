@@ -13,7 +13,7 @@ export default function Curriculum({ modules }: CurriculumProps) {
         {modules.map((mod) => (
           <details
             key={mod.id}
-            className="group bg-gray-50 dark:bg-card-dark rounded-xl border border-gray-200 dark:border-border-dark overflow-hidden"
+            className="group bg-card rounded-xl border border-border overflow-hidden"
             open={mod.isOpen}
           >
             <summary className="list-none cursor-pointer p-6 flex items-center justify-between">
@@ -23,7 +23,7 @@ export default function Curriculum({ modules }: CurriculumProps) {
                 </span>
                 <div>
                   <h3 className="font-bold text-lg">{mod.title}</h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                  <p className="text-sm text-muted-foreground">
                     {mod.meta}
                   </p>
                 </div>
@@ -32,10 +32,10 @@ export default function Curriculum({ modules }: CurriculumProps) {
                 expand_more
               </span>
             </summary>
-            <div className="p-6 pt-6 border-t border-gray-200 dark:border-border-dark space-y-6">
+            <div className="p-6 pt-6 border-t border-border space-y-6">
               {/* Topics Covered */}
               <div className="space-y-3">
-                <h4 className="text-sm font-bold uppercase tracking-wider text-gray-400">Topics Covered</h4>
+                <h4 className="text-sm font-bold uppercase tracking-wider text-muted-foreground">Topics Covered</h4>
                 <div className="space-y-2">
                   {mod.lessons.map((lesson, idx) => (
                     <div
@@ -45,7 +45,7 @@ export default function Curriculum({ modules }: CurriculumProps) {
                       <span className="material-icons text-primary/60 text-sm">
                         play_circle
                       </span>
-                      <span className="font-medium text-gray-700 dark:text-gray-300">
+                      <span className="font-medium text-foreground">
                         {lesson.title}
                       </span>
                     </div>
@@ -57,21 +57,21 @@ export default function Curriculum({ modules }: CurriculumProps) {
         ))}
       </div>
       <div className="grid grid-cols-2 gap-6 mt-12">
-        <div className="p-8 bg-gray-100 dark:bg-card-dark rounded-2xl border border-gray-200 dark:border-border-dark">
+        <div className="p-8 bg-card rounded-2xl border border-border">
           <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-6 text-primary">
             <span className="material-icons">auto_awesome</span>
           </div>
           <h4 className="text-xl font-bold mb-3">Practical Learning</h4>
-          <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+          <p className="text-muted-foreground text-sm leading-relaxed">
             No dry theory. We build real projects from scratch.
           </p>
         </div>
-        <div className="p-8 bg-gray-100 dark:bg-card-dark rounded-2xl border border-gray-200 dark:border-border-dark">
+        <div className="p-8 bg-card rounded-2xl border border-border">
           <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-6 text-primary">
             <span className="material-icons">update</span>
           </div>
           <h4 className="text-xl font-bold mb-3">Lifetime Updates</h4>
-          <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+          <p className="text-muted-foreground text-sm leading-relaxed">
             The course is constantly updated as soon as new features appear.
           </p>
         </div>

@@ -7,10 +7,10 @@ interface PricingSidebarProps {
 export default function PricingSidebar({ price }: PricingSidebarProps) {
   return (
     <aside className="sticky top-28">
-      <div className="bg-white dark:bg-card-dark p-8 rounded-2xl border border-gray-200 dark:border-border-dark shadow-2xl">
+      <div className="bg-card p-8 rounded-2xl border border-border shadow-2xl">
         <div className="flex items-center justify-between mb-8">
           <div>
-            <span className="text-sm text-gray-500 uppercase tracking-widest font-bold">
+            <span className="text-sm text-muted-foreground uppercase tracking-widest font-bold">
               One-time payment
             </span>
             <div className="flex items-baseline gap-2">
@@ -21,7 +21,7 @@ export default function PricingSidebar({ price }: PricingSidebarProps) {
             -45% OFF
           </div>
         </div>
-        <button className="w-full bg-primary text-white py-5 rounded-xl font-bold text-lg hover:bg-orange-600 transition-all mb-8 shadow-lg shadow-primary/25 cursor-pointer">
+        <button className="w-full bg-primary text-white py-5 rounded-xl font-bold text-lg hover:bg-orange-600 transition-all mb-8 shadow-lg shadow-primary/25 cursor-pointer hover:scale-105 active:scale-95">
           ENROLL NOW
         </button>
         <div className="space-y-4 mb-8">
@@ -38,15 +38,15 @@ export default function PricingSidebar({ price }: PricingSidebarProps) {
             <span>Certificate of Completion</span>
           </div>
         </div>
-        <div className="pt-8 border-t border-gray-200 dark:border-border-dark">
-          <div className="flex items-center gap-4 bg-gray-50 dark:bg-white/5 p-4 rounded-xl">
+        <div className="pt-8 border-t border-border">
+          <div className="flex items-center gap-4 bg-muted p-4 rounded-xl">
             <span className="material-icons text-primary text-3xl">
               verified_user
             </span>
             <div className="text-[12px] font-bold leading-tight uppercase">
               14-DAY MONEY-BACK GUARANTEE
               <br />
-              <span className="text-gray-500 dark:text-gray-400 font-medium normal-case">
+              <span className="text-muted-foreground font-medium normal-case">
                 No questions asked.
               </span>
             </div>

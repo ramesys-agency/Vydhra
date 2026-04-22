@@ -17,7 +17,7 @@ export default function ProgramComparison() {
               "Few opportunities for revision, quizzes, and interview prep.",
               "Missing exposure to AI and modern industry workflows.",
             ].map((item, idx) => (
-              <li key={idx} className="flex gap-3 text-sm text-gray-700 dark:text-gray-300">
+              <li key={idx} className="flex gap-3 text-sm text-foreground">
                 <span className="material-icons text-red-400 shrink-0 mt-0.5 text-base">
                   close
                 </span>
@@ -42,7 +42,7 @@ export default function ProgramComparison() {
               "Mini Projects & Capstone for building a portfolio.",
               "Bonus AI/LLM Sessions to future-proof learners.",
             ].map((item, idx) => (
-              <li key={idx} className="flex gap-3 text-sm text-gray-700 dark:text-gray-300">
+              <li key={idx} className="flex gap-3 text-sm text-foreground">
                 <span className="material-icons text-green-500 shrink-0 mt-0.5 text-base">
                   check
                 </span>

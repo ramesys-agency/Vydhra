@@ -1,0 +1,144 @@
+{
+  "slug": "sql-job-ready",
+  "title": "SQL Job-Ready Bootcamp",
+  "subtitle": "Become Job-Ready in Data & Analytics in 6 Weeks",
+  "description": "Master SQL from fundamentals to advanced querying, data analysis, and database design. Learn how to work with real datasets and become job-ready for data roles through live, mentor-led training.",
+  "price": "$199.00",
+  "image": "/courses/sql-bootcamp.png",
+  "heroImage": "/courses/sql-hero.png",
+  "category": "Data Engineering",
+  "level": "Beginner",
+  "duration": "8 Weeks",
+  "liveInteractiveClasses": true,
+  "projects": [
+    {
+      "title": "Sales Data Analysis Dashboard",
+      "description": "Perform deep dive sales data analysis using aggregations and build a reporting dashboard.",
+      "icon": "trending_up"
+    },
+    {
+      "title": "Database Schema Design Project",
+      "description": "Design an optimized database schema for an ERP system and implement normalization.",
+      "icon": "database"
+    },
+    {
+      "title": "Business Insights Query System",
+      "description": "Develop complex queries to extract actionable business insights from raw data.",
+      "icon": "insights"
+    },
+    {
+      "title": "SQL-Based Interview Case Studies",
+      "description": "Solve 50+ real-world SQL interview problems and case studies.",
+      "icon": "verified"
+    }
+  ],
+  "tools": [
+    { "name": "PostgreSQL", "icon": "postgresql" },
+    { "name": "SQL (Advanced Queries)", "icon": "sql" },
+    { "name": "Data Analysis", "icon": "analytics" },
+    { "name": "GitHub", "icon": "github" }
+  ],
+  "requirements": [
+    "No prior coding experience required.",
+    "Beginners interested in data and analytics",
+    "Working professionals transitioning into data roles",
+    "Students aiming for data analyst or data engineering careers"
+  ],
+  "curriculum": [
+    {
+      "id": "01",
+      "title": "SQL Foundations",
+      "meta": "Week 1",
+      "lessons": [
+        { "title": "SELECT, WHERE & Filtering", "type": "video" },
+        { "title": "Sorting & Query Patterns", "type": "live" }
+      ],
+      "practice": "Basic data retrieval exercises",
+      "outcome": "Write clean SQL queries confidently.",
+      "isOpen": true
+    },
+    {
+      "id": "02",
+      "title": "Aggregations & Analysis",
+      "meta": "Week 2",
+      "lessons": [
+        { "title": "GROUP BY, HAVING & Nulls", "type": "live" },
+        { "title": "CASE WHEN for Reporting", "type": "video" }
+      ],
+      "practice": "Sales metrics analysis project",
+      "outcome": "Perform complex data aggregations."
+    },
+    {
+      "id": "03",
+      "title": "Joins Mastery",
+      "meta": "Week 3",
+      "lessons": [
+        { "title": "INNER, LEFT, RIGHT & FULL Joins", "type": "video" },
+        { "title": "Multi-table query logic", "type": "live" }
+      ],
+      "practice": "Business multi-table query tasks",
+      "outcome": "Extract insights across diverse tables."
+    },
+    {
+      "id": "04",
+      "title": "Subqueries & Advanced Filtering",
+      "meta": "Week 4",
+      "lessons": [
+        { "title": "Exists, In, ANY/ALL", "type": "live" },
+        { "title": "Nested Query Problems", "type": "video" }
+      ],
+      "practice": "Complex nested filtering tasks",
+      "outcome": "Solve intermediate SQL logic problems."
+    },
+    {
+      "id": "05",
+      "title": "Window Functions",
+      "meta": "Week 5",
+      "lessons": [
+        { "title": "Rank, RowNumber, Partition", "type": "video" },
+        { "title": "Lag/Lead & Running Totals", "type": "live" }
+      ],
+      "practice": "Ranking and time-trend analysis",
+      "outcome": "Solve interview-level analytical SQL."
+    },
+    {
+      "id": "06",
+      "title": "Data Transformation",
+      "meta": "Week 6",
+      "lessons": [
+        { "title": "String & Date Functions", "type": "live" },
+        { "title": "Cleaning Messy Datasets", "type": "video" }
+      ],
+      "practice": "Transform datasets for reporting",
+      "outcome": "Deliver clean, high-quality data reports."
+    },
+    {
+      "id": "07",
+      "title": "Database Design Basics",
+      "meta": "Week 7",
+      "lessons": [
+        { "title": "Normalization & Schema Design", "type": "video" },
+        { "title": "Indexing & Performance", "type": "live" }
+      ],
+      "practice": "Designing database structures",
+      "outcome": "Understand data organization principles."
+    },
+    {
+      "id": "08",
+      "title": "Capstone & Interviews",
+      "meta": "Week 8",
+      "lessons": [
+        { "title": "End-to-End SQL Project", "type": "live" },
+        { "title": "Mock SQL Interviews", "type": "live" }
+      ],
+      "practice": "Final real-world dataset project",
+      "outcome": "Complete portfolio-ready SQL project."
+    }
+  ],
+  "features": [
+    "Focused on real-world data analysis and business use cases",
+    "Live training with practical query-building sessions",
+    "Designed for beginners and career switchers",
+    "ISO-Certified Program"
+  ]
+}

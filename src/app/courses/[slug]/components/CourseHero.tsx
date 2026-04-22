@@ -8,6 +8,7 @@ interface CourseHeroProps {
   description: string;
   live: boolean;
   image: string;
+  heroImage?: string;
   price: string;
   level: string;
   duration: string;
@@ -20,11 +21,12 @@ export default function CourseHero({
   description,
   live,
   image,
+  heroImage,
   price,
   level,
 }: CourseHeroProps) {
   return (
-    <section className="relative overflow-hidden pt-20 pb-32 bg-[#F8FAFC]">
+    <section className="relative overflow-hidden pt-20 pb-32 bg-background">
       {/* Background Graphics (Blobs & Swishes) */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Blurred Blobs - Increased brightness */}
@@ -34,7 +36,7 @@ export default function CourseHero({
 
         {/* Curved Swish Lines - Increased stroke opacity */}
         <svg
-          className="absolute inset-0 w-full h-full opacity-[0.5]"
+          className="absolute inset-0 w-full h-full opacity-[0.5] dark:opacity-[0.2]"
           viewBox="0 0 1440 800"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +88,7 @@ export default function CourseHero({
           {/* Left Content */}
           <div className="lg:col-span-6">
             <div className="mb-6 flex items-center gap-3">
-              <span className="text-orange-600 font-semibold text-lg tracking-tight">
+              <span className="text-orange-600 dark:text-orange-400 font-semibold text-lg tracking-tight">
                 {level}-Friendly {title.split(" ")[0]} Course
               </span>
               {live && (
@@ -96,37 +98,37 @@ export default function CourseHero({
               )}
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-[900] text-[#1E293B] leading-[1.1] tracking-tight mb-4">
+            <h1 className="text-5xl md:text-6xl font-[900] text-foreground leading-[1.1] tracking-tight mb-4">
               {title}
             </h1>
 
-            <p className="text-blue-600/60 font-bold uppercase tracking-widest text-xs mb-8">
+            <p className="text-blue-600/60 dark:text-blue-400/60 font-bold uppercase tracking-widest text-xs mb-8">
               {subtitle}
             </p>
 
-            <p className="text-lg text-slate-500 max-w-xl leading-relaxed mb-10">
+            <p className="text-lg text-muted-foreground max-w-xl leading-relaxed mb-10">
               {description}
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
-              <button className="bg-[#FF6B00] text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-[#E56000] transition-all shadow-xl shadow-orange-500/20 cursor-pointer">
+              <button className="bg-primary text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-[#E56000] transition-all shadow-xl shadow-orange-500/20 cursor-pointer hover:scale-105 active:scale-95">
                 Enroll Now - {price}
               </button>
               <a
                 href="#curriculum"
-                className="bg-white text-[#1E293B] px-10 py-5 rounded-2xl font-bold text-lg border border-slate-200 hover:bg-slate-50 transition-all shadow-sm cursor-pointer no-underline inline-block"
+                className="bg-background text-foreground px-10 py-5 rounded-2xl font-bold text-lg border border-border hover:bg-muted transition-all shadow-sm cursor-pointer no-underline inline-block"
               >
                 View Curriculum
               </a>
             </div>
 
             {/* Feature Sub-line */}
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-3 mb-12 text-slate-500 text-sm font-medium">
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-3 mb-12 text-muted-foreground text-sm font-medium">
               <div className="flex items-center gap-2">
                 <Icon name="verified" className="text-blue-500" size={18} />
                 <span>Certificate included</span>
               </div>
-              <div className="flex items-center gap-2 text-slate-300">•</div>
+              <div className="flex items-center gap-2 text-border">•</div>
               <div className="flex items-center gap-2">
                 <Icon
                   name="sentiment_satisfied_alt"
@@ -135,7 +137,7 @@ export default function CourseHero({
                 />
                 <span>{level} friendly</span>
               </div>
-              <div className="flex items-center gap-2 text-slate-300">•</div>
+              <div className="flex items-center gap-2 text-border">•</div>
               <div className="flex items-center gap-2">
                 <Icon name="psychology" className="text-blue-500" size={18} />
                 <span>Practical learning</span>
@@ -149,11 +151,11 @@ export default function CourseHero({
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-orange-400/10 rounded-full blur-[100px] pointer-events-none"></div>
             <div className="relative w-full max-w-[850px]">
               <Image
-                src={image}
+                src={heroImage || image}
                 alt="Course Hero Visual"
                 width={1400}
                 height={1400}
-                className="w-full h-auto object-contain mix-blend-multiply scale-110 lg:scale-125 transition-transform duration-700"
+                className="w-full h-auto object-contain mix-blend-multiply dark:mix-blend-normal scale-110 lg:scale-125 transition-transform duration-700 dark:brightness-110"
                 priority
               />
             </div>

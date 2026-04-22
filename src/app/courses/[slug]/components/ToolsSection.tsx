@@ -19,14 +19,14 @@ export default function ToolsSection({ tools }: ToolsSectionProps) {
             key={index}
             className="flex flex-col items-center gap-3 group"
           >
-            <div className="w-16 h-16 bg-gray-50 dark:bg-card-dark rounded-full flex items-center justify-center border border-gray-100 dark:border-border-dark group-hover:border-primary transition-colors duration-300">
+            <div className="w-16 h-16 bg-card rounded-full flex items-center justify-center border border-border group-hover:border-primary transition-colors duration-300">
               <Icon 
                 name={tool.icon} 
                 className="text-3xl text-gray-400 group-hover:text-primary transition-colors duration-300"
                 size={32}
               />
             </div>
-            <span className="font-medium text-sm text-gray-700 dark:text-gray-300">
+            <span className="font-medium text-sm text-foreground">
               {tool.name}
             </span>
           </div>

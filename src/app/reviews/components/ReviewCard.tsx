@@ -15,7 +15,7 @@ export default function ReviewCard({ name, course, text, rating, image, verified
   const halfStar = rating % 1 !== 0;
 
   return (
-    <div className="break-inside-avoid bg-white dark:bg-card-dark rounded-2xl p-6 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.08)] border border-slate-100 dark:border-slate-800 flex flex-col gap-5 hover:shadow-xl transition-shadow duration-300 mb-6">
+    <div className="break-inside-avoid bg-card rounded-2xl p-6 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.08)] border border-border flex flex-col gap-5 hover:shadow-xl transition-shadow duration-300 mb-6">
       <div className="flex items-start justify-between">
         <div className="flex items-center gap-3">
           <div className="size-12 rounded-full border-2 border-primary/10 overflow-hidden relative">
@@ -27,8 +27,8 @@ export default function ReviewCard({ name, course, text, rating, image, verified
             />
           </div>
           <div>
-            <p className="text-slate-900 dark:text-white font-bold text-base">{name}</p>
-            <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest leading-tight">
+            <p className="text-foreground font-bold text-base">{name}</p>
+            <p className="text-muted-foreground text-[10px] font-bold uppercase tracking-widest leading-tight">
               {course}
             </p>
           </div>
@@ -48,7 +48,7 @@ export default function ReviewCard({ name, course, text, rating, image, verified
         </div>
       )}
 
-      <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed font-medium">
+      <p className="text-foreground text-sm leading-relaxed font-medium">
         &quot;{text}&quot;
       </p>
     </div>

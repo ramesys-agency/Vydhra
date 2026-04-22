@@ -31,6 +31,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
           description={course.description}
           live={course.liveInteractiveClasses}
           image={course.image}
+          heroImage={course.heroImage}
           price={course.price}
           level={course.level}
           duration={course.duration}

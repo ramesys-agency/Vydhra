@@ -1,0 +1,189 @@
+{
+  "slug": "mern-stack-ai",
+  "title": "MERN + AI Job-Ready Bootcamp",
+  "subtitle": "Become a Full-Stack Developer with AI Skills",
+  "description": "Master full-stack development using MongoDB, Express, React, and Node.js—enhanced with AI tools, APIs, and modern workflows. Build production-ready applications and become job-ready in 3–6 months.",
+  "price": "$399.00",
+  "image": "/courses/mern-ai.png",
+  "heroImage": "/courses/mern-hero.png",
+  "category": "Fullstack Development",
+  "level": "Professional",
+  "duration": "12 Weeks",
+  "liveInteractiveClasses": true,
+  "projects": [
+    {
+      "title": "Full-Stack Dashboard Application",
+      "description": "Build a responsive dashboard with full CRUD and Auth.",
+      "icon": "layout"
+    },
+    {
+      "title": "AI Chatbot Integration Project",
+      "description": "Integrate a custom AI chatbot using OpenAI API.",
+      "icon": "bot"
+    },
+    {
+      "title": "Production-Level Portfolio Website",
+      "description": "Deploy a fleet of production-ready fullstack apps.",
+      "icon": "verified"
+    },
+    {
+      "title": "End-to-End MERN + AI Application",
+      "description": "Develop a complete application from scratch with integrated AI features.",
+      "icon": "auto_awesome"
+    }
+  ],
+  "tools": [
+    { "name": "MongoDB", "icon": "mongodb" },
+    { "name": "Express.js", "icon": "express" },
+    { "name": "React.js", "icon": "react" },
+    { "name": "Node.js", "icon": "node" },
+    { "name": "APIs & AI Tools", "icon": "openai" },
+    { "name": "Git & Deployment", "icon": "git" }
+  ],
+  "requirements": [
+    "Basic knowledge of JavaScript and web fundamentals is helpful but not mandatory.",
+    "Beginners with basic programming understanding",
+    "Developers looking to upgrade into full-stack + AI",
+    "Career switchers entering software development"
+  ],
+  "curriculum": [
+    {
+      "id": "01",
+      "title": "Web Foundations",
+      "meta": "Week 1",
+      "lessons": [
+        { "title": "Semantic HTML & SEO Basics", "type": "video" },
+        { "title": "Flexbox & Tailwind CSS", "type": "live" }
+      ],
+      "practice": "Build a responsive landing page with AI",
+      "outcome": "Can build mobile-first layouts using Tailwind."
+    },
+    {
+      "id": "02",
+      "title": "JavaScript Mastery",
+      "meta": "Week 2",
+      "lessons": [
+        { "title": "ES6+ Essentials & Async JS", "type": "live" },
+        { "title": "Handling APIs & Fetch", "type": "video" }
+      ],
+      "practice": "Build an API-based mini app",
+      "outcome": "Can handle asynchronous operations comfortably."
+    },
+    {
+      "id": "03",
+      "title": "React Core",
+      "meta": "Week 3",
+      "lessons": [
+        { "title": "JSX, Components & Props", "type": "video" },
+        { "title": "State Management & useEffect", "type": "live" }
+      ],
+      "practice": "Build a multi-page interactive React app",
+      "outcome": "Can create dynamic SPAs with React hooks."
+    },
+    {
+      "id": "04",
+      "title": "Advanced React & State",
+      "meta": "Week 4",
+      "lessons": [
+        { "title": "Context API & Global State", "type": "live" },
+        { "title": "Auth Flow & Protected Routes", "type": "video" }
+      ],
+      "practice": "Implement secure authentication flow",
+      "outcome": "Can manage global state and secure routes."
+    },
+    {
+      "id": "05",
+      "title": "Frontend Production",
+      "meta": "Week 5",
+      "lessons": [
+        { "title": "Project Setup & CRUD Integration", "type": "live" },
+        { "title": "UX Principles & Polish with AI", "type": "video" }
+      ],
+      "practice": "Finalize production dashboard frontend",
+      "outcome": "Complete a professional-grade frontend system."
+    },
+    {
+      "id": "06",
+      "title": "Node.js & Express",
+      "meta": "Week 6",
+      "lessons": [
+        { "title": "Server Setup & Middleware", "type": "video" },
+        { "title": "REST API Design Principles", "type": "live" }
+      ],
+      "practice": "Build a scalable backend REST API",
+      "outcome": "Can build modular server-side applications."
+    },
+    {
+      "id": "07",
+      "title": "Databases & Prisma",
+      "meta": "Week 7",
+      "lessons": [
+        { "title": "MongoDB/SQL Schema Design", "type": "live" },
+        { "title": "Relational CRUD & ORM", "type": "video" }
+      ],
+      "practice": "Design relational database schemas",
+      "outcome": "Can model data and optimize storage."
+    },
+    {
+      "id": "08",
+      "title": "Backend Security",
+      "meta": "Week 8",
+      "lessons": [
+        { "title": "JWT Auth & Password Hashing", "type": "video" },
+        { "title": "RBAC & API Hardening", "type": "live" }
+      ],
+      "practice": "Implement a secure login system",
+      "outcome": "Can protect backend resources effectively."
+    },
+    {
+      "id": "09",
+      "title": "AI Tools & Workflows",
+      "meta": "Week 9",
+      "lessons": [
+        { "title": "Prompt Engineering & Code Gen", "type": "live" },
+        { "title": "AI-Driven Testing & Docs", "type": "video" }
+      ],
+      "practice": "Automate tests and docs with AI",
+      "outcome": "Adopt AI-first development workflows."
+    },
+    {
+      "id": "10",
+      "title": "AI Integration",
+      "meta": "Week 10",
+      "lessons": [
+        { "title": "OpenAI API & Chatbots", "type": "video" },
+        { "title": "AI Blog & Content Generators", "type": "live" }
+      ],
+      "practice": "Integrate custom AI features into app",
+      "outcome": "Can leverage LLMs for intelligent features."
+    },
+    {
+      "id": "11",
+      "title": "Deployment & CI/CD",
+      "meta": "Week 11",
+      "lessons": [
+        { "title": "Vercel & Environment Config", "type": "live" },
+        { "title": "CI/CD Pipelines & Performance", "type": "video" }
+      ],
+      "practice": "Deploy fullstack system with CI/CD",
+      "outcome": "Understand software release lifecycle."
+    },
+    {
+      "id": "12",
+      "title": "Capstone & Portfolio",
+      "meta": "Week 12",
+      "lessons": [
+        { "title": "Capstone Finalization", "type": "live" },
+        { "title": "Resume & Interview Prep", "type": "live" }
+      ],
+      "practice": "Complete portfolio-ready fullstack AI app",
+      "outcome": "Job-ready with a major live project."
+    }
+  ],
+  "features": [
+    "Combines full-stack development with real AI integration",
+    "Built for real-world production environments",
+    "Live mentorship from industry professionals",
+    "ISO-Certified Program"
+  ]
+}

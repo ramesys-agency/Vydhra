@@ -1,6 +1,5 @@
+import { Testimonial } from "@/types/course";
 import Image from "next/image";
-import React from "react";
-import { Testimonial } from "@/data/courses";
 import Link from "next/link";
 
 const defaultTestimonials: Testimonial[] = [
@@ -37,7 +36,7 @@ export default function TestimonialsSection({
   const displayTestimonials = testimonials || defaultTestimonials;
 
   return (
-    <section className="bg-white dark:bg-[#111] py-24 border-t border-gray-200 dark:border-border-dark">
+    <section className="bg-background py-24 border-t border-border">
       <div className="max-w-7xl mx-auto px-8">
         <div className="mb-16">
           <span className="text-primary font-bold tracking-widest uppercase text-xs">
@@ -51,7 +50,7 @@ export default function TestimonialsSection({
           {displayTestimonials.map((t, idx) => (
             <div
               key={idx}
-              className="bg-gray-50 dark:bg-card-dark p-10 rounded-3xl border border-gray-200 dark:border-border-dark flex flex-col hover:border-primary/30 transition-all group"
+              className="bg-card p-10 rounded-3xl border border-border flex flex-col hover:border-primary/30 transition-all group"
             >
               {t.image ? (
                 <Image
@@ -66,11 +65,11 @@ export default function TestimonialsSection({
                   {t.name[0]}
                 </div>
               )}
-              <p className="text-lg leading-relaxed mb-10 italic text-slate-600 dark:text-slate-300">
+              <p className="text-lg leading-relaxed mb-10 italic text-muted-foreground">
                 &ldquo;{t.text}&rdquo;
               </p>
               <div className="mt-auto">
-                <p className="font-bold text-[#1E293B] dark:text-white text-xl">
+                <p className="font-bold text-foreground text-xl">
                   {t.name}
                 </p>
                 <p className="text-xs text-primary font-bold uppercase tracking-widest mt-1">
@@ -83,7 +82,7 @@ export default function TestimonialsSection({
         <div className="mt-16 text-center">
           <Link
             href={"/reviews"}
-            className="px-10 py-5 border border-gray-200 dark:border-border-dark bg-white dark:bg-transparent rounded-2xl font-bold hover:bg-slate-50 dark:hover:bg-white/5 transition-all shadow-sm cursor-pointer"
+            className="px-10 py-5 border border-border bg-background rounded-2xl font-bold hover:bg-muted transition-all shadow-sm cursor-pointer"
           >
             Read all reviews
           </Link>

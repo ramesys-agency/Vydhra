@@ -1,0 +1,166 @@
+{
+  "slug": "python-ai",
+  "title": "Python AI Course",
+  "subtitle": "From Beginner to Job-Ready in 3–6 Months",
+  "description": "Learn Python, AI, and real-world application development through live, mentor-led training. Build projects using modern tools, APIs, and LLMs to become job-ready in today’s AI-driven tech industry.",
+  "price": "$299.00",
+  "image": "/courses/python-ai.png",
+  "heroImage": "/courses/python-hero.png",
+  "category": "Programming",
+  "level": "Beginner",
+  "duration": "8 Weeks",
+  "liveInteractiveClasses": true,
+  "projects": [
+    {
+      "title": "Command-Line Automation Tool",
+      "description": "Understand core Python concepts by building a working automation script.",
+      "icon": "calculate"
+    },
+    {
+      "title": "Interactive Logic-Based Game",
+      "description": "Apply conditions and loops to create an interactive number-based game.",
+      "icon": "sports_esports"
+    },
+    {
+      "title": "Task Manager with File Handling",
+      "description": "Build a simple command-line tool to manage daily tasks and understand file I/O.",
+      "icon": "assignment"
+    },
+    {
+      "title": "API-Based AI Application",
+      "description": "Integrate external APIs and LLMs to build an intelligent application.",
+      "icon": "auto_awesome"
+    }
+  ],
+  "tools": [
+    { "name": "Python", "icon": "python" },
+    { "name": "APIs & Automation", "icon": "api" },
+    { "name": "Git & GitHub", "icon": "git" },
+    { "name": "SQL Basics", "icon": "database" },
+    { "name": "AI Workflows", "icon": "psychology" }
+  ],
+  "requirements": [
+    "No prior experience required—just consistency and willingness to learn.",
+    "Complete beginners with no coding experience",
+    "Working professionals switching to tech",
+    "Students aiming for AI or development careers"
+  ],
+  "curriculum": [
+    {
+      "id": "01",
+      "title": "Python Foundations",
+      "meta": "Week 1",
+      "lessons": [
+        { "title": "Intro to Python: Installation and Hello World", "type": "video" },
+        { "title": "Variables, Data Types, and Type Casting", "type": "live" },
+        { "title": "Basic Operators: Arithmetic, Comparison & Logical", "type": "video" }
+      ],
+      "practice": "Building a basic BMI or Currency Converter calculator",
+      "outcome": "Students can write simple scripts and understand how computers store information.",
+      "isOpen": true
+    },
+    {
+      "id": "02",
+      "title": "Control Flow & Data Structures",
+      "meta": "Week 2",
+      "lessons": [
+        { "title": "Conditional Statements (If-Else, Match-Case)", "type": "live" },
+        { "title": "Loops: For & While loops with range", "type": "video" },
+        { "title": "List, Tuple, Set & Dictionary essentials", "type": "live" }
+      ],
+      "practice": "Creating a mini To-Do List or Grocery List app",
+      "outcome": "Students can implement logic and manage collections of data efficiently."
+    },
+    {
+      "id": "03",
+      "title": "Functions & Logic Building",
+      "meta": "Week 3",
+      "lessons": [
+        { "title": "Defining functions, parameters, and return values", "type": "video" },
+        { "title": "Lambda functions & recursion basics", "type": "live" },
+        { "title": "Scope, local vs global variables", "type": "video" }
+      ],
+      "practice": "Building a functional 'Rock, Paper, Scissors' game",
+      "outcome": "Students can write reusable, modular code and break down complex problems."
+    },
+    {
+      "id": "04",
+      "title": "File Handling & Error Handling",
+      "meta": "Week 4",
+      "lessons": [
+        { "title": "Reading/Writing text and CSV files", "type": "live" },
+        { "title": "With-statement context managers", "type": "video" },
+        { "title": "Try-Except blocks and debugging basics", "type": "live" }
+      ],
+      "practice": "Building a password manager that saves to a file",
+      "outcome": "Students can work with external data and build error-resistant programs."
+    },
+    {
+      "id": "05",
+      "title": "Advanced Python & Algorithms",
+      "meta": "Week 5",
+      "lessons": [
+        { "title": "List comprehensions and generators", "type": "video" },
+        { "title": "Built-in modules: Math, Random, Datetime", "type": "live" },
+        { "title": "Intro to basic sorting and searching algorithms", "type": "video" }
+      ],
+      "practice": "Solving logic puzzles using advanced Python features",
+      "outcome": "Students can write highly optimized and performance-oriented code."
+    },
+    {
+      "id": "06",
+      "title": "OOPs & Git Version Control",
+      "meta": "Week 6",
+      "lessons": [
+        { "title": "Classes, Objects, and __init__ method", "type": "live" },
+        { "title": "Git basics: GitHub repos, commits, push workflow", "type": "video" },
+        { "title": "Inheritance and portfolio hygiene", "type": "live" }
+      ],
+      "practice": "Student record class and publishing to GitHub",
+      "outcome": "Students can build class-based programs and publish work professionally."
+    },
+    {
+      "id": "07",
+      "title": "APIs, SQL & AI Basics",
+      "meta": "Week 7",
+      "lessons": [
+        { "title": "API basics with requests & JSON", "type": "video" },
+        { "title": "SQL basics & data querying", "type": "live" },
+        { "title": "Prompt Engineering & intro to LLM APIs", "type": "video" }
+      ],
+      "practice": "Weather app and prompt design practice",
+      "outcome": "Students gain exposure to data querying, APIs, and AI workflow concepts."
+    },
+    {
+      "id": "08",
+      "title": "Capstone & Job Readiness",
+      "meta": "Week 8",
+      "lessons": [
+        { "title": "Capstone planning and development", "type": "live" },
+        { "title": "Testing, debugging, and cleanup", "type": "video" },
+        { "title": "Resume, LinkedIn & GitHub polish", "type": "live" }
+      ],
+      "practice": "Final capstone, README, and mock interview",
+      "outcome": "Students finish with a portfolio-ready project and fresher job readiness.",
+      "isOpen": true
+    }
+  ],
+  "features": [
+    "Designed for beginners and career switchers",
+    "Focus on real-world application, not just theory",
+    "Learn AI tools, APIs, and automation workflows",
+    "ISO-Certified Program"
+  ],
+  "testimonials": [
+    {
+      "name": "ALEX M.",
+      "role": "STUDENT (UK)",
+      "text": "I had no coding background before starting this course. The way concepts are explained made it very easy to follow. I was able to build small programs on my own within a few weeks."
+    },
+    {
+      "name": "FATIMA K.",
+      "role": "UNIVERSITY STUDENT (DUBAI)",
+      "text": "This course helped me understand Python in a simple and practical way. The projects made a big difference because I could actually apply what I learned."
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "slug": "ml-job-ready",
+  "title": "ML Job Ready Bootcamp",
+  "subtitle": "Become Job-Ready in 3–6 Months",
+  "description": "Master machine learning and AI systems through live, mentor-led training. Build real-world projects, deploy models, and develop job-ready skills that companies actively look for.",
+  "price": "$499.00",
+  "image": "/courses/ml-bootcamp.png",
+  "heroImage": "/courses/ml-hero.png",
+  "category": "AI & ML",
+  "level": "Professional",
+  "duration": "8 Weeks",
+  "liveInteractiveClasses": true,
+  "projects": [
+    {
+      "title": "Predictive Analytics System",
+      "description": "Build a regression model to predict future sales trends and business outcomes.",
+      "icon": "trending_up"
+    },
+    {
+      "title": "Customer Segmentation Model",
+      "description": "Use clustering to group customers based on behavior for targeted marketing.",
+      "icon": "groups"
+    },
+    {
+      "title": "Image Classification Project",
+      "description": "Develop a deep learning model for visual recognition and object detection.",
+      "icon": "camera_alt"
+    },
+    {
+      "title": "End-to-End ML Deployment Project",
+      "description": "Deploy a complete machine learning model into a production environment.",
+      "icon": "cloud_upload"
+    }
+  ],
+  "tools": [
+    { "name": "Python", "icon": "python" },
+    { "name": "Scikit-Learn", "icon": "scikit-learn" },
+    { "name": "TensorFlow", "icon": "tensorflow" },
+    { "name": "PyTorch", "icon": "pytorch" },
+    { "name": "Pandas & NumPy", "icon": "pandas" }
+  ],
+  "requirements": [
+    "No prior experience required—just consistency and commitment.",
+    "Beginners with no coding background",
+    "Working professionals switching to tech",
+    "Graduates aiming for AI/ML careers"
+  ],
+  "curriculum": [
+    {
+      "id": "01",
+      "title": "Intro to Machine Learning & Statistics",
+      "meta": "Week 1",
+      "lessons": [
+        {
+          "title": "What is ML? Types and Real-world applications",
+          "type": "video"
+        },
+        {
+          "title": "Descriptive Statistics: Mean, Median, Mode, Std Dev",
+          "type": "live"
+        },
+        {
+          "title": "Probability Basics & Inferential Statistics",
+          "type": "video"
+        }
+      ],
+      "practice": "Exploratory Data Analysis (EDA) on a basic dataset",
+      "outcome": "Students understand ML terminology and the mathematical backbone of data analysis.",
+      "isOpen": true
+    },
+    {
+      "id": "02",
+      "title": "Python for Data Science",
+      "meta": "Week 2",
+      "lessons": [
+        { "title": "NumPy for numerical operations", "type": "live" },
+        {
+          "title": "Pandas for data manipulation & Series/DataFrames",
+          "type": "video"
+        },
+        {
+          "title": "Matplotlib & Seaborn for data visualization",
+          "type": "live"
+        }
+      ],
+      "practice": "Automating data summary reports using Pandas",
+      "outcome": "Students can load, manipulate, and visualize datasets efficiently using Python."
+    },
+    {
+      "id": "03",
+      "title": "Data Preprocessing & Cleaning",
+      "meta": "Week 3",
+      "lessons": [
+        { "title": "Handling missing values & outliers", "type": "video" },
+        {
+          "title": "Feature scaling (Standardization/Normalization)",
+          "type": "live"
+        },
+        { "title": "Encoding categorical variables", "type": "video" }
+      ],
+      "practice": "Preparing a 'dirty' dataset for machine learning models",
+      "outcome": "Students gain the ability to turn raw, messy data into high-quality training features."
+    },
+    {
+      "id": "04",
+      "title": "Supervised Learning (Regression)",
+      "meta": "Week 4",
+      "lessons": [
+        {
+          "title": "Linear Regression & Multi-Linear Regression",
+          "type": "live"
+        },
+        {
+          "title": "Cost functions, Gradient Descent, & MSE/R2-score",
+          "type": "video"
+        },
+        { "title": "Regularization (Lasso/Ridge regression)", "type": "live" }
+      ],
+      "practice": "House price prediction project",
+      "outcome": "Students can build predictive models for continuous values and evaluate performance."
+    },
+    {
+      "id": "05",
+      "title": "Supervised Learning (Classification)",
+      "meta": "Week 5",
+      "lessons": [
+        { "title": "Logistic Regression & Decision Trees", "type": "video" },
+        {
+          "title": "Random Forest & Support Vector Machines (SVM)",
+          "type": "live"
+        },
+        {
+          "title": "Confusion matrix, Precision, Recall, & F1-score",
+          "type": "video"
+        }
+      ],
+      "practice": "Spam detection or Loan approval project",
+      "outcome": "Students can build robust classification models and interpret evaluation metrics."
+    },
+    {
+      "id": "06",
+      "title": "Unsupervised Learning",
+      "meta": "Week 6",
+      "lessons": [
+        { "title": "Clustering (K-Means & Hierarchical)", "type": "live" },
+        { "title": "Dimensionality Reduction (PCA basics)", "type": "video" },
+        { "title": "Association Rule Learning", "type": "live" }
+      ],
+      "practice": "Customer segmentation project",
+      "outcome": "Students can identify patterns and group data in practical scenarios."
+    },
+    {
+      "id": "07",
+      "title": "Deep Learning Fundamentals",
+      "meta": "Week 7",
+      "lessons": [
+        {
+          "title": "Neural networks, layers, and activation functions",
+          "type": "video"
+        },
+        { "title": "TensorFlow/Keras introduction", "type": "live" },
+        {
+          "title": "When to use Deep Learning vs Traditional ML",
+          "type": "video"
+        }
+      ],
+      "practice": "Basic image classification demonstration",
+      "outcome": "Students gain a strong beginner-level understanding of deep learning concepts and tools."
+    },
+    {
+      "id": "08",
+      "title": "Capstone & Job Readiness",
+      "meta": "Week 8",
+      "lessons": [
+        { "title": "End-to-end ML project workflow", "type": "live" },
+        { "title": "Model evaluation & deployment basics", "type": "video" },
+        { "title": "GitHub portfolio polish & Interview prep", "type": "live" }
+      ],
+      "outcome": "Students complete a portfolio-ready ML project and strengthen job readiness.",
+      "isOpen": true
+    }
+  ],
+  "features": [
+    "Live instructor-led sessions (no pre-recorded content)",
+    "Real-world projects via Ramesys",
+    "Resume + Interview Preparation",
+    "ISO-Certified Program"
+  ],
+  "testimonials": [
+    {
+      "name": "SVEN",
+      "role": "SOFTWARE ENGINEER",
+      "text": "I can't emphasize enough how valuable this course is. Learning Python through this course completely shifted my professional focus.",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBOdBRCWmTBTRC_HZfFKGkpWp-HFz3BLIUTk5nerVlvHn1pS4QO-wGcatYu_kz7AXb4kvjAU4O7ie68XhcjoySty9C_xzr0fCbsgwRXye-GR1HjpqVdrvax-u34X_kboSum5S9exzrSc6_hHM_4aZVrrwJRLA9xEdDg8vZJAkgNJBM0WZeyeJ6iorvJOj0s1Czz2-75U-bJn7VlkbJsh8FL11wahHhCLK8Mf6OOtSuc313j_xg4OcHKxaM2RuXCTk50DGR0OFhjrx6q"
+    }
+  ]
+}

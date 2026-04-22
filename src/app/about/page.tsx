@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-slate-50 dark:bg-background-dark">
+    <main className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-24 px-6 md:px-12 lg:px-24">
         <div className="absolute top-0 left-0 w-full h-full bg-grid-slate-200 dark:bg-grid-slate-800 [mask-image:linear-gradient(to_bottom,white,transparent)] pointer-events-none" />
@@ -18,19 +18,18 @@ export default function AboutPage() {
             <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-bold text-xs tracking-wider uppercase">
               Our Story
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 dark:text-white">
-              Empowering <span className="text-primary">Learning</span> Without Limits
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-foreground leading-[1.1]">
+              Built to Solve the Gap Between <br/> <span className="text-primary">Learning</span> and Real-World Tech Skills
             </h1>
-            <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-xl">
-              At Vydhra, we believe that education should be accessible, engaging, and transformative. We are dedicated to providing high-quality courses that help you master new skills and advance your career.
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
+              Vydhra was created to redefine how people enter the tech industry—through real capability, not just theoretical knowledge.
             </p>
           </div>
           <div className="relative">
             <div className="absolute -inset-4 bg-gradient-to-r from-primary to-orange-400 rounded-2xl blur-lg opacity-30 animate-pulse" />
-            <div className="relative aspect-video rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-2xl">
-              {/* Placeholder for a hero image if desired */}
-              <div className="w-full h-full flex items-center justify-center bg-slate-100 dark:bg-slate-900">
-                <span className="material-icons text-6xl text-slate-300 dark:text-slate-700">groups</span>
+            <div className="relative aspect-video rounded-2xl overflow-hidden bg-muted border border-border shadow-2xl">
+              <div className="w-full h-full flex items-center justify-center bg-background">
+                <span className="material-icons text-6xl text-muted-foreground/50">insights</span>
               </div>
             </div>
           </div>
@@ -38,39 +37,39 @@ export default function AboutPage() {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 px-6 bg-white dark:bg-background-dark/50 border-y border-slate-200 dark:border-slate-800">
+      <section className="py-20 px-6 bg-card border-y border-border">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Our Mission</h2>
-            <p className="text-slate-600 dark:text-slate-400">
-              We are on a mission to democratize education by connecting expert instructors with eager learners from around the globe.
+            <h2 className="text-3xl font-bold text-foreground mb-4 uppercase tracking-widest">Our Mission</h2>
+            <p className="text-xl text-muted-foreground">
+              To build a new standard of tech education—one that focuses on real-world capability, not passive learning. We aim to equip learners with the skills, thinking, and practical experience required to succeed in AI, software development, and data-driven roles.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                icon: 'school',
-                title: 'Expert Instructors',
-                description: 'Learn from industry professionals who bring real-world experience to every lesson.'
+                icon: 'engineering',
+                title: 'Industry-Driven Learning',
+                description: 'Learn from professionals actively working in AI and software development—not traditional instructors disconnected from real-world systems.'
               },
               {
-                icon: 'schedule',
-                title: 'Flexible Learning',
-                description: 'Study at your own pace, on your own schedule, from anywhere in the world.'
+                icon: 'psychology',
+                title: 'Real Capability Over Theory',
+                description: 'We focus on building skills that translate directly into real work—projects, systems, and problem-solving.'
               },
               {
-                icon: 'verified',
-                title: 'Certified Skills',
-                description: 'Earn certificates that validate your expertise and help you stand out to employers.'
+                icon: 'public',
+                title: 'Globally Relevant Skills',
+                description: 'Our programs are designed to prepare learners for opportunities across global tech markets.'
               }
             ].map((item, index) => (
-              <div key={index} className="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors group">
+              <div key={index} className="p-8 rounded-2xl bg-background border border-border hover:border-primary/50 transition-colors group">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <span className="material-icons">{item.icon}</span>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">{item.title}</h3>
-                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                <h3 className="text-xl font-bold text-foreground mb-3 uppercase tracking-tight">{item.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -79,34 +78,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      {/* <section className="py-20 px-6 bg-slate-900 text-white relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full opacity-10">
-             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent" />
-        </div>
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 relative z-10 text-center">
-            {[
-                { number: '10k+', label: 'Students' },
-                { number: '200+', label: 'Courses' },
-                { number: '50+', label: 'Instructors' },
-                { number: '4.9', label: 'Rating' }
-            ].map((stat, i) => (
-                <div key={i}>
-                    <div className="text-4xl md:text-5xl font-black text-primary mb-2">{stat.number}</div>
-                     <div className="text-sm font-medium text-slate-400 uppercase tracking-widest">{stat.label}</div>
-                </div>
-            ))}
-        </div>
-      </section> */}
-
-      {/* Founder Story Section */}
-      <section className="py-20 px-6 bg-white dark:bg-background-dark border-b border-slate-200 dark:border-slate-800">
+      {/* Origin & Founder Story Section */}
+      <section className="py-20 px-6 bg-background border-b border-border">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center">
             <div className="w-full md:w-1/2">
-                <div className="aspect-square rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-800 relative">
-                     {/* Placeholder for founder image */}
-                    <div className="absolute inset-0 flex items-center justify-center bg-slate-100 dark:bg-slate-900">
-                        <span className="material-icons text-9xl text-slate-300 dark:text-slate-700">person</span>
+                <div className="aspect-square rounded-2xl overflow-hidden bg-muted relative group">
+                    <div className="absolute inset-0 flex items-center justify-center bg-background group-hover:scale-110 transition-transform duration-700">
+                        <span className="material-icons text-9xl text-muted-foreground/50">business</span>
                     </div>
                 </div>
             </div>
@@ -114,40 +92,43 @@ export default function AboutPage() {
                 <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-bold text-xs tracking-wider uppercase">
                     The Founder
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">
-                    Built from Passion, <br/>Driven by Purpose
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground uppercase tracking-tighter leading-tight">
+                    From Building Systems <br/> to Building Talent
                 </h2>
-                <div className="space-y-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+                <div className="space-y-4 text-muted-foreground leading-relaxed text-lg">
                     <p>
-                        Hello! I&apos;m the founder of Vydhra. My journey began with a simple realization: quality education shouldn&apos;t be a luxury. After years in the industry, I saw a gap between theoretical knowledge and practical application.
+                        Vydhra is a wholly owned subsidiary of Ramesys Private Limited, built to solve a real industry problem—not just to teach.
                     </p>
                     <p>
-                        I started Vydhra to bridge that gap. What began as a small series of tutorials has grown into a comprehensive platform for learners worldwide. My goal is to empower you with the tools you need to succeed in a rapidly evolving digital landscape.
+                        While working on real-world projects at Ramesys, one challenge kept repeating: finding truly skilled developers. The issue wasn’t a lack of candidates—it was a lack of real capability. Most learners understood concepts. Very few could apply them in production environments.
+                    </p>
+                    <p>
+                        That gap led to a clear decision: instead of searching for talent, build it. What began as internal training and mentorship inside Ramesys evolved into Vydhra—a platform focused on creating professionals who can contribute from day one.
                     </p>
                 </div>
-                <div className="pt-4">
-                    <div className="font-bold text-slate-900 dark:text-white text-lg">Alex Vydhra</div>
-                    <div className="text-primary text-sm font-medium">Founder & CEO</div>
+                <div className="pt-4 border-t border-border">
+                    <div className="font-bold text-foreground text-xl uppercase tracking-widest">Ramesys Private Limited</div>
+                    <div className="text-primary text-sm font-bold uppercase tracking-widest">Parent Company</div>
                 </div>
             </div>
         </div>
       </section>
 
       {/* Vision Section */}
-      <section className="py-24 px-6 bg-slate-50 dark:bg-slate-900/50">
+      <section className="py-24 px-6 bg-muted/50">
         <div className="max-w-4xl mx-auto text-center space-y-8">
              <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-bold text-xs tracking-wider uppercase">
                 Our Vision
             </div>
-            <h2 className="text-3xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white">
-                Shaping the <span className="text-primary">Future</span> of Education
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight text-foreground uppercase tracking-tighter">
+                Building the <span className="text-primary">Next Generation</span> of AI & Tech Professionals
             </h2>
-            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
-                We envision a world where anyone, anywhere, has access to the highest quality education. We are constantly innovating to bring you immersive learning experiences, AI-driven personalization, and a community that supports your growth every step of the way.
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                The future of work is being shaped by AI, automation, and rapidly evolving technologies. Vydhra’s vision is to become a global platform that produces highly capable professionals who can build, adapt, and lead in this new era.
             </p>
              <div className="pt-8 flex justify-center gap-4">
-                <button className="bg-primary hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-primary/30 transition-all cursor-pointer">
-                    Join Our Community
+                <button className="bg-primary text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-orange-600 hover:shadow-primary/30 transition-all cursor-pointer hover:scale-105 active:scale-95 uppercase tracking-widest text-sm">
+                    Join Our Programs
                 </button>
             </div>
         </div>

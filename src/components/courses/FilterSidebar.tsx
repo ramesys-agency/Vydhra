@@ -29,8 +29,8 @@ export default function FilterSidebar({
                 onClick={() => onSelectCategory(cat.name)}
                 className={`flex items-center justify-between w-full group text-left cursor-pointer ${
                   selectedCategory === cat.name
-                    ? "text-slate-900 dark:text-white"
-                    : "text-gray-500 dark:text-gray-400"
+                    ? "text-foreground"
+                    : "text-muted-foreground"
                 }`}
               >
                 <span
@@ -46,7 +46,7 @@ export default function FilterSidebar({
                   className={`text-xs px-2 py-1 rounded transition-colors ${
                     selectedCategory === cat.name
                       ? "bg-primary text-white"
-                      : "bg-gray-100 dark:bg-card-dark"
+                      : "bg-muted"
                   }`}
                 >
                   {cat.count}

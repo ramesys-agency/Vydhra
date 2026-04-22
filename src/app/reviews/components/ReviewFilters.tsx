@@ -17,7 +17,7 @@ interface ReviewFiltersProps {
 
 export default function ReviewFilters({ activeCategory, onCategoryChange }: ReviewFiltersProps) {
   return (
-    <div className="border-b border-slate-200 dark:border-slate-800 overflow-x-auto">
+    <div className="border-b border-border overflow-x-auto">
       <div className="flex gap-8 min-w-max">
         {categories.map((cat) => (
           <button
@@ -25,8 +25,8 @@ export default function ReviewFilters({ activeCategory, onCategoryChange }: Revi
             onClick={() => onCategoryChange(cat)}
             className={`flex flex-col items-center justify-center border-b-2 pb-4 pt-2 font-bold text-sm tracking-wide transition-colors cursor-pointer ${
               activeCategory === cat
-                ? "border-primary text-slate-900 dark:text-white"
-                : "border-transparent text-slate-400 hover:text-primary"
+                ? "border-primary text-foreground"
+                : "border-transparent text-muted-foreground hover:text-primary"
             }`}
           >
             {cat}

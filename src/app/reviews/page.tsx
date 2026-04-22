@@ -31,18 +31,17 @@ export default function ReviewsPage() {
   const hasMore = visibleCount < filteredReviews.length;
 
   return (
-    <div className="min-h-screen grid-bg">
-      <main className="flex flex-col items-center">
-        <div className="w-full max-w-[1200px] px-6 lg:px-10 py-12 flex flex-col gap-8">
-          <div className="flex flex-wrap items-end justify-between gap-6">
-            <div className="flex flex-col gap-3">
-              <h1 className="text-primary text-4xl lg:text-6xl font-black leading-tight tracking-tight uppercase">
-                WHAT OUR STUDENTS SAY
+    <div className="min-h-screen bg-background">
+      <main className="max-w-7xl mx-auto px-4 md:px-8 py-24 text-foreground">
+        <div className="mb-20">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
+            <div className="max-w-2xl">
+              <span className="text-primary font-bold tracking-widest uppercase text-xs mb-4 block">
+                Wall of Love
+              </span>
+              <h1 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-none text-foreground">
+                Trusted by <br /> <span className="text-primary">2,500+</span> Students
               </h1>
-              <p className="text-slate-600 dark:text-slate-400 text-lg font-medium leading-normal max-w-xl">
-                Join 2,500+ professionals who transformed their careers through
-                our industry-leading design and development programs.
-              </p>
             </div>
             <button className="flex min-w-[160px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-xl h-14 px-8 bg-primary text-white text-base font-bold shadow-lg shadow-primary/20 transition-transform hover:scale-105 active:scale-95">
               <span className="material-icons text-[24px]">edit_note</span>

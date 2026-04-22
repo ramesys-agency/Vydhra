@@ -13,14 +13,14 @@ export default function MobileNav() {
   };
 
   const activeClass = "text-primary";
-  const inactiveClass = "text-slate-400 dark:text-slate-500";
+  const inactiveClass = "text-muted-foreground";
 
   return (
     <>
       {/* <button className="fixed bottom-4 left-4 bg-white dark:bg-slate-800 text-[10px] uppercase font-bold tracking-widest px-4 py-2 rounded-full border border-slate-200 dark:border-slate-700 shadow-lg z-[100] hover:scale-105 transition-transform cursor-pointer">
         Cookie Settings
       </button> */}
-      <div className="lg:hidden fixed bottom-1 left-0 w-full bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 p-4 flex justify-around items-center z-50">
+      <div className="lg:hidden fixed bottom-1 left-0 w-full bg-background border-t border-border p-4 flex justify-around items-center z-50">
         <Link href="/" className={`flex flex-col items-center hover:text-primary transition-colors cursor-pointer ${isActive("/") ? activeClass : inactiveClass}`}>
           <span className="material-icons">home</span>
           <span className="text-[10px] font-bold mt-1">HOME</span>
