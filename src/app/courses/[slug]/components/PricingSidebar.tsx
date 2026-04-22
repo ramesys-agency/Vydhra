@@ -1,10 +1,12 @@
+import Link from "next/link";
 import React from "react";
 
 interface PricingSidebarProps {
   price: string;
+  slug: string;
 }
 
-export default function PricingSidebar({ price }: PricingSidebarProps) {
+export default function PricingSidebar({ price, slug }: PricingSidebarProps) {
   return (
     <aside className="sticky top-28">
       <div className="bg-card p-8 rounded-2xl border border-border shadow-2xl">
@@ -21,9 +23,12 @@ export default function PricingSidebar({ price }: PricingSidebarProps) {
             -45% OFF
           </div>
         </div>
-        <button className="w-full bg-primary text-white py-5 rounded-xl font-bold text-lg hover:bg-orange-600 transition-all mb-8 shadow-lg shadow-primary/25 cursor-pointer hover:scale-105 active:scale-95">
+        <Link
+          href={`/courses/${slug}/enroll`}
+          className="w-full bg-primary text-white py-5 rounded-xl font-bold text-lg hover:bg-orange-600 transition-all mb-8 shadow-lg shadow-primary/25 cursor-pointer hover:scale-105 active:scale-95 flex items-center justify-center no-underline"
+        >
           ENROLL NOW
-        </button>
+        </Link>
         <div className="space-y-4 mb-8">
           <div className="flex items-center gap-3 text-sm">
             <span className="material-icons text-green-500">check_circle</span>

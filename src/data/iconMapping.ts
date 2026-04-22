@@ -43,7 +43,15 @@ import {
   Globe,
   Monitor,
   Search,
-  PenTool
+  PenTool,
+  ArrowLeft,
+  Tag,
+  CheckCircle2,
+  Shield,
+  ShieldCheck as ShieldCheckLucide,
+  Headset,
+  Lock,
+  ChevronDown
 } from "lucide-react";
 import { IconType } from "react-icons";
 
@@ -99,6 +107,14 @@ export const iconMapping: Record<string, IconComponentType> = {
   "monitor": Monitor,
   "search": Search,
   "edit": PenTool,
+  "arrow_back": ArrowLeft,
+  "local_offer": Tag,
+  "check_circle": CheckCircle2,
+  "security": Shield,
+  "verified_user": ShieldCheckLucide,
+  "support_agent": Headset,
+  "lock": Lock,
+  "expand_more": ChevronDown,
 
   // Fallbacks
   "science": SiScikitlearn,

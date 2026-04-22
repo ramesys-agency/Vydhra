@@ -36,6 +36,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
           level={course.level}
           duration={course.duration}
           requirements={course.requirements}
+          slug={slug}
         />
 
         <div className="max-w-7xl mx-auto px-8 py-20 gap-16">
@@ -72,7 +73,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
 
             {/* Right Sidebar (Sticky) */}
             <aside className="lg:col-span-1 sticky top-28">
-              <PricingSidebar price={course.price} />
+              <PricingSidebar price={course.price} slug={slug} />
             </aside>
           </div>
         </div>

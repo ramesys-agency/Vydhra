@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import Icon from "@/components/common/Icon";
 
@@ -13,6 +14,7 @@ interface CourseHeroProps {
   level: string;
   duration: string;
   requirements: string[];
+  slug: string;
 }
 
 export default function CourseHero({
@@ -24,6 +26,7 @@ export default function CourseHero({
   heroImage,
   price,
   level,
+  slug,
 }: CourseHeroProps) {
   return (
     <section className="relative overflow-hidden pt-20 pb-32 bg-background">
@@ -111,9 +114,12 @@ export default function CourseHero({
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
-              <button className="bg-primary text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-[#E56000] transition-all shadow-xl shadow-orange-500/20 cursor-pointer hover:scale-105 active:scale-95">
+              <Link
+                href={`/courses/${slug}/enroll`}
+                className="bg-primary text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-[#E56000] transition-all shadow-xl shadow-orange-500/20 cursor-pointer hover:scale-105 active:scale-95 no-underline"
+              >
                 Enroll Now - {price}
-              </button>
+              </Link>
               <a
                 href="#curriculum"
                 className="bg-background text-foreground px-10 py-5 rounded-2xl font-bold text-lg border border-border hover:bg-muted transition-all shadow-sm cursor-pointer no-underline inline-block"
