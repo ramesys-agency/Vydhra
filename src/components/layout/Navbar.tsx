@@ -3,15 +3,28 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ThemeToggle } from "../common/ThemeToggle";
+import { useTheme } from "next-themes";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const pathname = usePathname();
+
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const isActive = (path: string) => {
     if (path === "/" && pathname === "/") return true;
     if (path !== "/" && pathname.startsWith(path)) return true;
     return false;
   };
+
+  const logoSrc = mounted && resolvedTheme === "dark" 
+    ? "/logo_vydhra_dark.png" 
+    : "/logo_vydhra_light.png";
 
   const activeLinkClass = "relative bg-primary/5 dark:bg-primary/10";
   const activeTextClass = "text-primary";
@@ -23,7 +36,7 @@ export default function Navbar() {
             <Image
               alt="Vydhra Logo"
               className="h-16 w-auto object-contain scale-[3] group-hover:scale-[3.1] transition-transform duration-300"
-              src="/logo_vydhra.png"
+              src={logoSrc}
               width={200}
               height={250}
               priority

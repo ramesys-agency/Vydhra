@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { courses } from "@/data/courses";
+import { getCourseBySlug } from "@/lib/api";
 import CourseHero from "./components/CourseHero";
 import Curriculum from "./components/Curriculum";
 import PricingSidebar from "./components/PricingSidebar";
@@ -11,12 +11,12 @@ import RequirementsSection from "./components/RequirementsSection";
 import FeaturesSection from "./components/FeaturesSection";
 
 interface PageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export default async function CourseDetailPage({ params }: PageProps) {
   const { slug } = await params;
-  const course = courses.find((c) => c.slug === slug);
+  const course = await getCourseBySlug(slug);
 
   if (!course) {
     notFound();
@@ -33,6 +33,8 @@ export default async function CourseDetailPage({ params }: PageProps) {
           image={course.image}
           heroImage={course.heroImage}
           price={course.price}
+          priceINR={course.priceINR}
+          priceUSD={course.priceUSD}
           level={course.level}
           duration={course.duration}
           requirements={course.requirements}
@@ -73,7 +75,12 @@ export default async function CourseDetailPage({ params }: PageProps) {
 
             {/* Right Sidebar (Sticky) */}
             <aside className="lg:col-span-1 sticky top-28">
-              <PricingSidebar price={course.price} slug={slug} />
+              <PricingSidebar 
+                price={course.price} 
+                priceINR={course.priceINR}
+                priceUSD={course.priceUSD}
+                slug={slug} 
+              />
             </aside>
           </div>
         </div>

@@ -1,10 +1,8 @@
-"use client";
-
 import CourseCard from "@/components/courses/CourseCard";
-// import Newsletter from "@/components/common/Newsletter";
-import { courses } from "@/data/courses";
+import { getCourses } from "@/lib/api";
 
-export default function CoursesPage() {
+export default async function CoursesPage() {
+  const courses = await getCourses();
   return (
     <div className="min-h-screen bg-background">
       <main className="max-w-[1440px] mx-auto px-6 py-12 text-foreground">
@@ -21,9 +19,9 @@ export default function CoursesPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-            {courses.map((course) => (
+            {courses.map((course, index) => (
               <CourseCard
-                key={course.slug}
+                key={(course as any).id || course.slug || index}
                 {...course}
                 link={`/courses/${course.slug}`}
               />

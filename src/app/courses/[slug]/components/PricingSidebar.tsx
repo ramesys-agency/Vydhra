@@ -1,12 +1,18 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
 
 interface PricingSidebarProps {
   price: string;
+  priceINR?: number;
+  priceUSD?: number;
   slug: string;
 }
 
-export default function PricingSidebar({ price, slug }: PricingSidebarProps) {
+export default function PricingSidebar({ price, priceINR, priceUSD, slug }: PricingSidebarProps) {
+  const displayPrice = priceUSD ? `$${priceUSD}` : price;
+
   return (
     <aside className="sticky top-28">
       <div className="bg-card p-8 rounded-2xl border border-border shadow-2xl">
@@ -16,7 +22,7 @@ export default function PricingSidebar({ price, slug }: PricingSidebarProps) {
               One-time payment
             </span>
             <div className="flex items-baseline gap-2">
-              <span className="text-5xl font-black">{price}</span>
+              <span className="text-5xl font-black">{displayPrice}</span>
             </div>
           </div>
           <div className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold">

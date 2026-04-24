@@ -8,7 +8,7 @@ const razorpay = new Razorpay({
 
 export async function POST(request: Request) {
   try {
-    const { amount, currency = "INR", receipt } = await request.json();
+    const { amount, currency = "USD", receipt } = await request.json();
 
     const options = {
       amount: Math.round(amount * 100), // Razorpay expects amount in paise

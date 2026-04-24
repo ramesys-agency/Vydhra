@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import Icon from "@/components/common/Icon";
@@ -7,6 +9,8 @@ interface CourseCardProps {
   category: string;
   description: string;
   price: string;
+  priceINR?: number;
+  priceUSD?: number;
   originalPrice?: string;
   image: string;
   link: string;
@@ -17,10 +21,14 @@ export default function CourseCard({
   category,
   description,
   price,
+  priceINR,
+  priceUSD,
   originalPrice,
   image,
   link,
 }: CourseCardProps) {
+  const displayPrice = priceUSD ? `$${priceUSD}` : price;
+
   return (
     <Link href={link} className="group cursor-pointer block h-full">
       <div className="bg-card border border-border rounded-[2rem] p-5 shadow-sm hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2 transition-all duration-500 h-full flex flex-col">
@@ -28,7 +36,7 @@ export default function CourseCard({
           <Image
             alt={title}
             className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700 ease-out"
-            src={image}
+            src={image || "/courses/ai-agents.png"}
             width={400}
             height={300}
           />
@@ -52,7 +60,7 @@ export default function CourseCard({
                   {originalPrice}
                 </span>
               )}
-              <span className="text-2xl font-black text-primary">{price}</span>
+              <span className="text-2xl font-black text-primary">{displayPrice}</span>
             </div>
             <div className="w-12 h-12 rounded-2xl bg-muted flex items-center justify-center group-hover:bg-primary group-hover:text-white group-hover:rotate-[-10deg] transition-all duration-500 shadow-inner text-foreground">
               <Icon

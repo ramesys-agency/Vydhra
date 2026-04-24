@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -11,6 +13,8 @@ interface CourseHeroProps {
   image: string;
   heroImage?: string;
   price: string;
+  priceINR?: number;
+  priceUSD?: number;
   level: string;
   duration: string;
   requirements: string[];
@@ -25,9 +29,13 @@ export default function CourseHero({
   image,
   heroImage,
   price,
+  priceINR,
+  priceUSD,
   level,
   slug,
 }: CourseHeroProps) {
+  const displayPrice = priceUSD ? `$${priceUSD}` : price;
+
   return (
     <section className="relative overflow-hidden pt-20 pb-32 bg-background">
       {/* Background Graphics (Blobs & Swishes) */}
@@ -118,7 +126,7 @@ export default function CourseHero({
                 href={`/courses/${slug}/enroll`}
                 className="bg-primary text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-[#E56000] transition-all shadow-xl shadow-orange-500/20 cursor-pointer hover:scale-105 active:scale-95 no-underline"
               >
-                Enroll Now - {price}
+                Enroll Now - {displayPrice}
               </Link>
               <a
                 href="#curriculum"

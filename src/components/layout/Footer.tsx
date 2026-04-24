@@ -1,8 +1,21 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 export default function Footer() {
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const logoSrc = mounted && resolvedTheme === "dark" 
+    ? "/logo_vydhra_dark.png" 
+    : "/logo_vydhra_light.png";
+
   return (
     <footer className="border-t border-border mt-24 py-12 bg-background">
       <div className="max-w-[1440px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8 text-foreground">
@@ -11,7 +24,7 @@ export default function Footer() {
             <Image
               alt="Vydhra Logo"
               className="h-full w-auto object-contain scale-[2.5] group-hover:scale-[2.6] transition-transform duration-300"
-              src="/logo_vydhra.png"
+              src={logoSrc}
               width={240}
               height={300}
             />

@@ -39,6 +39,8 @@ export interface Course {
   subtitle: string;
   description: string;
   price: string;
+  priceINR?: number;
+  priceUSD?: number;
   image: string;
   heroImage: string;
   category: string;

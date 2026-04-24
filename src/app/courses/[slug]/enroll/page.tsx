@@ -1,14 +1,14 @@
 import { notFound } from "next/navigation";
-import { courses } from "@/data/courses";
+import { getCourseBySlug } from "@/lib/api";
 import EnrollmentClient from "./EnrollmentClient";
 
 interface PageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
-  const course = courses.find((c) => c.slug === slug);
+  const course = await getCourseBySlug(slug);
   
   if (!course) return { title: "Course Not Found" };
   
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function EnrollmentPage({ params }: PageProps) {
   const { slug } = await params;
-  const course = courses.find((c) => c.slug === slug);
+  const course = await getCourseBySlug(slug);
 
   if (!course) {
     notFound();
@@ -28,14 +28,17 @@ export default async function EnrollmentPage({ params }: PageProps) {
 
   return (
     <main>
-      <EnrollmentClient 
+      <EnrollmentClient
         course={{
           title: course.title,
           subtitle: course.subtitle,
           price: course.price,
+          priceINR: course.priceINR,
+          priceUSD: course.priceUSD,
           image: course.image,
-          category: course.category
-        }} 
+          category: course.category,
+          slug: slug,
+        }}
         slug={slug}
       />
     </main>

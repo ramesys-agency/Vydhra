@@ -22,6 +22,8 @@ import MobileNav from "@/components/layout/MobileNav";
 import Footer from "@/components/layout/Footer";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 
+import { Toaster } from "sonner";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -52,6 +54,7 @@ export default function RootLayout({
           {children}
           <Footer />
           <MobileNav />
+          <Toaster richColors position="top-center" />
         </ThemeProvider>
       </body>
     </html>
