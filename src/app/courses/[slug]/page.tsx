@@ -9,6 +9,7 @@ import ProjectsSection from "./components/ProjectsSection";
 import ToolsSection from "./components/ToolsSection";
 import RequirementsSection from "./components/RequirementsSection";
 import FeaturesSection from "./components/FeaturesSection";
+import BatchesSection from "./components/BatchesSection";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -52,25 +53,22 @@ export default async function CourseDetailPage({ params }: PageProps) {
                 <FeaturesSection features={course.features} />
               )}
 
-              {/* 3. Description */}
-              {/* <div className="py-8">
-                <h2 className="text-3xl font-bold mb-6">About this Course</h2>
-                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed italic">
-                  &ldquo;{course.description}&rdquo;
-                </p>
-              </div> */}
+              {/* 3. Available Batches */}
+              <BatchesSection
+                batches={course.batches}
+                slug={slug}
+                coursePrice={course.price}
+                coursePriceUSD={course.priceUSD}
+              />
 
-              {/* 4. Prerequisites */}
+              {/* 5. Prerequisites */}
               <RequirementsSection requirements={course.requirements} />
 
-              {/* 5. Projects */}
+              {/* 6. Projects */}
               <ProjectsSection projects={course.projects} />
 
-              {/* 6. Tools */}
+              {/* 7. Tools */}
               <ToolsSection tools={course.tools} />
-
-              {/* 7. Comparison */}
-              {/* <ProgramComparison /> */}
             </div>
 
             {/* Right Sidebar (Sticky) */}

@@ -5,15 +5,28 @@ import { usePathname } from "next/navigation";
 import { ThemeToggle } from "../common/ThemeToggle";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
+import { getCourses } from "@/lib/api";
 
 export default function Navbar() {
   const pathname = usePathname();
 
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [coursesCount, setCoursesCount] = useState(13);
 
   useEffect(() => {
     setMounted(true);
+
+    // Dynamically query courses count in background, falling back to 13 if offline/error
+    getCourses()
+      .then((data) => {
+        if (data && Array.isArray(data)) {
+          setCoursesCount(data.length);
+        }
+      })
+      .catch((err) => {
+        console.error("Navbar dynamic courses count load failed:", err);
+      });
   }, []);
 
   const isActive = (path: string) => {
@@ -22,9 +35,11 @@ export default function Navbar() {
     return false;
   };
 
-  const logoSrc = mounted && resolvedTheme === "dark" 
-    ? "/logo_vydhra_dark.png" 
-    : "/logo_vydhra_light.png";
+  const logoSrc =
+    mounted && resolvedTheme === "dark"
+      ? "/logo_vydhra_dark.png"
+      : "/logo_vydhra_light.png";
+  // const logoSrc = "/logo_vydhra_light.png";
 
   const activeLinkClass = "relative bg-primary/5 dark:bg-primary/10";
   const activeTextClass = "text-primary";
@@ -62,7 +77,7 @@ export default function Navbar() {
               NEW
             </span>
             <span className="absolute top-4 left-6 text-[10px] font-bold text-muted-foreground transition-colors group-hover:text-primary/70">
-              5
+              {coursesCount}
             </span>
             <span
               className={`font-semibold text-sm transition-colors group-hover:text-primary ${isActive("/courses") ? activeTextClass : ""}`}

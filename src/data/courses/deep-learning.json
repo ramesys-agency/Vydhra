@@ -1,0 +1,88 @@
+{
+  "slug": "deep-learning",
+  "title": "Deep Learning Job-Ready Bootcamp",
+  "subtitle": "Build Neural Networks, Computer Vision & Modern AI Systems",
+  "description": "Become a Deep Learning Engineer in 8 Weeks. Build neural networks, computer vision models, and modern AI systems using PyTorch & TensorFlow.",
+  "price": "$399.00",
+  "image": "/courses/deep-learning.png",
+  "heroImage": "/courses/deep-learning-hero.png",
+  "category": "AI & ML",
+  "level": "Advanced",
+  "duration": "8 Weeks",
+  "liveInteractiveClasses": true,
+  "projects": [
+    {
+      "title": "Image Classification System",
+      "description": "Build a CNN model to classify complex visual images.",
+      "icon": "photo_camera"
+    },
+    {
+      "title": "NLP Sentiment Classifier",
+      "description": "Develop a sequence-based text analysis network.",
+      "icon": "forum"
+    },
+    {
+      "title": "Deployed AI App",
+      "description": "Deploy a deep learning neural network as a web application.",
+      "icon": "cloud"
+    },
+    {
+      "title": "Capstone Transformer",
+      "description": "Train or fine-tune a modern transformer model for specific tasks.",
+      "icon": "verified"
+    }
+  ],
+  "tools": [
+    { "name": "PyTorch", "icon": "pytorch" },
+    { "name": "TensorFlow", "icon": "tensorflow" },
+    { "name": "CNNs & RNNs", "icon": "psychology" },
+    { "name": "Transformers (NLP)", "icon": "auto_awesome" },
+    { "name": "Model Deployment", "icon": "cloud" }
+  ],
+  "requirements": [
+    "Good knowledge of Python and basic Machine Learning algorithms",
+    "Basic familiarity with calculus and linear algebra"
+  ],
+  "curriculum": [
+    {
+      "id": "01",
+      "title": "Deep Neural Networks Foundations",
+      "meta": "Weeks 1-3",
+      "lessons": [
+        { "title": "Introduction to Neural Networks, Perceptron & Backpropagation", "type": "live" },
+        { "title": "Loss functions, optimizers, learning rate & weight initialization", "type": "video" }
+      ],
+      "practice": "Build a multi-layer perceptron from scratch in PyTorch",
+      "outcome": "Understand mathematical foundations of neural networks and train simple models.",
+      "isOpen": true
+    },
+    {
+      "id": "02",
+      "title": "Computer Vision & CNNs",
+      "meta": "Weeks 4-6",
+      "lessons": [
+        { "title": "Convolutional Neural Networks: Padding, pooling, & strides", "type": "live" },
+        { "title": "Transfer Learning: Fine-tuning ResNet & MobileNet", "type": "video" }
+      ],
+      "practice": "Build and train an image classifier on custom product images",
+      "outcome": "Implement convolutional architectures and leverage transfer learning for vision."
+    },
+    {
+      "id": "03",
+      "title": "NLP & Transformers & Model Deployment",
+      "meta": "Weeks 7-8",
+      "lessons": [
+        { "title": "Recurrent networks, LSTMs & introduction to Transformers", "type": "live" },
+        { "title": "Model optimization, quantization & deployment using FastAPI", "type": "live" }
+      ],
+      "practice": "Deploy an NLP or Image classification model on a live web app",
+      "outcome": "Be job-ready as a Deep Learning, AI, or Machine Learning Engineer with a deployed app."
+    }
+  ],
+  "features": [
+    "Hands-on model building with PyTorch & TensorFlow",
+    "Learn real-world AI use cases: vision, text, and sequences",
+    "Get model optimization and deployment training",
+    "Prepares you for Deep Learning Engineer, AI Engineer, and ML Engineer roles"
+  ]
+}

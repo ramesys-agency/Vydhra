@@ -1,0 +1,100 @@
+{
+  "slug": "ai-prompt-engineering",
+  "title": "AI Prompt Engineering Bootcamp",
+  "subtitle": "Become Job-Ready in AI Prompt Engineering in 4 Weeks",
+  "description": "Master AI tools, prompt systems, and real-world workflows to boost productivity, automate tasks, and unlock high-income opportunities.",
+  "price": "$149.00",
+  "image": "/courses/prompt-eng.png",
+  "heroImage": "/courses/prompt-eng-hero.png",
+  "category": "AI Engineering",
+  "level": "All Levels",
+  "duration": "4 Weeks",
+  "liveInteractiveClasses": true,
+  "projects": [
+    {
+      "title": "AI Content Generation System",
+      "description": "Build a complete content generation and social media post system.",
+      "icon": "post_add"
+    },
+    {
+      "title": "Marketing Automation Workflow",
+      "description": "Create multi-step prompt chains for marketing funnels.",
+      "icon": "insights"
+    },
+    {
+      "title": "Business Prompt Library",
+      "description": "Build a robust prompt database/library for corporate workflows.",
+      "icon": "folder"
+    },
+    {
+      "title": "AI Productivity Portfolio",
+      "description": "Create an end-to-end portfolio showing automated real-world workflows.",
+      "icon": "verified"
+    }
+  ],
+  "tools": [
+    { "name": "ChatGPT & Claude", "icon": "openai" },
+    { "name": "Prompt Systems", "icon": "psychology" },
+    { "name": "AI Automation", "icon": "auto_awesome" },
+    { "name": "Workflow Builders", "icon": "build" },
+    { "name": "Freelance Platforms", "icon": "work" }
+  ],
+  "requirements": [
+    "No coding experience required",
+    "Access to internet & modern AI tools (Free tiers suffice)",
+    "Willingness to practice and build workflows"
+  ],
+  "curriculum": [
+    {
+      "id": "01",
+      "title": "Prompt Engineering Foundations",
+      "meta": "Week 1",
+      "lessons": [
+        { "title": "How Modern LLMs work & Structured Prompt Writing", "type": "live" },
+        { "title": "Zero-shot, Few-shot & Role-based Prompting Techniques", "type": "video" }
+      ],
+      "practice": "Create custom prompt templates for specific real-world tasks",
+      "outcome": "Write precise prompts that produce accurate, structured and usable results.",
+      "isOpen": true
+    },
+    {
+      "id": "02",
+      "title": "Business & Content Workflows",
+      "meta": "Week 2",
+      "lessons": [
+        { "title": "AI for Marketing copy, Competitor Analysis & Email Campaigns", "type": "live" },
+        { "title": "Content generation workflows, brand voice guidelines & research helper", "type": "video" }
+      ],
+      "practice": "Build a custom automated AI content generation system",
+      "outcome": "Implement AI seamlessly inside marketing, content, and business operations."
+    },
+    {
+      "id": "03",
+      "title": "Advanced Prompting & Automation",
+      "meta": "Week 3",
+      "lessons": [
+        { "title": "Prompt Chaining & generating structured outputs (JSON/Markdown)", "type": "live" },
+        { "title": "AI integrations with Google Sheets, Docs & Zapier automations", "type": "video" }
+      ],
+      "practice": "Build a multi-step automated email responding workflow using prompt chains",
+      "outcome": "Automate manual administrative tasks saving hours of work daily."
+    },
+    {
+      "id": "04",
+      "title": "AI Quality, Safety & Portfolio",
+      "meta": "Week 4",
+      "lessons": [
+        { "title": "Handling Hallucinations, Output verification & Guardrails", "type": "live" },
+        { "title": "Freelancing strategies: Packaging Prompt Engineering services", "type": "live" }
+      ],
+      "practice": "Compile final prompt library and AI productivity portfolio",
+      "outcome": "Be job-ready as an AI productivity expert and successfully launch freelancing."
+    }
+  ],
+  "features": [
+    "Learn prompt systems and structured workflows, not random tricks",
+    "100% project-based with weekly live building sessions",
+    "Automate real-world tasks and increase efficiency drastically",
+    "Includes freelance agency setup & interview training"
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "slug": "html-css-js-front-end",
+  "title": "HTML CSS & JS Job-Ready Bootcamp",
+  "subtitle": "Become a Job-Ready Front-End Developer in 12 Weeks",
+  "description": "Learn to build real websites, apps, and deploy live projects from scratch. Focus on responsive design, interactive JS, and production tools.",
+  "price": "$249.00",
+  "image": "/courses/frontend-bootcamp.png",
+  "heroImage": "/courses/frontend-hero.png",
+  "category": "Fullstack Development",
+  "level": "Beginner",
+  "duration": "12 Weeks",
+  "liveInteractiveClasses": true,
+  "projects": [
+    {
+      "title": "Portfolio Website",
+      "description": "Build your own responsive, modern portfolio site.",
+      "icon": "portrait"
+    },
+    {
+      "title": "Business Landing Page",
+      "description": "Create a highly converting, SEO friendly product landing page.",
+      "icon": "web"
+    },
+    {
+      "title": "API-Based Interactive App",
+      "description": "Develop a dynamic web app fetching live database info.",
+      "icon": "cloud"
+    },
+    {
+      "title": "Interactive Dashboard",
+      "description": "Build an executive admin-like dashboard using CSS grids and charts.",
+      "icon": "dashboard"
+    }
+  ],
+  "tools": [
+    { "name": "HTML5 & CSS3", "icon": "html" },
+    { "name": "JavaScript (ES6+)", "icon": "javascript" },
+    { "name": "Responsive Design", "icon": "devices" },
+    { "name": "Git & GitHub", "icon": "git" },
+    { "name": "Deployment & Vercel", "icon": "cloud" }
+  ],
+  "requirements": [
+    "Basic computer literacy",
+    "No programming experience required",
+    "A laptop/PC with VS Code installed"
+  ],
+  "curriculum": [
+    {
+      "id": "01",
+      "title": "HTML, CSS & Responsive Layouts",
+      "meta": "Weeks 1-3",
+      "lessons": [
+        { "title": "Semantic HTML5 structure & SEO best practices", "type": "live" },
+        { "title": "CSS Foundations: Flexbox, Grid, Custom Properties & Animations", "type": "video" },
+        { "title": "Mobile-first responsive design & Media Queries", "type": "live" }
+      ],
+      "practice": "Develop and style a personal responsive portfolio landing page",
+      "outcome": "Can build structured, beautiful, and fully responsive static websites.",
+      "isOpen": true
+    },
+    {
+      "id": "02",
+      "title": "JavaScript & DOM Manipulation",
+      "meta": "Weeks 4-6",
+      "lessons": [
+        { "title": "JS Basics: Variables, Arrays, Objects, Functions & Control Flow", "type": "live" },
+        { "title": "DOM Selection, Event listeners, and Dynamic UI modifications", "type": "video" },
+        { "title": "Fetching external APIs, Promises, Async/Await & JSON rendering", "type": "live" }
+      ],
+      "practice": "Build a real-time weather or movie search app fetching external data",
+      "outcome": "Implement logic, handle browser events, and pull API data into static pages."
+    },
+    {
+      "id": "03",
+      "title": "Advanced Projects & Git Workflow",
+      "meta": "Weeks 7-10",
+      "lessons": [
+        { "title": "Version Control with Git & Hosting on GitHub", "type": "live" },
+        { "title": "Modern build tools & deploying sites to Vercel/Netlify", "type": "video" },
+        { "title": "Creating clean CSS themes, light/dark modes & UX improvements", "type": "live" }
+      ],
+      "practice": "Build and deploy a fully functional multi-page Business dashboard",
+      "outcome": "Deploy interactive applications live to production using git version control."
+    },
+    {
+      "id": "04",
+      "title": "Capstone Project & Career Preparation",
+      "meta": "Weeks 11-12",
+      "lessons": [
+        { "title": "Designing and developing a custom Capstone application", "type": "live" },
+        { "title": "Mock interviews, Resume review & Freelance job hunting templates", "type": "live" }
+      ],
+      "practice": "Complete your developer portfolio and apply for entry-level roles",
+      "outcome": "Become a job-ready Front-End Developer with a strong, published portfolio."
+    }
+  ],
+  "features": [
+    "Build 5+ real-world responsive frontend websites",
+    "Learn DOM, APIs, and modern ES6+ JS by building things",
+    "Get portfolio deployment and hosting training using Git",
+    "Get career outcomes: Front-End Developer, Freelance Web Developer, UI Developer"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "slug": "python-data-analysis",
+  "title": "Data Analysis with Python Bootcamp",
+  "subtitle": "Become a Data Analyst with Python, Pandas & Real Business Projects",
+  "description": "Learn how to clean, analyze, and visualize data using Python. Build real-world projects and become job-ready for data analyst roles.",
+  "price": "$299.00",
+  "image": "/courses/python-analysis.png",
+  "heroImage": "/courses/python-analysis-hero.png",
+  "category": "Data Analytics",
+  "level": "Beginner",
+  "duration": "8 Weeks",
+  "liveInteractiveClasses": true,
+  "projects": [
+    {
+      "title": "Sales Data Analysis Project",
+      "description": "Clean and analyze structured business data.",
+      "icon": "analytics"
+    },
+    {
+      "title": "eCommerce Data Cleaning Project",
+      "description": "Handle real-world messy datasets and clean outliers.",
+      "icon": "cleaning_services"
+    },
+    {
+      "title": "Exploratory Data Analysis (EDA) Project",
+      "description": "Find trends, patterns, and insights in user behavior data.",
+      "icon": "search"
+    },
+    {
+      "title": "Final Portfolio Data Analysis Project",
+      "description": "End-to-end analysis (clean → analyze → visualize → report).",
+      "icon": "verified"
+    }
+  ],
+  "tools": [
+    { "name": "Python", "icon": "python" },
+    { "name": "Pandas & NumPy", "icon": "pandas" },
+    { "name": "Matplotlib & Seaborn", "icon": "matplotlib" },
+    { "name": "Jupyter Notebook", "icon": "jupyter" },
+    { "name": "Basic Statistics", "icon": "statistics" }
+  ],
+  "requirements": [
+    "Basic computer knowledge",
+    "No coding experience required",
+    "Willingness to practice datasets"
+  ],
+  "curriculum": [
+    {
+      "id": "01",
+      "title": "Python Foundations & Data Cleaning",
+      "meta": "Weeks 1-2",
+      "lessons": [
+        { "title": "Python Basics for Data Analysis: Variables & Lists", "type": "live" },
+        { "title": "Pandas Intro: Series, DataFrames & Reading CSV/Excel", "type": "video" },
+        { "title": "Handling Missing Values, Duplicates & Filtering", "type": "live" }
+      ],
+      "practice": "Clean eCommerce dataset containing messy user entries",
+      "outcome": "Can write python code and clean unstructured real-world datasets.",
+      "isOpen": true
+    },
+    {
+      "id": "02",
+      "title": "Analysis & Visualization",
+      "meta": "Weeks 3-5",
+      "lessons": [
+        { "title": "Groupby operations, Aggregations & Pivot tables", "type": "live" },
+        { "title": "Data Visualization with Matplotlib & Seaborn: Line, Bar & Scatter charts", "type": "video" },
+        { "title": "Deriving Business KPIs and Insights from Clean Datasets", "type": "live" }
+      ],
+      "practice": "Generate a business insights report for sales and marketing teams",
+      "outcome": "Students visualize data patterns and deliver insightful business summaries."
+    },
+    {
+      "id": "03",
+      "title": "Statistics & Capstone",
+      "meta": "Weeks 6-8",
+      "lessons": [
+        { "title": "Probability, Distributions & A/B Testing Basics", "type": "live" },
+        { "title": "End-to-End Capstone Project Development & Presentation", "type": "live" },
+        { "title": "Data Analyst Portfolio Polish & Mock Interviews", "type": "video" }
+      ],
+      "practice": "Build an end-to-end data analysis pipeline from raw data to final report",
+      "outcome": "Graduates build portfolio projects and crack data analyst interviews."
+    }
+  ],
+  "features": [
+    "Learn Pandas, EDA, Visualization, Statistics end-to-end",
+    "Work on real datasets (sales, eCommerce, marketing)",
+    "Focus on business insights, not just coding",
+    "Includes portfolio project + interview prep",
+    "Designed for Data Analyst roles"
+  ]
+}

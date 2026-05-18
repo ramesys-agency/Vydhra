@@ -40,6 +40,7 @@ export default async function EnrollmentPage({ params }: PageProps) {
           slug: slug,
         }}
         slug={slug}
+        batches={course.batches ?? []}
       />
     </main>
   );

@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const ADMIN_API_URL = process.env.ADMIN_API_URL || "http://localhost:3001";
+const ADMIN_API_URL = process.env.ADMIN_API_URL || process.env.NEXT_PUBLIC_ADMIN_API_URL || "http://127.0.0.1:3002";
 
 export async function POST(req: Request) {
   try {

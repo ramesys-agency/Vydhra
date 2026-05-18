@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import ReactFlagsSelect from "react-flags-select";
+import { CourseBatch } from "@/types/course";
 
 declare global {
   interface Window {
@@ -29,6 +30,7 @@ interface EnrollmentClientProps {
     slug: string;
   };
   slug: string;
+  batches: CourseBatch[];
 }
 
 import { toast } from "sonner";
@@ -88,11 +90,18 @@ const getCountryCode = (name: string) => {
   return mapping[name] || "IN";
 };
 
-export default function EnrollmentClient({ course, slug }: EnrollmentClientProps) {
+export default function EnrollmentClient({ course, slug, batches }: EnrollmentClientProps) {
   const router = useRouter();
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [step, setStep] = useState<Step>("info");
+
+  // Batch selection
+  const activeBatches = batches.filter((b) => b.status === "ACTIVE" || b.status === "UPCOMING");
+  const [selectedBatchId, setSelectedBatchId] = useState<string | null>(
+    activeBatches.length === 1 ? activeBatches[0].id : null
+  );
+  const selectedBatch = activeBatches.find((b) => b.id === selectedBatchId) ?? null;
 
   // Student info
   const [info, setInfo] = useState<StudentInfo>({ name: "", email: "", phone: "", country: "India" });
@@ -112,7 +121,8 @@ export default function EnrollmentClient({ course, slug }: EnrollmentClientProps
   const logoSrc = mounted && resolvedTheme === "dark" ? "/logo_vydhra_dark.png" : "/logo_vydhra_light.png";
 
   const currency = "USD";
-  const basePrice = course.priceUSD || parseFloat(course.price.replace(/[^0-9.]/g, ""));
+  const coursePriceNum = course.priceUSD || parseFloat(course.price.replace(/[^0-9.]/g, ""));
+  const basePrice = selectedBatch?.priceUSD ?? selectedBatch?.price ?? coursePriceNum;
   const currencySymbol = "$";
 
   const discountAmount = couponResult?.valid ? (couponResult.discountAmount ?? 0) : 0;
@@ -120,6 +130,8 @@ export default function EnrollmentClient({ course, slug }: EnrollmentClientProps
   const total = Math.max(0, basePrice - discountAmount + platformFee);
 
   // --- Validate info form ---
+  const [batchError, setBatchError] = useState<string | null>(null);
+
   const validateInfo = () => {
     const errors: Partial<StudentInfo> = {};
     if (!info.name.trim()) errors.name = "Full name is required";
@@ -128,6 +140,12 @@ export default function EnrollmentClient({ course, slug }: EnrollmentClientProps
     if (!info.phone.trim() || info.phone.length < 5) errors.phone = "Valid phone number is required";
     if (!info.country) errors.country = "Please select your country";
     setInfoErrors(errors);
+
+    if (activeBatches.length > 0 && !selectedBatchId) {
+      setBatchError("Please select a batch to continue");
+      return false;
+    }
+    setBatchError(null);
     return Object.keys(errors).length === 0;
   };
 
@@ -184,6 +202,7 @@ export default function EnrollmentClient({ course, slug }: EnrollmentClientProps
           amount: total,
           currency: "USD",
           couponCode: couponResult?.valid ? couponResult.code : null,
+          batchId: selectedBatchId ?? null,
         }),
       });
 
@@ -267,7 +286,13 @@ export default function EnrollmentClient({ course, slug }: EnrollmentClientProps
 
       const rzp = new window.Razorpay(options);
       rzp.on("payment.failed", function (response: any) {
-        toast.error(`Payment Failed: ${response.error.description}`);
+        console.error("Razorpay payment.failed:", JSON.stringify(response, null, 2));
+        const reason =
+          response?.error?.description ||
+          response?.error?.reason ||
+          response?.error?.code ||
+          "Unknown error";
+        toast.error(`Payment Failed: ${reason}`);
         setIsProcessing(false);
       });
       rzp.open();
@@ -361,6 +386,73 @@ export default function EnrollmentClient({ course, slug }: EnrollmentClientProps
                 <h4 className="text-xl font-bold flex items-center gap-2">
                   <Icon name="person" className="text-primary" /> Your Details
                 </h4>
+
+                {/* Batch selector */}
+                {activeBatches.length > 0 && (
+                  <div className="space-y-3">
+                    <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground block">
+                      Select Batch *
+                    </label>
+                    <div className="grid gap-3">
+                      {activeBatches.map((batch) => {
+                        const batchPrice = batch.priceUSD
+                          ? `$${batch.priceUSD}`
+                          : batch.price
+                          ? `$${batch.price}`
+                          : course.priceUSD
+                          ? `$${course.priceUSD}`
+                          : course.price;
+                        const seatsLeft =
+                          batch.maxSeats != null
+                            ? batch.maxSeats - (batch.enrollmentCount ?? 0)
+                            : null;
+                        const isFull = seatsLeft !== null && seatsLeft <= 0;
+                        const isSelected = selectedBatchId === batch.id;
+
+                        return (
+                          <button
+                            key={batch.id}
+                            type="button"
+                            disabled={isFull}
+                            onClick={() => { setSelectedBatchId(batch.id); setBatchError(null); }}
+                            className={`w-full text-left flex items-center justify-between px-5 py-4 rounded-2xl border-2 transition-all cursor-pointer ${
+                              isFull
+                                ? "opacity-50 cursor-not-allowed border-border"
+                                : isSelected
+                                ? "border-primary bg-primary/5"
+                                : "border-border hover:border-primary/50"
+                            }`}
+                          >
+                            <div className="space-y-0.5">
+                              <div className="flex items-center gap-2">
+                                <span className={`w-4 h-4 rounded-full border-2 flex items-center justify-center shrink-0 ${isSelected ? "border-primary" : "border-muted-foreground/40"}`}>
+                                  {isSelected && <span className="w-2 h-2 rounded-full bg-primary block" />}
+                                </span>
+                                <p className="font-bold text-sm">{batch.name}</p>
+                              </div>
+                              <p className="text-xs text-muted-foreground pl-6">
+                                {new Date(batch.startDate).toLocaleDateString("en-US", { day: "numeric", month: "short", year: "numeric" })}
+                                {" → "}
+                                {new Date(batch.endDate).toLocaleDateString("en-US", { day: "numeric", month: "short", year: "numeric" })}
+                                {seatsLeft !== null && (
+                                  <span className={`ml-2 font-bold ${isFull ? "text-red-500" : seatsLeft <= 5 ? "text-orange-500" : "text-muted-foreground"}`}>
+                                    · {isFull ? "Full" : `${seatsLeft} seat${seatsLeft !== 1 ? "s" : ""} left`}
+                                  </span>
+                                )}
+                              </p>
+                            </div>
+                            <span className="font-black text-sm shrink-0">{batchPrice}</span>
+                          </button>
+                        );
+                      })}
+                    </div>
+                    {batchError && (
+                      <p className="text-red-500 text-xs flex items-center gap-1 font-medium">
+                        <Icon name="error" size={14} /> {batchError}
+                      </p>
+                    )}
+                  </div>
+                )}
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
@@ -611,6 +703,17 @@ export default function EnrollmentClient({ course, slug }: EnrollmentClientProps
               <h4 className="text-2xl font-bold mb-8 relative z-10">Order Summary</h4>
 
               <div className="space-y-4 relative z-10">
+                {selectedBatch && (
+                  <div className="bg-muted/50 rounded-2xl px-4 py-3 space-y-0.5 mb-2">
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Selected Batch</p>
+                    <p className="font-bold text-sm">{selectedBatch.name}</p>
+                    <p className="text-xs text-muted-foreground">
+                      {new Date(selectedBatch.startDate).toLocaleDateString("en-US", { day: "numeric", month: "short", year: "numeric" })}
+                      {" – "}
+                      {new Date(selectedBatch.endDate).toLocaleDateString("en-US", { day: "numeric", month: "short", year: "numeric" })}
+                    </p>
+                  </div>
+                )}
                 <div className="flex justify-between text-muted-foreground">
                   <span className="font-medium">Original Price</span>
                   <span className="font-bold">{currencySymbol}{basePrice.toLocaleString("en-US")}</span>

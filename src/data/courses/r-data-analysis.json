@@ -1,0 +1,90 @@
+{
+  "slug": "r-data-analysis",
+  "title": "Data Analysis with R Bootcamp",
+  "subtitle": "Become a Data Analyst using R, Tidyverse & Business Reporting",
+  "description": "Master R for data cleaning, analysis, visualization, and reporting. Build portfolio projects and become job-ready for analyst roles.",
+  "price": "$249.00",
+  "image": "/courses/r-analysis.png",
+  "heroImage": "/courses/r-analysis-hero.png",
+  "category": "Data Analytics",
+  "level": "Beginner",
+  "duration": "8 Weeks",
+  "liveInteractiveClasses": true,
+  "projects": [
+    {
+      "title": "Data Cleaning Project with dplyr",
+      "description": "Transform messy real-world datasets and format columns.",
+      "icon": "cleaning_services"
+    },
+    {
+      "title": "Business Metrics Analysis Project",
+      "description": "Generate KPIs, summarize data, and discover insights.",
+      "icon": "analytics"
+    },
+    {
+      "title": "Visualization Project using ggplot2",
+      "description": "Create professional charts, heatmaps, and customizable reports.",
+      "icon": "insert_chart"
+    },
+    {
+      "title": "Final Portfolio Project",
+      "description": "End-to-end R analysis report with markdown publishing.",
+      "icon": "verified"
+    }
+  ],
+  "tools": [
+    { "name": "R & RStudio", "icon": "r" },
+    { "name": "dplyr (Data Manipulation)", "icon": "dplyr" },
+    { "name": "ggplot2 (Visualization)", "icon": "ggplot2" },
+    { "name": "tidyverse", "icon": "tidyverse" },
+    { "name": "R Markdown (Reporting)", "icon": "rmarkdown" }
+  ],
+  "requirements": [
+    "Basic understanding of data",
+    "No programming experience required",
+    "Interest in analytics"
+  ],
+  "curriculum": [
+    {
+      "id": "01",
+      "title": "R Foundations & Data Cleaning",
+      "meta": "Weeks 1-3",
+      "lessons": [
+        { "title": "R Basics: Vectors, Matrices, Factors & DataFrames", "type": "live" },
+        { "title": "dplyr verbs: filter, select, mutate, arrange & summarize", "type": "video" }
+      ],
+      "practice": "Clean a messy retail sales dataset with dplyr",
+      "outcome": "Manipulate datasets quickly and create clean data pipelines in R.",
+      "isOpen": true
+    },
+    {
+      "id": "02",
+      "title": "tidyverse & ggplot2 Visualization",
+      "meta": "Weeks 4-6",
+      "lessons": [
+        { "title": "Reshaping Data with tidyr (pivot_longer, pivot_wider)", "type": "live" },
+        { "title": "Grammar of Graphics: ggplot2 geometries, scales, & themes", "type": "video" }
+      ],
+      "practice": "Create publication-ready charts representing marketing KPIs",
+      "outcome": "Build professional visualizations and custom data plots in R."
+    },
+    {
+      "id": "03",
+      "title": "R Markdown & Automated Reporting",
+      "meta": "Weeks 7-8",
+      "lessons": [
+        { "title": "Literate Programming: Dynamic documents with R Markdown", "type": "live" },
+        { "title": "Structuring Analyst Reports, Slide Decks & Portfolio Prep", "type": "video" }
+      ],
+      "practice": "Publish a comprehensive HTML/PDF business analysis report",
+      "outcome": "Automate analytical reporting and prepare a job-ready R project portfolio."
+    }
+  ],
+  "features": [
+    "Learn R + dplyr + ggplot2 + reporting workflows",
+    "Work on real-world datasets and case studies",
+    "Strong focus on analytics + storytelling",
+    "Includes portfolio + interview prep",
+    "Designed for Data Analyst roles"
+  ]
+}

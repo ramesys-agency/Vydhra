@@ -1,0 +1,90 @@
+{
+  "slug": "data-engineering",
+  "title": "Data Engineering Job-Ready Bootcamp",
+  "subtitle": "Master Data Pipelines, Snowflake, Airflow & Production Systems",
+  "description": "Master data pipelines, Snowflake, Airflow & real-world systems. Become a job-ready Data Engineer by building end-to-end pipelines.",
+  "price": "$399.00",
+  "image": "/courses/data-eng.png",
+  "heroImage": "/courses/data-eng-hero.png",
+  "category": "Data Engineering",
+  "level": "Intermediate",
+  "duration": "12 Weeks",
+  "liveInteractiveClasses": true,
+  "projects": [
+    {
+      "title": "API → Snowflake Pipeline",
+      "description": "Extract live weather/eCommerce data from API and load to Snowflake.",
+      "icon": "cloud"
+    },
+    {
+      "title": "Data Warehouse Design",
+      "description": "Build a complete Star Schema and OLAP structures.",
+      "icon": "database"
+    },
+    {
+      "title": "Automated Workflows",
+      "description": "Automate pipeline execution using Apache Airflow orchestrator.",
+      "icon": "schedule"
+    },
+    {
+      "title": "Capstone Pipeline",
+      "description": "End-to-end production data pipeline with testing and monitoring.",
+      "icon": "verified"
+    }
+  ],
+  "tools": [
+    { "name": "Python", "icon": "python" },
+    { "name": "Snowflake", "icon": "snowflake" },
+    { "name": "Apache Airflow", "icon": "airflow" },
+    { "name": "SQL & dbt", "icon": "sql" },
+    { "name": "API & Cloud Services", "icon": "cloud" }
+  ],
+  "requirements": [
+    "Basic Python and intermediate SQL knowledge",
+    "Willingness to build complex data structures",
+    "Computer setup capable of running docker"
+  ],
+  "curriculum": [
+    {
+      "id": "01",
+      "title": "Data Extraction & SQL pipelines",
+      "meta": "Weeks 1-4",
+      "lessons": [
+        { "title": "Python for Data Pipelines: API requests & pagination", "type": "live" },
+        { "title": "Advanced SQL: CTEs, analytical window functions & transformations", "type": "video" }
+      ],
+      "practice": "Create a python script to pull eCommerce sales and clean raw values",
+      "outcome": "Can extract raw dataset from remote REST APIs and execute SQL transformations.",
+      "isOpen": true
+    },
+    {
+      "id": "02",
+      "title": "Snowflake Data Warehousing",
+      "meta": "Weeks 5-8",
+      "lessons": [
+        { "title": "Snowflake Architecture: Virtual warehouses & Storage layers", "type": "live" },
+        { "title": "Loading data using Snowpipe, COPY INTO & staging layers", "type": "video" }
+      ],
+      "practice": "Design and load structured business data into active Snowflake staging",
+      "outcome": "Design database warehousing structures and manage bulk cloud data loads."
+    },
+    {
+      "id": "03",
+      "title": "Orchestration with Airflow & Capstone",
+      "meta": "Weeks 9-12",
+      "lessons": [
+        { "title": "Apache Airflow: DAGs, Operators, Tasks & scheduling", "type": "live" },
+        { "title": "Data transformation modeling using dbt (Data Build Tool)", "type": "video" },
+        { "title": "Completing and presenting end-to-end Pipeline Capstone project", "type": "live" }
+      ],
+      "practice": "Design Apache Airflow orchestrator DAG executing staging load",
+      "outcome": "Job-ready Data Engineer capable of orchestrating complex production pipelines."
+    }
+  ],
+  "features": [
+    "End-to-end data pipeline training from scratch",
+    "Real tools used in top industries (Snowflake, Apache Airflow, dbt)",
+    "Production-style projects that you can showcase on GitHub",
+    "Includes direct training for Data Engineer, Analytics Engineer, ETL Developer roles"
+  ]
+}

@@ -33,6 +33,19 @@ export interface Testimonial {
   image?: string;
 }
 
+export interface CourseBatch {
+  id: string;
+  name: string;
+  startDate: string;
+  endDate: string;
+  maxSeats?: number | null;
+  price?: number | null;
+  priceINR?: number | null;
+  priceUSD?: number | null;
+  status: "UPCOMING" | "ACTIVE" | "COMPLETED" | "CANCELLED";
+  enrollmentCount?: number;
+}
+
 export interface Course {
   slug: string;
   title: string;
@@ -53,4 +66,5 @@ export interface Course {
   curriculum: Module[];
   features?: string[];
   testimonials?: Testimonial[];
+  batches?: CourseBatch[];
 }

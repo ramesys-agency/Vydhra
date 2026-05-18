@@ -1,0 +1,90 @@
+{
+  "slug": "cybersecurity",
+  "title": "Cybersecurity Job-Ready Bootcamp",
+  "subtitle": "Protect Systems, Detect Threats & Handle Security Incidents",
+  "description": "Master networking, system security, vulnerability assessment, SIEM & incident response. Become a job-ready Security Analyst in 12 weeks.",
+  "price": "$399.00",
+  "image": "/courses/cybersecurity.png",
+  "heroImage": "/courses/cybersecurity-hero.png",
+  "category": "Cybersecurity",
+  "level": "Beginner",
+  "duration": "12 Weeks",
+  "liveInteractiveClasses": true,
+  "projects": [
+    {
+      "title": "Network Analysis Lab",
+      "description": "Monitor network packet flows and isolate malicious actions.",
+      "icon": "security"
+    },
+    {
+      "title": "Vulnerability Assessment",
+      "description": "Scan system setups and generate security fixes reports.",
+      "icon": "report"
+    },
+    {
+      "title": "Security Audit Project",
+      "description": "Create a full threat modeling audit for enterprise networks.",
+      "icon": "verified"
+    },
+    {
+      "title": "SIEM Incident Response",
+      "description": "Configure SIEM dashboards and triage simulated network attacks.",
+      "icon": "dashboard"
+    }
+  ],
+  "tools": [
+    { "name": "Wireshark", "icon": "wireshark" },
+    { "name": "Nmap", "icon": "nmap" },
+    { "name": "Linux (Kali)", icon: "linux" },
+    { "name": "SIEM & Splunk", "icon": "splunk" },
+    { "name": "Cloud Security", "icon": "cloud" }
+  ],
+  "requirements": [
+    "Basic understanding of computers and operating systems",
+    "No prior cybersecurity or programming experience required",
+    "PC/Laptop capable of virtualization"
+  ],
+  "curriculum": [
+    {
+      "id": "01",
+      "title": "Networking & OS Security Foundations",
+      "meta": "Weeks 1-4",
+      "lessons": [
+        { "title": "TCP/IP models, routing protocols & network protocols", "type": "live" },
+        { "title": "Linux systems administration, access controls & permissions", "type": "video" }
+      ],
+      "practice": "Perform port scans and traffic sniffing using Nmap & Wireshark",
+      "outcome": "Can analyze network architecture and manage fundamental OS security.",
+      "isOpen": true
+    },
+    {
+      "id": "02",
+      "title": "Vulnerability Scan & SIEM Tracking",
+      "meta": "Weeks 5-8",
+      "lessons": [
+        { "title": "Vulnerability management: scanning, reporting & remediation", "type": "live" },
+        { "title": "Introduction to SIEM platforms (Splunk/ELK stack) & log parsing", "type": "video" }
+      ],
+      "practice": "Scan a mock server using vulnerability scanner & analyze reports",
+      "outcome": "Identify network flaws and navigate SIEM systems for event log tracking."
+    },
+    {
+      "id": "03",
+      "title": "Incident Handling & Cloud Security",
+      "meta": "Weeks 9-12",
+      "lessons": [
+        { "title": "Threat hunting, triage, incident containment & report structures", "type": "live" },
+        { "title": "Cloud security concepts: IAM, AWS structures & guardrails", "type": "video" },
+        { "title": "Completing security assessment audit & defense mock scenarios", "type": "live" }
+      ],
+      "practice": "Draft incident response report for a simulated ransomware attack",
+      "outcome": "Job-ready Cybersecurity Analyst, SOC Analyst or Security Associate."
+    }
+  ],
+  "features": [
+    "Hands-on training in virtual lab environment",
+    "Learn actual attack, threat analysis, and defense concepts",
+    "SOC operations & Splunk SIEM training",
+    "Prepares you for Cybersecurity Analyst, SOC Analyst, and Security Associate roles"
+  ]
+}

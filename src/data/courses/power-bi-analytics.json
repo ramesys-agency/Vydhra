@@ -1,0 +1,101 @@
+{
+  "slug": "power-bi-analytics",
+  "title": "Power BI Data Analytics Job-Ready Bootcamp",
+  "subtitle": "Master Power BI from Data Cleaning to Executive Dashboards",
+  "description": "Master Power BI from data cleaning to executive dashboards. Build real business projects, track KPIs, and become job-ready with portfolio + interview prep.",
+  "price": "$199.00",
+  "image": "/courses/power-bi.png",
+  "heroImage": "/courses/power-bi-hero.png",
+  "category": "Data Analytics",
+  "level": "Beginner to Advanced",
+  "duration": "4 Weeks",
+  "liveInteractiveClasses": true,
+  "projects": [
+    {
+      "title": "Sales Performance Dashboard",
+      "description": "Track revenue, growth, and KPIs with interactive visuals.",
+      "icon": "trending_up"
+    },
+    {
+      "title": "Business KPI Dashboard",
+      "description": "Build executive-level dashboards with filters & drilldowns.",
+      "icon": "insights"
+    },
+    {
+      "title": "Data Cleaning Project",
+      "description": "Transform messy datasets into analysis-ready format with Power Query.",
+      "icon": "cleaning_services"
+    },
+    {
+      "title": "Final Portfolio Dashboard",
+      "description": "End-to-end BI project (data → model → dashboard → presentation).",
+      "icon": "verified"
+    }
+  ],
+  "tools": [
+    { "name": "Power BI Desktop", "icon": "powerbi" },
+    { "name": "Power Query", "icon": "powerquery" },
+    { "name": "DAX", "icon": "dax" },
+    { "name": "Data Modeling", "icon": "datamodeling" },
+    { "name": "Power BI Service", "icon": "cloud" }
+  ],
+  "requirements": [
+    "Basic understanding of data (Excel is enough)",
+    "No coding required",
+    "Willingness to practice dashboards"
+  ],
+  "curriculum": [
+    {
+      "id": "01",
+      "title": "Data Cleaning & Power Query",
+      "meta": "Week 1",
+      "lessons": [
+        { "title": "Introduction to Power BI & ETL Processes", "type": "live" },
+        { "title": "Transforming Messy Datasets in Power Query Editor", "type": "video" }
+      ],
+      "practice": "Clean eCommerce/Sales raw dataset and prepare it for loading",
+      "outcome": "Can clean, format, and load unstructured raw datasets with ease.",
+      "isOpen": true
+    },
+    {
+      "id": "02",
+      "title": "Data Modeling & Star Schema",
+      "meta": "Week 2",
+      "lessons": [
+        { "title": "Understanding Relationships, Star Schema & Snowflake Schema", "type": "live" },
+        { "title": "Creating Active vs Inactive Relationships & Cross Filtering", "type": "video" }
+      ],
+      "practice": "Design an optimized database schema for Business KPIs",
+      "outcome": "Students design efficient schemas and create reliable data models."
+    },
+    {
+      "id": "03",
+      "title": "DAX (Data Analysis Expressions)",
+      "meta": "Week 3",
+      "lessons": [
+        { "title": "Calculated Columns vs Measures & Basic DAX Functions", "type": "live" },
+        { "title": "Time Intelligence Functions & CALCULATE Deep-Dive", "type": "video" }
+      ],
+      "practice": "Implement KPI calculations, YTD/MTD and growth metrics",
+      "outcome": "Students construct advanced business logic and KPI formulas."
+    },
+    {
+      "id": "04",
+      "title": "Dashboard Design & Service Deployment",
+      "meta": "Week 4",
+      "lessons": [
+        { "title": "Visual Storytelling, Layout Design & Interactive Elements", "type": "live" },
+        { "title": "Power BI Service: Publishing, Gateway Setup & RLS", "type": "video" }
+      ],
+      "practice": "Build and publish an executive-level sales performance dashboard",
+      "outcome": "Students deploy interactive dashboards and create professional portfolio reports."
+    }
+  ],
+  "features": [
+    "Build real business dashboards (Sales, Finance, Marketing)",
+    "Learn Power Query + DAX used in actual companies",
+    "Focus on job-ready skills, not just theory",
+    "Includes portfolio project + interview prep",
+    "Designed for analyst roles (BI / Data Analyst)"
+  ]
+}
