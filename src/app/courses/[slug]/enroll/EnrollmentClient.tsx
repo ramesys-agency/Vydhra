@@ -11,6 +11,7 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import ReactFlagsSelect from "react-flags-select";
 import { CourseBatch } from "@/types/course";
+import { useCurrency } from "@/context/CurrencyContext";
 
 declare global {
   interface Window {
@@ -22,9 +23,7 @@ interface EnrollmentClientProps {
   course: {
     title: string;
     subtitle: string;
-    price: string;
-    priceINR?: number;
-    priceUSD?: number;
+    pricing: Record<string, number>;
     image: string;
     category: string;
     slug: string;
@@ -94,7 +93,7 @@ export default function EnrollmentClient({ course, slug, batches }: EnrollmentCl
   const router = useRouter();
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  const [step, setStep] = useState<Step>("info");
+  const [step] = useState<Step>("info");
 
   // Batch selection
   const activeBatches = batches.filter((b) => b.status === "ACTIVE" || b.status === "UPCOMING");
@@ -118,12 +117,13 @@ export default function EnrollmentClient({ course, slug, batches }: EnrollmentCl
 
   useEffect(() => { setMounted(true); }, []);
 
+  const { currency, currencyInfo, getPrice, formatPrice } = useCurrency();
+  const currencySymbol = currencyInfo.symbol;
+
   const logoSrc = mounted && resolvedTheme === "dark" ? "/logo_vydhra_dark.png" : "/logo_vydhra_light.png";
 
-  const currency = "USD";
-  const coursePriceNum = course.priceUSD || parseFloat(course.price.replace(/[^0-9.]/g, ""));
-  const basePrice = selectedBatch?.priceUSD ?? selectedBatch?.price ?? coursePriceNum;
-  const currencySymbol = "$";
+  const coursePriceNum = getPrice(course.pricing) ?? 0;
+  const basePrice = (selectedBatch?.pricing ? getPrice(selectedBatch.pricing) : null) ?? coursePriceNum;
 
   const discountAmount = couponResult?.valid ? (couponResult.discountAmount ?? 0) : 0;
   const platformFee = 0;
@@ -150,7 +150,7 @@ export default function EnrollmentClient({ course, slug, batches }: EnrollmentCl
   };
 
   const handleContinue = () => {
-    if (validateInfo()) setStep("payment");
+    if (validateInfo()) handlePayment();
   };
 
   // --- Coupon validation ---
@@ -162,7 +162,7 @@ export default function EnrollmentClient({ course, slug, batches }: EnrollmentCl
       const res = await fetch("/api/coupon/validate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ code: coupon.trim(), amount: basePrice }),
+        body: JSON.stringify({ code: coupon.trim(), amount: basePrice, currency }),
       });
       const data: CouponResult = await res.json();
       if (data.valid) {
@@ -200,7 +200,7 @@ export default function EnrollmentClient({ course, slug, batches }: EnrollmentCl
           courseSlug: slug,
           courseName: course.title,
           amount: total,
-          currency: "USD",
+          currency,
           couponCode: couponResult?.valid ? couponResult.code : null,
           batchId: selectedBatchId ?? null,
         }),
@@ -218,7 +218,7 @@ export default function EnrollmentClient({ course, slug, batches }: EnrollmentCl
       const options = {
         key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
         amount: Math.round(total * 100),
-        currency: "USD",
+        currency,
         name: "Vydhra",
         description: `Enrollment – ${course.title}`,
         image: "/logo_vydhra_dark.png",
@@ -245,7 +245,7 @@ export default function EnrollmentClient({ course, slug, batches }: EnrollmentCl
                 courseId,
                 couponId: couponId ?? null,
                 amount: total,
-                currency: "USD",
+                currency,
               }),
             });
 
@@ -266,12 +266,15 @@ export default function EnrollmentClient({ course, slug, batches }: EnrollmentCl
                 courseImage: course.image,
                 courseCategory: course.category,
                 amount: total,
+                currency,
+                currencySymbol,
                 discountAmount,
                 couponCode: couponResult?.valid ? couponResult.code : null,
                 studentName: info.name,
                 studentEmail: info.email,
                 studentPhone: info.phone,
                 studentCountry: info.country,
+                whatsappGroupUrl: selectedBatch?.whatsappGroupUrl ?? null,
               })
             );
 
@@ -336,32 +339,6 @@ export default function EnrollmentClient({ course, slug, batches }: EnrollmentCl
           </p>
         </div>
 
-        {/* Step indicator */}
-        <div className="flex items-center gap-3 mb-10">
-          {(["info", "payment"] as Step[]).map((s, i) => (
-            <React.Fragment key={s}>
-              <div
-                className={`flex items-center gap-2 px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest transition-all ${
-                  step === s
-                    ? "bg-primary text-white shadow-lg shadow-primary/30"
-                    : step === "payment" && s === "info"
-                    ? "bg-green-500 text-white"
-                    : "bg-muted text-muted-foreground"
-                }`}
-              >
-                {step === "payment" && s === "info" ? (
-                  <Icon name="check_circle" size={14} />
-                ) : (
-                  <span>{i + 1}</span>
-                )}
-                {s === "info" ? "Your Details" : "Payment"}
-              </div>
-              {i === 0 && (
-                <div className={`flex-1 h-px max-w-[60px] transition-all ${step === "payment" ? "bg-primary" : "bg-border"}`} />
-              )}
-            </React.Fragment>
-          ))}
-        </div>
 
         <div className="grid lg:grid-cols-12 gap-12 items-start">
           {/* Left column */}
@@ -380,9 +357,8 @@ export default function EnrollmentClient({ course, slug, batches }: EnrollmentCl
               </div>
             </div>
 
-            {/* STEP 1: Student info form */}
-            {step === "info" && (
-              <div className="bg-card/50 backdrop-blur-xl border border-border rounded-3xl p-8 space-y-5">
+            {/* Student info form */}
+            <div className="bg-card/50 backdrop-blur-xl border border-border rounded-3xl p-8 space-y-5">
                 <h4 className="text-xl font-bold flex items-center gap-2">
                   <Icon name="person" className="text-primary" /> Your Details
                 </h4>
@@ -395,13 +371,7 @@ export default function EnrollmentClient({ course, slug, batches }: EnrollmentCl
                     </label>
                     <div className="grid gap-3">
                       {activeBatches.map((batch) => {
-                        const batchPrice = batch.priceUSD
-                          ? `$${batch.priceUSD}`
-                          : batch.price
-                          ? `$${batch.price}`
-                          : course.priceUSD
-                          ? `$${course.priceUSD}`
-                          : course.price;
+                        const batchPrice = formatPrice(batch.pricing || course.pricing);
                         const seatsLeft =
                           batch.maxSeats != null
                             ? batch.maxSeats - (batch.enrollmentCount ?? 0)
@@ -626,18 +596,10 @@ export default function EnrollmentClient({ course, slug, batches }: EnrollmentCl
                   `}</style>
                 </div>
 
-                <button
-                  onClick={handleContinue}
-                  className="w-full py-5 bg-primary text-white rounded-2xl font-black text-lg hover:bg-orange-600 hover:scale-[1.01] active:scale-95 transition-all shadow-xl shadow-primary/30 flex items-center justify-center gap-2 cursor-pointer"
-                >
-                  Continue to Payment <Icon name="arrow_forward" size={20} />
-                </button>
-              </div>
-            )}
+            </div>
 
-            {/* STEP 2: Coupon */}
-            {step === "payment" && (
-              <div className="bg-card/50 backdrop-blur-xl border border-border rounded-3xl p-8">
+            {/* Coupon */}
+            <div className="bg-card/50 backdrop-blur-xl border border-border rounded-3xl p-8">
                 <h4 className="text-xl font-bold mb-6 flex items-center gap-2">
                   <Icon name="local_offer" className="text-primary" /> Have a coupon code?
                 </h4>
@@ -678,8 +640,7 @@ export default function EnrollmentClient({ course, slug, batches }: EnrollmentCl
                     )}
                   </>
                 )}
-              </div>
-            )}
+            </div>
 
             {/* Trust badges */}
             <div className="grid grid-cols-3 gap-4">
@@ -738,21 +699,8 @@ export default function EnrollmentClient({ course, slug, batches }: EnrollmentCl
                   </div>
                 </div>
 
-                {/* Student info summary (step 2) */}
-                {step === "payment" && (
-                  <div className="bg-muted/50 rounded-2xl p-4 mb-4 space-y-1">
-                    <div className="flex justify-between items-center">
-                      <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Enrolling as</p>
-                      <button onClick={() => setStep("info")} className="text-primary text-xs font-bold hover:underline cursor-pointer">Edit</button>
-                    </div>
-                    <p className="font-bold">{info.name}</p>
-                    <p className="text-sm text-muted-foreground">{info.email}</p>
-                    <p className="text-sm text-muted-foreground">{info.phone} · {info.country}</p>
-                  </div>
-                )}
-
                 <button
-                  onClick={step === "info" ? handleContinue : handlePayment}
+                  onClick={handleContinue}
                   disabled={isProcessing}
                   className={`w-full py-6 rounded-2xl font-black text-xl flex items-center justify-center gap-3 transition-all shadow-2xl cursor-pointer ${
                     isProcessing
@@ -764,10 +712,6 @@ export default function EnrollmentClient({ course, slug, batches }: EnrollmentCl
                     <>
                       <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                       Processing...
-                    </>
-                  ) : step === "info" ? (
-                    <>
-                      <Icon name="arrow_forward" size={20} /> Continue
                     </>
                   ) : (
                     <>

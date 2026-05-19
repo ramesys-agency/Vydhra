@@ -21,7 +21,7 @@ import Navbar from "@/components/layout/Navbar";
 import MobileNav from "@/components/layout/MobileNav";
 import Footer from "@/components/layout/Footer";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
-
+import { CurrencyProvider } from "@/context/CurrencyContext";
 import { Toaster } from "sonner";
 
 export default function RootLayout({
@@ -50,11 +50,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <CurrencyProvider>
           <Navbar />
           {children}
           <Footer />
           <MobileNav />
           <Toaster richColors position="top-center" />
+          </CurrencyProvider>
         </ThemeProvider>
       </body>
     </html>

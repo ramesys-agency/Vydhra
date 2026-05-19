@@ -3,14 +3,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import Icon from "@/components/common/Icon";
+import { useCurrency } from "@/context/CurrencyContext";
 
 interface CourseCardProps {
   title: string;
   category: string;
   description: string;
-  price: string;
-  priceINR?: number;
-  priceUSD?: number;
+  pricing: Record<string, number>;
   originalPrice?: string;
   image: string;
   link: string;
@@ -20,14 +19,13 @@ export default function CourseCard({
   title,
   category,
   description,
-  price,
-  priceINR,
-  priceUSD,
+  pricing,
   originalPrice,
   image,
   link,
 }: CourseCardProps) {
-  const displayPrice = priceUSD ? `$${priceUSD}` : price;
+  const { formatPrice } = useCurrency();
+  const displayPrice = formatPrice(pricing);
 
   return (
     <Link href={link} className="group cursor-pointer block h-full">

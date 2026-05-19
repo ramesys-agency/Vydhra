@@ -10,6 +10,8 @@ interface ReceiptData {
   paymentId: string;
   razorpayPaymentId: string;
   amount: number;
+  currency?: string;
+  currencySymbol?: string;
   discountAmount?: number;
   couponCode?: string | null;
   courseName: string;
@@ -20,9 +22,10 @@ interface ReceiptData {
   studentPhone: string;
   studentCountry: string;
   paidAt: string;
+  whatsappGroupUrl?: string | null;
 }
 
-const WHATSAPP_URL = process.env.NEXT_PUBLIC_WHATSAPP_GROUP_URL || "https://chat.whatsapp.com/";
+const FALLBACK_WHATSAPP_URL = process.env.NEXT_PUBLIC_WHATSAPP_GROUP_URL || "https://chat.whatsapp.com/";
 
 export default function EnrollmentSuccessClient({ slug }: { slug: string }) {
   const router = useRouter();
@@ -108,8 +111,8 @@ export default function EnrollmentSuccessClient({ slug }: { slug: string }) {
     <tr><td>Payment Date</td><td>${paidDate}</td></tr>
     <tr><td>Payment Method</td><td>Razorpay (Online)</td></tr>
     <tr><td>Razorpay Payment ID</td><td>${receipt.razorpayPaymentId}</td></tr>
-    ${receipt.couponCode ? `<tr><td>Coupon Applied</td><td>${receipt.couponCode} (–$${(receipt.discountAmount ?? 0).toLocaleString("en-US")} off)</td></tr>` : ""}
-    <tr class="amount-row"><td>Amount Paid</td><td>$${receipt.amount.toLocaleString("en-US")}</td></tr>
+    ${receipt.couponCode ? `<tr><td>Coupon Applied</td><td>${receipt.couponCode} (–${receipt.currencySymbol ?? "$"}${(receipt.discountAmount ?? 0).toLocaleString("en-US")} off)</td></tr>` : ""}
+    <tr class="amount-row"><td>Amount Paid</td><td>${receipt.currencySymbol ?? "$"}${receipt.amount.toLocaleString("en-US")}</td></tr>
   </table>
 
   <div class="footer">
@@ -224,12 +227,12 @@ export default function EnrollmentSuccessClient({ slug }: { slug: string }) {
             {receipt.couponCode && (
               <div className="flex justify-between text-sm mb-3 text-green-500 font-medium">
                 <span>Coupon Discount ({receipt.couponCode})</span>
-                <span>–${(receipt.discountAmount ?? 0).toLocaleString("en-US")}</span>
+                <span>–{receipt.currencySymbol ?? "$"}{(receipt.discountAmount ?? 0).toLocaleString("en-US")}</span>
               </div>
             )}
             <div className="flex justify-between items-center">
               <span className="text-sm font-bold text-muted-foreground uppercase tracking-widest">Total Paid</span>
-              <span className="text-3xl font-black text-primary">${receipt.amount.toLocaleString("en-US")}</span>
+              <span className="text-3xl font-black text-primary">{receipt.currencySymbol ?? "$"}{receipt.amount.toLocaleString("en-US")}</span>
             </div>
           </div>
         </div>
@@ -252,7 +255,7 @@ export default function EnrollmentSuccessClient({ slug }: { slug: string }) {
 
           {/* WhatsApp group */}
           <a
-            href={WHATSAPP_URL}
+            href={receipt.whatsappGroupUrl || FALLBACK_WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-3 bg-green-500 text-white py-5 rounded-2xl font-black text-base hover:bg-green-600 transition-all hover:scale-[1.02] active:scale-95 no-underline"

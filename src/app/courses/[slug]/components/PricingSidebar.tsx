@@ -1,17 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
+import { useCurrency } from "@/context/CurrencyContext";
 
 interface PricingSidebarProps {
-  price: string;
-  priceINR?: number;
-  priceUSD?: number;
+  pricing: Record<string, number>;
   slug: string;
 }
 
-export default function PricingSidebar({ price, priceINR, priceUSD, slug }: PricingSidebarProps) {
-  const displayPrice = priceUSD ? `$${priceUSD}` : price;
+export default function PricingSidebar({ pricing, slug }: PricingSidebarProps) {
+  const { formatPrice } = useCurrency();
+  const displayPrice = formatPrice(pricing);
 
   return (
     <aside className="sticky top-28">
@@ -51,15 +50,11 @@ export default function PricingSidebar({ price, priceINR, priceUSD, slug }: Pric
         </div>
         <div className="pt-8 border-t border-border">
           <div className="flex items-center gap-4 bg-muted p-4 rounded-xl">
-            <span className="material-icons text-primary text-3xl">
-              verified_user
-            </span>
+            <span className="material-icons text-primary text-3xl">verified_user</span>
             <div className="text-[12px] font-bold leading-tight uppercase">
               14-DAY MONEY-BACK GUARANTEE
               <br />
-              <span className="text-muted-foreground font-medium normal-case">
-                No questions asked.
-              </span>
+              <span className="text-muted-foreground font-medium normal-case">No questions asked.</span>
             </div>
           </div>
         </div>

@@ -2,54 +2,55 @@ import { Course } from "@/types/course";
 
 const API_URL = process.env.NEXT_PUBLIC_ADMIN_API_URL || process.env.ADMIN_API_URL || "http://127.0.0.1:3002";
 
+function mapPricing(course: Record<string, unknown>): Record<string, number> {
+  if (course.pricing && typeof course.pricing === "object" && !Array.isArray(course.pricing)) {
+    return course.pricing as Record<string, number>;
+  }
+  const fallback: Record<string, number> = {};
+  if (typeof course.priceUSD === "number") fallback.USD = course.priceUSD;
+  if (typeof course.priceINR === "number") fallback.INR = course.priceINR;
+  if (typeof course.price === "number" && !fallback.USD) fallback.USD = course.price;
+  return fallback;
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function mapCourse(course: any): Course {
+  const details = typeof course.details === "string"
+    ? JSON.parse(course.details)
+    : (course.details || {});
+
+  return {
+    ...details,
+    id: course.id,
+    slug: course.slug || details.slug || `course-${course.id}`,
+    title: details.title || course.name || "Untitled Course",
+    description: details.description || course.description || "",
+    category: details.category || "Course",
+    image: details.image || "/courses/ai-agents.png",
+    heroImage: details.heroImage || details.image || "/courses/ai-agents.png",
+    pricing: mapPricing(course),
+    batches: Array.isArray(course.batches) ? course.batches : [],
+  } as Course;
+}
+
 export async function getCourses(): Promise<Course[]> {
   try {
-    const res = await fetch(`${API_URL}/api/public/vydhra/courses`, {
-      cache: "no-store",
-    });
+    const res = await fetch(`${API_URL}/api/public/vydhra/courses`, { cache: "no-store" });
 
-    if (!res.ok) {
-      throw new Error(`Failed to fetch courses: ${res.statusText}`);
-    }
+    if (!res.ok) throw new Error(`Failed to fetch courses: ${res.statusText}`);
 
     const result = await res.json();
-    
-    // Defensive check for data structure
     const courseData = result?.data;
     if (!Array.isArray(courseData)) {
-      console.error("Invalid API response format: expected an array in 'data' field", result);
+      console.error("Invalid API response format", result);
       return [];
     }
 
-    return courseData.map((course: any) => {
-      try {
-        const details = typeof course.details === 'string' 
-          ? JSON.parse(course.details) 
-          : (course.details || {});
-          
-        return {
-          ...details,
-          id: course.id,
-          slug: course.slug || details.slug || `course-${course.id}`,
-          title: details.title || course.name || "Untitled Course",
-          description: details.description || course.description || "",
-          category: details.category || "Course",
-          image: details.image || "/courses/ai-agents.png",
-          price: typeof course.price === 'number' 
-            ? `$${course.price.toFixed(2)}` 
-            : (details.price || course.price || "Contact for Pricing"),
-          priceUSD: course.priceUSD || details.priceUSD,
-        } as Course;
-      } catch (parseError) {
-        console.error("Error parsing course details:", parseError, course);
-        // Return a partial object to avoid breaking the whole list
-        return {
-          id: course.id,
-          title: course.name || "Error loading course",
-          slug: course.slug || `error-${course.id}`,
-          image: "/courses/ai-agents.png",
-          price: "N/A"
-        } as unknown as Course;
+    return courseData.map((c) => {
+      try { return mapCourse(c); }
+      catch (e) {
+        console.error("Error mapping course:", e, c);
+        return { id: c.id, title: c.name || "Error", slug: c.slug || `error-${c.id}`, pricing: {} } as unknown as Course;
       }
     });
   } catch (error) {
@@ -60,9 +61,7 @@ export async function getCourses(): Promise<Course[]> {
 
 export async function getCourseBySlug(slug: string): Promise<Course | null> {
   try {
-    const res = await fetch(`${API_URL}/api/public/vydhra/courses/${slug}`, {
-      cache: "no-store",
-    });
+    const res = await fetch(`${API_URL}/api/public/vydhra/courses/${slug}`, { cache: "no-store" });
 
     if (!res.ok) {
       if (res.status === 404) return null;
@@ -72,24 +71,7 @@ export async function getCourseBySlug(slug: string): Promise<Course | null> {
     const course = await res.json();
     if (!course) return null;
 
-    const details = typeof course.details === 'string' 
-      ? JSON.parse(course.details) 
-      : (course.details || {});
-
-    return {
-      ...details,
-      id: course.id,
-      slug: course.slug || details.slug || slug,
-      title: details.title || course.name || "Untitled Course",
-      description: details.description || course.description || "",
-      category: details.category || "Course",
-      image: details.image || "/courses/ai-agents.png",
-      price: typeof course.price === 'number'
-        ? `$${course.price.toFixed(2)}`
-        : (details.price || course.price || "Contact for Pricing"),
-      priceUSD: course.priceUSD || details.priceUSD,
-      batches: Array.isArray(course.batches) ? course.batches : [],
-    } as Course;
+    return mapCourse(course);
   } catch (error) {
     console.error(`Error fetching course ${slug}:`, error);
     if (error instanceof Error && error.message.includes("404")) return null;

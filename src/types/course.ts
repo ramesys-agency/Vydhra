@@ -39,11 +39,10 @@ export interface CourseBatch {
   startDate: string;
   endDate: string;
   maxSeats?: number | null;
-  price?: number | null;
-  priceINR?: number | null;
-  priceUSD?: number | null;
+  pricing?: Record<string, number>;
   status: "UPCOMING" | "ACTIVE" | "COMPLETED" | "CANCELLED";
   enrollmentCount?: number;
+  whatsappGroupUrl?: string | null;
 }
 
 export interface Course {
@@ -51,9 +50,7 @@ export interface Course {
   title: string;
   subtitle: string;
   description: string;
-  price: string;
-  priceINR?: number;
-  priceUSD?: number;
+  pricing: Record<string, number>;
   image: string;
   heroImage: string;
   category: string;

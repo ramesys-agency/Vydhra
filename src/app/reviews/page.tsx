@@ -39,8 +39,9 @@ export default function ReviewsPage() {
               <span className="text-primary font-bold tracking-widest uppercase text-xs mb-4 block">
                 Wall of Love
               </span>
-              <h1 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-none text-foreground">
-                Trusted by <br /> <span className="text-primary">2,500+</span> Students
+              <h1 className="text-5xl md:text-6xl font-black uppercase tracking-tighter leading-none text-foreground">
+                Trusted by <br />{" "}
+                <span className="text-primary">students across the globe</span>
               </h1>
             </div>
             <button className="flex min-w-[160px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-xl h-14 px-8 bg-primary text-white text-base font-bold shadow-lg shadow-primary/20 transition-transform hover:scale-105 active:scale-95">
@@ -50,17 +51,17 @@ export default function ReviewsPage() {
           </div>
 
           <RatingSummary />
-          
-          <ReviewFilters 
-            activeCategory={activeCategory} 
-            onCategoryChange={handleCategoryChange} 
+
+          <ReviewFilters
+            activeCategory={activeCategory}
+            onCategoryChange={handleCategoryChange}
           />
-          
+
           <ReviewGrid reviews={displayedReviews} />
 
           {hasMore && (
             <div className="flex justify-center py-10">
-              <button 
+              <button
                 onClick={handleLoadMore}
                 className="px-10 py-4 border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all duration-300 cursor-pointer"
               >

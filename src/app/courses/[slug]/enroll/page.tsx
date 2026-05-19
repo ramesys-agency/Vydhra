@@ -32,9 +32,7 @@ export default async function EnrollmentPage({ params }: PageProps) {
         course={{
           title: course.title,
           subtitle: course.subtitle,
-          price: course.price,
-          priceINR: course.priceINR,
-          priceUSD: course.priceUSD,
+          pricing: course.pricing,
           image: course.image,
           category: course.category,
           slug: slug,

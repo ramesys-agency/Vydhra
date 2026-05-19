@@ -1,11 +1,13 @@
+"use client";
+
 import Link from "next/link";
 import { CourseBatch } from "@/types/course";
+import { useCurrency } from "@/context/CurrencyContext";
 
 interface BatchesSectionProps {
   batches?: CourseBatch[];
   slug: string;
-  coursePrice: string;
-  coursePriceUSD?: number;
+  coursePricing: Record<string, number>;
 }
 
 function formatDate(dateStr: string) {
@@ -16,17 +18,11 @@ function formatDate(dateStr: string) {
   });
 }
 
-export default function BatchesSection({
-  batches,
-  slug,
-  coursePrice,
-  coursePriceUSD,
-}: BatchesSectionProps) {
+export default function BatchesSection({ batches, slug, coursePricing }: BatchesSectionProps) {
+  const { formatPrice } = useCurrency();
   const activeBatches = (batches ?? []).filter((b) => b.status === "ACTIVE" || b.status === "UPCOMING");
 
   if (activeBatches.length === 0) return null;
-
-  const displayCoursePrice = coursePriceUSD ? `$${coursePriceUSD}` : coursePrice;
 
   return (
     <section>
@@ -37,17 +33,10 @@ export default function BatchesSection({
 
       <div className="grid gap-4">
         {activeBatches.map((batch) => {
-          const batchPrice = batch.priceUSD
-            ? `$${batch.priceUSD}`
-            : batch.price
-            ? `$${batch.price}`
-            : displayCoursePrice;
+          const batchPrice = formatPrice(batch.pricing && Object.keys(batch.pricing).length ? batch.pricing : coursePricing);
 
           const seatsLeft =
-            batch.maxSeats != null
-              ? batch.maxSeats - (batch.enrollmentCount ?? 0)
-              : null;
-
+            batch.maxSeats != null ? batch.maxSeats - (batch.enrollmentCount ?? 0) : null;
           const isFull = seatsLeft !== null && seatsLeft <= 0;
 
           return (
@@ -85,9 +74,7 @@ export default function BatchesSection({
               <div className="flex items-center gap-4 shrink-0">
                 <div className="text-right">
                   <p className="text-2xl font-black">{batchPrice}</p>
-                  <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-widest">
-                    One-time
-                  </p>
+                  <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-widest">One-time</p>
                 </div>
                 <Link
                   href={`/courses/${slug}/enroll`}

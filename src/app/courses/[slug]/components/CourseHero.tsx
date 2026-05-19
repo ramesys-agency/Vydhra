@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Icon from "@/components/common/Icon";
+import { useCurrency } from "@/context/CurrencyContext";
 
 interface CourseHeroProps {
   title: string;
@@ -12,9 +13,7 @@ interface CourseHeroProps {
   live: boolean;
   image: string;
   heroImage?: string;
-  price: string;
-  priceINR?: number;
-  priceUSD?: number;
+  pricing: Record<string, number>;
   level: string;
   duration: string;
   requirements: string[];
@@ -28,13 +27,12 @@ export default function CourseHero({
   live,
   image,
   heroImage,
-  price,
-  priceINR,
-  priceUSD,
+  pricing,
   level,
   slug,
 }: CourseHeroProps) {
-  const displayPrice = priceUSD ? `$${priceUSD}` : price;
+  const { formatPrice } = useCurrency();
+  const displayPrice = formatPrice(pricing);
 
   return (
     <section className="relative overflow-hidden pt-20 pb-32 bg-background">

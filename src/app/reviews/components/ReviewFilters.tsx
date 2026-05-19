@@ -15,9 +15,12 @@ interface ReviewFiltersProps {
   onCategoryChange: (category: string) => void;
 }
 
-export default function ReviewFilters({ activeCategory, onCategoryChange }: ReviewFiltersProps) {
+export default function ReviewFilters({
+  activeCategory,
+  onCategoryChange,
+}: ReviewFiltersProps) {
   return (
-    <div className="border-b border-border overflow-x-auto">
+    <div className="mt-8 border-b border-border overflow-x-auto">
       <div className="flex gap-8 min-w-max">
         {categories.map((cat) => (
           <button
