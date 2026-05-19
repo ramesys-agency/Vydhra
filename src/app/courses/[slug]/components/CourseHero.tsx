@@ -97,7 +97,7 @@ export default function CourseHero({
       <div className="max-w-7xl mx-auto px-8 relative z-10">
         <div className="grid lg:grid-cols-10 gap-16 items-center">
           {/* Left Content */}
-          <div className="lg:col-span-6">
+          <div className="lg:col-span-5">
             <div className="mb-6 flex items-center gap-3">
               <span className="text-orange-600 dark:text-orange-400 font-semibold text-lg tracking-tight">
                 {level}-Friendly {title.split(" ")[0]} Course
@@ -109,7 +109,7 @@ export default function CourseHero({
               )}
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-[900] text-foreground leading-[1.1] tracking-tight mb-4">
+            <h1 className="text-5xl md:text-6xl font-black text-foreground leading-[1.1] tracking-tight mb-4">
               {title}
             </h1>
 
@@ -142,7 +142,7 @@ export default function CourseHero({
                 <Icon name="verified" className="text-blue-500" size={18} />
                 <span>Certificate included</span>
               </div>
-              <div className="flex items-center gap-2 text-border">•</div>
+              <span className="opacity-40 select-none">•</span>
               <div className="flex items-center gap-2">
                 <Icon
                   name="sentiment_satisfied_alt"
@@ -151,7 +151,7 @@ export default function CourseHero({
                 />
                 <span>{level} friendly</span>
               </div>
-              <div className="flex items-center gap-2 text-border">•</div>
+              <span className="opacity-40 select-none">•</span>
               <div className="flex items-center gap-2">
                 <Icon name="psychology" className="text-blue-500" size={18} />
                 <span>Practical learning</span>
@@ -160,16 +160,16 @@ export default function CourseHero({
           </div>
 
           {/* Right Visuals (Static Hero Photo/Graphic) */}
-          <div className="lg:col-span-4 relative flex justify-center items-center">
+          <div className="lg:col-span-5 relative flex justify-center items-center">
             {/* Background Glow for Blend */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-orange-400/10 rounded-full blur-[100px] pointer-events-none"></div>
-            <div className="relative w-full max-w-[850px]">
+            <div className="relative w-full max-w-[850px] rounded-3xl overflow-hidden border border-border shadow-lg">
               <Image
                 src={heroImage || image}
                 alt="Course Hero Visual"
                 width={1400}
                 height={1400}
-                className="w-full h-auto object-contain mix-blend-multiply dark:mix-blend-normal scale-110 lg:scale-125 transition-transform duration-700 dark:brightness-110"
+                className="w-full h-auto object-contain mix-blend-multiply dark:mix-blend-normal transition-transform duration-700 dark:brightness-110 rounded-3xl"
                 priority
               />
             </div>

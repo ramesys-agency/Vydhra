@@ -1,4 +1,3 @@
-import React from "react";
 import { iconMapping } from "@/data/iconMapping";
 import { HelpCircle } from "lucide-react";
 
