@@ -56,10 +56,6 @@ export default function ReviewsPage() {
                 <span className="text-primary">students across the globe</span>
               </h1>
             </div>
-            <button className="flex min-w-[160px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-xl h-14 px-8 bg-primary text-white text-base font-bold shadow-lg shadow-primary/20 transition-transform hover:scale-105 active:scale-95">
-              <span className="material-icons text-[24px]">edit_note</span>
-              <span className="truncate">Write a Review</span>
-            </button>
           </div>
 
           <RatingSummary />
