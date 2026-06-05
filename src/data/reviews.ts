@@ -17,7 +17,7 @@ export const reviews: Review[] = [
     category: "Fullstack Development",
     verified: true,
     image:
-      "https://res.cloudinary.com/daafchadi/image/upload/v1780640922/pexels-subhrajyoti-paul-447200412-36862121_gdl1vn.jpg",
+      "https://res.cloudinary.com/daafchadi/image/upload/c_fill,g_face,w_144,h_144,q_auto,f_auto/v1780640922/pexels-subhrajyoti-paul-447200412-36862121_gdl1vn.jpg",
   },
   {
     name: "Sofia Martinez",
@@ -27,7 +27,7 @@ export const reviews: Review[] = [
     category: "Programming",
     verified: true,
     image:
-      "https://res.cloudinary.com/daafchadi/image/upload/v1780641022/pexels-minan1398-1645500_z8giie.jpg",
+      "https://res.cloudinary.com/daafchadi/image/upload/c_fill,g_face,w_144,h_144,q_auto,f_auto/v1780641022/pexels-minan1398-1645500_z8giie.jpg",
   },
   {
     name: "Daniel Okoye",
@@ -36,6 +36,8 @@ export const reviews: Review[] = [
     rating: 5,
     category: "Data Engineering",
     verified: true,
+    image:
+      "https://res.cloudinary.com/daafchadi/image/upload/c_fill,g_face,w_144,h_144,q_auto,f_auto/v1780640833/pexels-khalil-atif-khan-3701376-7515590_wib9c7.jpg",
   },
   {
     name: "Emily Carter",
@@ -60,6 +62,8 @@ export const reviews: Review[] = [
     rating: 5,
     category: "AI Engineering",
     verified: true,
+    image:
+      "https://res.cloudinary.com/daafchadi/image/upload/c_fill,g_face,w_144,h_144,q_auto,f_auto/v1780640932/pexels-blue-bird-7242901_jpqgjy.jpg",
   },
   {
     name: "Kevin Tan",
@@ -92,6 +96,8 @@ export const reviews: Review[] = [
     rating: 5,
     category: "AI Engineering",
     verified: true,
+    image:
+      "https://res.cloudinary.com/daafchadi/image/upload/c_fill,g_face,w_144,h_144,q_auto,f_auto/v1780640907/pexels-aksinfo7-29564525_yrp1br.jpg",
   },
   {
     name: "Saurabh Kulkarni",
@@ -116,6 +122,8 @@ export const reviews: Review[] = [
     rating: 5,
     category: "Data Analytics",
     verified: true,
+    image:
+      "https://res.cloudinary.com/daafchadi/image/upload/c_fill,g_face,w_144,h_144,q_auto,f_auto/v1780640912/pexels-ezra-166788-35338654_px7s6r.jpg",
   },
   {
     name: "Anjali Verma",
@@ -132,6 +140,8 @@ export const reviews: Review[] = [
     rating: 5,
     category: "Data Engineering",
     verified: true,
+    image:
+      "https://res.cloudinary.com/daafchadi/image/upload/c_fill,g_face,w_144,h_144,q_auto,f_auto/v1780640933/pexels-siddkr20-30199408_fd5quh.jpg",
   },
   {
     name: "Harsh Gupta",
@@ -156,6 +166,8 @@ export const reviews: Review[] = [
     rating: 5,
     category: "AI Engineering",
     verified: true,
+    image:
+      "https://res.cloudinary.com/daafchadi/image/upload/c_fill,g_face,w_144,h_144,q_auto,f_auto/v1780640916/pexels-hartonosbg-34091221_rh3bbe.jpg",
   },
   {
     name: "Rahul Iyer",

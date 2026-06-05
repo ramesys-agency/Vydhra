@@ -10,9 +10,9 @@ const ratings = [
 
 export default function RatingSummary() {
   return (
-    <div className="flex flex-wrap gap-x-12 gap-y-8 p-10 bg-card border border-border rounded-2xl shadow-sm">
-      <div className="flex flex-col gap-2 justify-center border-r border-border pr-12">
-        <p className="text-foreground text-7xl font-black tracking-tighter">
+    <div className="flex flex-col md:flex-row gap-x-12 gap-y-8 p-6 md:p-10 bg-card border border-border rounded-2xl shadow-sm">
+      <div className="flex flex-col gap-2 justify-center border-b md:border-b-0 md:border-r border-border pb-6 md:pb-0 pr-0 md:pr-12">
+        <p className="text-foreground text-5xl md:text-7xl font-black tracking-tighter">
           4.9
         </p>
         <div className="flex gap-1 text-primary">

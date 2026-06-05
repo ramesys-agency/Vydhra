@@ -10,16 +10,16 @@ const solutions = [
 
 export default function SolutionSection() {
   return (
-    <section className="py-24 px-4 md:px-8 bg-background">
+    <section className="py-24 px-6 md:px-12 bg-background">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         <div>
           <span className="text-primary font-bold tracking-widest uppercase text-xs mb-4 block">
             The Solution
           </span>
-          <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-8 leading-none uppercase text-foreground">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter mb-8 leading-none uppercase text-foreground">
             Designed for Serious <span className="text-primary">Career Transitions</span> Into AI & Tech
           </h2>
-          <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
+          <p className="text-base md:text-lg lg:text-xl text-muted-foreground mb-10 leading-relaxed">
             Vydhra is not built for casual learners. It’s built for individuals who want measurable, career-level transformation.
           </p>
           <ul className="space-y-6">

@@ -74,7 +74,7 @@ export default function ContactPage() {
     `w-full bg-background border ${err ? "border-red-500" : "border-border"} rounded-2xl px-5 py-4 outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-foreground`;
 
   return (
-    <div className="min-h-screen pt-32 pb-20 px-4 md:px-8 bg-background relative overflow-hidden">
+    <div className="min-h-screen pt-24 md:pt-32 pb-20 px-6 md:px-12 bg-background relative overflow-hidden">
       {/* Ambient Glows */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full pointer-events-none -z-10" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full pointer-events-none -z-10" />
@@ -89,85 +89,70 @@ export default function ContactPage() {
             </span>
             We&apos;re Online
           </div>
-          <h1 className="text-5xl md:text-6xl font-black leading-[1.1] tracking-tighter text-foreground mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tighter text-foreground mb-6">
             Let&apos;s build <br className="hidden md:block" />
             <span className="text-primary">something great.</span>
           </h1>
-          <p className="text-xl text-muted-foreground mb-12 max-w-xl leading-relaxed">
+          <p className="text-base md:text-lg lg:text-xl text-muted-foreground mb-12 max-w-xl leading-relaxed">
             Have questions about the bootcamps? Need help with your enrollment?
             Our team is ready to help you take the next step.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className="bg-card p-6 rounded-3xl border border-border group hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between">
-              <div>
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <span className="material-icons text-primary text-2xl">
-                    email
-                  </span>
-                </div>
-                <h3 className="text-lg font-black mb-2 text-foreground">
-                  Email
-                </h3>
-                <p className="text-muted-foreground mb-6 text-xs leading-relaxed">
-                  For general inquiries and support.
-                </p>
+          <div className="flex flex-wrap gap-4">
+            <div className="bg-card p-4 rounded-2xl border border-border group hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-lg flex items-center gap-4 flex-1 min-w-[200px]">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+                <span className="material-icons text-primary text-xl">
+                  email
+                </span>
               </div>
-              <a
-                href="mailto:info@vydhra.com"
-                className="inline-flex items-center gap-1.5 font-bold text-primary hover:text-orange-600 transition-colors text-xs break-all"
-              >
-                info@vydhra.com
-                <span className="material-icons text-sm">arrow_forward</span>
-              </a>
+              <div className="min-w-0">
+                <h3 className="text-sm font-bold text-foreground">Email</h3>
+                <a
+                  href="mailto:info@vydhra.com"
+                  className="inline-flex items-center gap-1 font-bold text-primary hover:text-orange-600 transition-colors text-xs break-all"
+                >
+                  info@vydhra.com
+                  <span className="material-icons text-xs">arrow_forward</span>
+                </a>
+              </div>
             </div>
 
-            <div className="bg-card p-6 rounded-3xl border border-border group hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between">
-              <div>
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <span className="material-icons text-primary text-2xl">
-                    phone
-                  </span>
-                </div>
-                <h3 className="text-lg font-black mb-2 text-foreground">
-                  Phone
-                </h3>
-                <p className="text-muted-foreground mb-6 text-xs leading-relaxed">
-                  Call us directly to speak with an advisor.
-                </p>
+            <div className="bg-card p-4 rounded-2xl border border-border group hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-lg flex items-center gap-4 flex-1 min-w-[200px]">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+                <span className="material-icons text-primary text-xl">
+                  phone
+                </span>
               </div>
-              <a
-                href="tel:+917980624524"
-                className="inline-flex items-center gap-1.5 font-bold text-primary hover:text-orange-600 transition-colors text-xs whitespace-nowrap"
-              >
-                +91 79806 24524
-                <span className="material-icons text-sm">arrow_forward</span>
-              </a>
+              <div className="min-w-0">
+                <h3 className="text-sm font-bold text-foreground">Phone</h3>
+                <a
+                  href="tel:+917980624524"
+                  className="inline-flex items-center gap-1 font-bold text-primary hover:text-orange-600 transition-colors text-xs whitespace-nowrap"
+                >
+                  +91 79806 24524
+                  <span className="material-icons text-xs">arrow_forward</span>
+                </a>
+              </div>
             </div>
 
-            <div className="bg-card p-6 rounded-3xl border border-border group hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between">
-              <div>
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <span className="material-icons text-primary text-2xl">
-                    chat
-                  </span>
-                </div>
-                <h3 className="text-lg font-black mb-2 text-foreground">
-                  WhatsApp
-                </h3>
-                <p className="text-muted-foreground mb-6 text-xs leading-relaxed">
-                  Chat with us directly for quick answers.
-                </p>
+            <div className="bg-card p-4 rounded-2xl border border-border group hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-lg flex items-center gap-4 flex-1 min-w-[200px]">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+                <span className="material-icons text-primary text-xl">
+                  chat
+                </span>
               </div>
-              <a
-                href="https://wa.me/917980624524"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 font-bold text-primary hover:text-orange-600 transition-colors text-xs whitespace-nowrap"
-              >
-                Start Chat
-                <span className="material-icons text-sm">arrow_forward</span>
-              </a>
+              <div className="min-w-0">
+                <h3 className="text-sm font-bold text-foreground">WhatsApp</h3>
+                <a
+                  href="https://wa.me/917980624524"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 font-bold text-primary hover:text-orange-600 transition-colors text-xs whitespace-nowrap"
+                >
+                  Start Chat
+                  <span className="material-icons text-xs">arrow_forward</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -189,7 +174,7 @@ export default function ContactPage() {
                   <span className="text-primary font-bold">
                     {form.email || "your email"}
                   </span>{" "}
-                  within 24 hours.
+                  within 1-2 business days.
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
@@ -288,7 +273,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full bg-primary text-white font-bold py-5 rounded-2xl hover:bg-orange-600 transition-all shadow-xl shadow-primary/25 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed disabled:scale-100 flex items-center justify-center gap-3 cursor-pointer mt-4"
+                    className="w-full sm:w-fit sm:px-8 py-3 sm:py-5 rounded-xl sm:rounded-2xl bg-primary text-white font-bold text-sm sm:text-base hover:bg-orange-600 transition-all shadow-xl shadow-primary/25 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed disabled:scale-100 flex items-center justify-center gap-3 cursor-pointer mt-4"
                   >
                     {loading ? (
                       <>

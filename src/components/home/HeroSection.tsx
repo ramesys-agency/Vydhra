@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="relative lg:h-screen min-h-screen lg:min-h-0 flex items-center overflow-hidden py-12 lg:py-0 px-4 md:px-8">
+    <section className="relative lg:h-screen min-h-screen lg:min-h-0 flex items-center overflow-hidden py-12 lg:py-0 px-6 md:px-12">
       <div className="absolute inset-0 grid-pattern pointer-events-none opacity-20 dark:opacity-30"></div>
       {/* <div className="absolute top-0 left-0 w-full bg-muted/50 border-b border-border py-2 overflow-hidden whitespace-nowrap">
         <div className="inline-block animate-[scroll_30s_linear_infinite] uppercase text-[10px] font-bold tracking-widest text-muted-foreground">
@@ -15,7 +16,7 @@ export default function HeroSection() {
           <span className="mx-8">James — Retail to Software Engineer</span>
         </div>
       </div> */}
-      <div className="max-w-[1440px] mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center relative z-10 lg:h-full">
+      <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center relative z-10 lg:h-full">
         <div className="max-w-2xl">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-sm mb-8 border border-primary/20 backdrop-blur-sm">
             <span className="relative flex h-2.5 w-2.5">
@@ -24,22 +25,28 @@ export default function HeroSection() {
             </span>
             Next Cohort Starting Soon
           </div>
-          <h1 className="text-5xl lg:text-6xl font-black leading-[1.1] tracking-tighter text-foreground mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tighter text-foreground mb-6">
             Live AI Bootcamps That Turn Beginners Into{" "}
             <span className="text-primary">Job-Ready Engineers</span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed font-medium">
+          <p className="text-base md:text-lg lg:text-xl text-muted-foreground mb-10 leading-relaxed font-medium">
             Stop consuming tutorials. Start building real systems. Vydhra’s
             live, mentor-led AI, Data Science, and Full-Stack bootcamps are
             engineered to make you outperform professionals in just 2–6 months.
           </p>
           <div className="flex flex-wrap items-center gap-4">
-            <button className="bg-primary text-white font-bold py-4 px-10 rounded-xl text-lg transition-all shadow-xl shadow-primary/20 cursor-pointer hover:scale-105 active:scale-95">
-              Apply Now
-            </button>
-            <button className="bg-background/80 backdrop-blur-md hover:bg-muted text-foreground font-bold py-4 px-10 rounded-xl text-lg border border-border transition-all cursor-pointer hover:shadow-lg hover:scale-105 active:scale-95">
-              Explore Bootcamps
-            </button>
+            <Link
+              href="/courses"
+              className="bg-primary text-white font-bold py-3 px-6 md:py-4 md:px-10 rounded-xl text-base md:text-lg transition-all shadow-xl shadow-primary/20 cursor-pointer hover:scale-105 active:scale-95"
+            >
+              Enroll Courses
+            </Link>
+            <Link
+              href="/about"
+              className="bg-background/80 backdrop-blur-md hover:bg-muted text-foreground font-bold py-3 px-6 md:py-4 md:px-10 rounded-xl text-base md:text-lg border border-border transition-all cursor-pointer hover:shadow-lg hover:scale-105 active:scale-95"
+            >
+              Know More About Us
+            </Link>
           </div>
         </div>
         <div className="relative flex justify-center lg:justify-end w-full">

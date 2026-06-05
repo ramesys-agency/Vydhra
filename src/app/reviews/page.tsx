@@ -44,15 +44,15 @@ export default function ReviewsPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <main className="max-w-7xl mx-auto px-4 md:px-8 py-24 text-foreground">
-        <div className="mb-20">
+      <main className="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-24 text-foreground">
+        <div className="mb-12 md:mb-20">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
             <div className="max-w-2xl">
               <span className="text-primary font-bold tracking-widest uppercase text-xs mb-4 block">
                 Wall of Love
               </span>
-              <h1 className="text-5xl md:text-6xl font-black uppercase tracking-tighter leading-none text-foreground">
-                Trusted by <br />{" "}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter leading-none text-foreground">
+                Trusted by <br className="hidden md:inline" />{" "}
                 <span className="text-primary">students across the globe</span>
               </h1>
             </div>

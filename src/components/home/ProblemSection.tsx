@@ -21,17 +21,17 @@ const problems = [
 
 export default function ProblemSection() {
   return (
-    <section className="py-24 px-4 md:px-8 bg-background overflow-hidden relative">
+    <section className="py-24 px-6 md:px-12 bg-background overflow-hidden relative">
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <div className="inline-block p-2 px-4 rounded-full bg-orange-100 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400 font-bold text-xs uppercase tracking-wider mb-6">
               The Challenges
             </div>
-            <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-8 text-foreground uppercase leading-none">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter mb-8 text-foreground uppercase leading-none">
               Why Most People <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">Fail</span> to Break Into Tech
             </h2>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-xl">
+            <p className="text-base md:text-lg lg:text-xl text-muted-foreground mb-8 leading-relaxed max-w-xl">
               The gap isn’t opportunity—it’s preparation. Watching content feels productive—but doesn’t create capability.
             </p>
             

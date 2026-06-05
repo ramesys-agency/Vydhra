@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Image from "next/image";
+import JoinTeamButton from "./JoinTeamButton";
 
 export const metadata: Metadata = {
   title: "About Us - Vydhra",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-background">
-      <section className="relative overflow-hidden py-32 md:py-48 px-6 md:px-12 lg:px-24">
+      <section className="relative overflow-hidden py-16 md:py-32 px-6 md:px-12">
         <div className="absolute top-0 left-0 w-full h-full bg-grid-slate-200 dark:bg-grid-slate-800 mask-[linear-gradient(to_bottom,white,transparent)] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center relative z-10">
@@ -18,12 +19,12 @@ export default function AboutPage() {
             <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-bold text-xs tracking-wider uppercase">
               Our Story
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-foreground leading-[1.1]">
-              Built to Solve the Gap Between <br />{" "}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-foreground leading-[1.1]">
+              Built to Solve the Gap Between <br className="hidden md:inline" />{" "}
               <span className="text-primary">Learning</span> and Real-World Tech
               Skills
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl">
               Vydhra was created to redefine how people enter the tech
               industry—through real capability, not just theoretical knowledge.
             </p>
@@ -31,12 +32,13 @@ export default function AboutPage() {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden bg-muted border border-border shadow-2xl">
               <Image
-                src="https://res.cloudinary.com/daafchadi/image/upload/v1780641301/ChatGPT_Image_Jun_5_2026_12_03_40_PM_rp6aqt.png"
+                src="https://res.cloudinary.com/daafchadi/image/upload/w_1200,q_auto,f_auto/v1780641301/ChatGPT_Image_Jun_5_2026_12_03_40_PM_rp6aqt.png"
                 alt="About Vydhra"
                 width={800}
                 height={800}
                 className="object-cover"
                 priority
+                unoptimized
               />
             </div>
           </div>
@@ -44,13 +46,13 @@ export default function AboutPage() {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 md:py-32 px-6 border-y border-border  bg-muted/50">
+      <section className="py-20 md:py-32 px-6 md:px-12 border-y border-border  bg-muted/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl font-bold text-foreground mb-4 uppercase tracking-widest">
               Our Mission
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-base md:text-lg lg:text-xl text-muted-foreground">
               To build a new standard of tech education—one that focuses on
               real-world capability, not passive learning. We aim to equip
               learners with the skills, thinking, and practical experience
@@ -100,7 +102,7 @@ export default function AboutPage() {
       </section>
 
       {/* Origin & Founder Story Section */}
-      <section className="py-20 md:py-32 px-6 bg-background border-b border-border">
+      <section className="py-20 md:py-32 px-6 md:px-12 bg-background border-b border-border">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center">
           <div className="w-full md:w-1/2">
             <div className="aspect-square rounded-2xl overflow-hidden bg-muted relative group">
@@ -115,10 +117,11 @@ export default function AboutPage() {
             <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-bold text-xs tracking-wider uppercase">
               The Founder
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground uppercase tracking-tighter leading-tight">
-              From Building Systems <br /> to Building Talent
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground uppercase tracking-tighter leading-tight">
+              From Building Systems <br className="hidden md:inline" /> to
+              Building Talent
             </h2>
-            <div className="space-y-4 text-muted-foreground leading-relaxed text-lg">
+            <div className="space-y-4 text-muted-foreground leading-relaxed text-base md:text-lg">
               <p>
                 Vydhra is a wholly owned subsidiary of Ramesys Private Limited,
                 built to solve a real industry problem—not just to teach.
@@ -150,25 +153,23 @@ export default function AboutPage() {
       </section>
 
       {/* Vision Section */}
-      <section className="py-24 md:py-40 px-6 bg-muted/50">
+      <section className="py-24 md:py-40 px-6 md:px-12 bg-muted/50">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-bold text-xs tracking-wider uppercase">
             Our Vision
           </div>
-          <h2 className="text-3xl md:text-5xl font-black tracking-tight text-foreground uppercase">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-black tracking-tight text-foreground uppercase">
             Building the <span className="text-primary">Next Generation</span>{" "}
             of AI & Tech Professionals
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+          <p className="text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed">
             The future of work is being shaped by AI, automation, and rapidly
             evolving technologies. Vydhra&apos;s vision is to become a global
             platform that produces highly capable professionals who can build,
             adapt, and lead in this new era.
           </p>
           <div className="pt-8 flex justify-center gap-4">
-            <button className="bg-primary text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-orange-600 hover:shadow-primary/30 transition-all cursor-pointer hover:scale-105 active:scale-95 uppercase tracking-widest text-sm">
-              Join Our Programs
-            </button>
+            <JoinTeamButton />
           </div>
         </div>
       </section>

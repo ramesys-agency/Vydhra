@@ -3,14 +3,14 @@ import React from "react";
 
 export default function SocialProofSection() {
   return (
-    <section className="bg-muted py-24 px-4 md:px-8 border-y border-border/50">
+    <section className="bg-muted py-24 px-6 md:px-12 border-y border-border/50">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-4 flex flex-col justify-center">
-            <h2 className="text-5xl md:text-6xl font-black tracking-tighter mb-4 text-foreground">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter mb-4 text-foreground">
               Student <br /> Success
             </h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-base md:text-lg lg:text-xl text-muted-foreground mb-8">
               See what working professionals are saying about their transition
               into tech with our live cohorts.
             </p>
@@ -23,10 +23,11 @@ export default function SocialProofSection() {
               <div className="bg-card p-8 rounded-3xl shadow-sm border border-border">
                 <Image
                   alt="Priya"
-                  className="w-20 h-20 rounded-2xl mb-6 bg-muted object-cover"
-                  src="https://res.cloudinary.com/daafchadi/image/upload/v1780644705/casual-clothes-portrait-attractive-young-woman-standing-office-with-black-bag_zumlxs.jpg"
+                  className="w-20 h-20 rounded-md mb-6 bg-muted object-cover"
+                  src="https://res.cloudinary.com/daafchadi/image/upload/c_fill,g_face,w_240,h_240,q_auto,f_auto/v1780644705/casual-clothes-portrait-attractive-young-woman-standing-office-with-black-bag_zumlxs.jpg"
                   width={80}
                   height={80}
+                  unoptimized
                 />
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   &quot;After 5 years of teaching, I thought it was too late to
@@ -49,10 +50,11 @@ export default function SocialProofSection() {
               <div className="bg-card p-8 rounded-3xl shadow-sm border border-border">
                 <Image
                   alt="Lukas"
-                  className="w-20 h-20 rounded-2xl mb-6 bg-muted object-cover"
-                  src="https://res.cloudinary.com/daafchadi/image/upload/v1780644827/krzhck-gMg3zSOdlgE-unsplash_ckli2k.jpg"
+                  className="w-20 h-20 rounded-md mb-6 bg-muted object-cover"
+                  src="https://res.cloudinary.com/daafchadi/image/upload/c_fill,g_face,w_240,h_240,q_auto,f_auto/v1780644827/krzhck-gMg3zSOdlgE-unsplash_ckli2k.jpg"
                   width={80}
                   height={80}
+                  unoptimized
                 />
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   &quot;This isn&apos;t just another pre-recorded tutorial where

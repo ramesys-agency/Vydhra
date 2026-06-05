@@ -2,25 +2,25 @@ import React from "react";
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen pt-32 pb-20 px-6 bg-background">
+    <div className="min-h-screen pt-24 md:pt-32 pb-20 px-6 md:px-12 bg-background">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tight text-primary mb-6">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-black uppercase tracking-tight text-primary mb-6">
           Privacy Policy
         </h1>
         <p className="text-muted-foreground mb-12 uppercase tracking-widest font-bold">Last Updated: April 2024</p>
 
         <div className="prose dark:prose-invert max-w-none space-y-12">
-          <section className="bg-card p-8 rounded-3xl border border-border shadow-sm">
+          <section className="bg-card p-6 md:p-8 rounded-3xl border border-border shadow-sm">
             <h2 className="text-2xl font-bold mb-4 uppercase tracking-tight text-foreground">1. Introduction</h2>
-            <p className="text-muted-foreground leading-relaxed text-lg">
+            <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
               Vydhra (“we”, “our”, “us”) is a brand operating under <strong>Ramesys Private Limited</strong>, based in Kolkata, India.
             </p>
-            <p className="text-muted-foreground leading-relaxed text-lg mt-4">
+            <p className="text-muted-foreground leading-relaxed text-base md:text-lg mt-4">
               We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, and safeguard your data when you use our website and services.
             </p>
           </section>
 
-          <section className="bg-card p-8 rounded-3xl border border-border shadow-sm">
+          <section className="bg-card p-6 md:p-8 rounded-3xl border border-border shadow-sm">
             <h2 className="text-2xl font-bold mb-4 uppercase tracking-tight text-foreground">2. Information We Collect</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
                 <div>
@@ -54,9 +54,9 @@ export default function PrivacyPage() {
             </div>
           </section>
 
-          <section className="bg-card p-8 rounded-3xl border border-border shadow-sm">
+          <section className="bg-card p-6 md:p-8 rounded-3xl border border-border shadow-sm">
             <h2 className="text-2xl font-bold mb-4 uppercase tracking-tight text-foreground">3. How We Use Your Information</h2>
-            <ul className="space-y-3 text-muted-foreground text-lg">
+            <ul className="space-y-3 text-muted-foreground text-base md:text-lg">
                 <li className="flex gap-3"><span className="text-primary">●</span> Provide and manage course enrollments</li>
                 <li className="flex gap-3"><span className="text-primary">●</span> Process payments securely</li>
                 <li className="flex gap-3"><span className="text-primary">●</span> Communicate with you (support, updates, notifications)</li>
@@ -65,39 +65,52 @@ export default function PrivacyPage() {
             </ul>
           </section>
 
-          <section className="bg-primary/5 dark:bg-primary/10 p-8 rounded-3xl border border-primary/20 shadow-sm">
+          <section className="bg-primary/5 dark:bg-primary/10 p-6 md:p-8 rounded-3xl border border-primary/20 shadow-sm">
             <h2 className="text-2xl font-bold mb-4 uppercase tracking-tight text-primary">9. Refund Policy (Important)</h2>
-            <p className="text-foreground font-bold mb-6 italic">
-                Refunds are subject to strict eligibility criteria. A refund can be claimed only if BOTH conditions are met:
+            <p className="text-foreground font-bold mb-6 italic text-base md:text-lg">
+                Refunds are subject to strict eligibility criteria. A refund can be claimed ONLY if the following condition is met:
             </p>
-            <ol className="list-decimal pl-6 space-y-4 text-muted-foreground font-medium">
-                <li>The request is made within <strong>7 days of payment</strong>, AND</li>
-                <li>The request is made at least <strong>7 days before the course batch start date</strong></li>
-            </ol>
+            <div className="space-y-4 my-6">
+              <div className="flex items-start gap-3 bg-background/80 p-5 rounded-2xl border border-primary/20 shadow-sm">
+                <span className="text-emerald-500 font-bold text-2xl mt-0.5">✓</span>
+                <div>
+                  <h4 className="font-bold text-foreground">Refund Eligibility Condition</h4>
+                  <p className="text-muted-foreground text-sm mt-1">The refund request must be made within <strong>7 days of payment</strong>.</p>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-muted-foreground font-semibold mb-6 text-sm md:text-base">
+              If this condition is not met, your payment becomes fully non-refundable. Please make sure to submit any requests within the 7-day window.
+            </p>
             
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-2xl border border-green-200 dark:border-green-800">
-                    <h4 className="text-green-700 dark:text-green-400 font-bold uppercase text-xs tracking-widest mb-2">Eligible Scenario</h4>
-                    <p className="text-green-600 dark:text-green-400 text-sm">Paid 1st June, Starts 20th June, Request 5th June. (Refund Allowed)</p>
-                </div>
-                <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-2xl border border-red-200 dark:border-red-800">
-                    <h4 className="text-red-700 dark:text-red-400 font-bold uppercase text-xs tracking-widest mb-2">Not Eligible</h4>
-                    <p className="text-red-600 dark:text-red-400 text-sm">Requested after 7 days of payment OR less than 7 days before batch start.</p>
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+              <div className="bg-emerald-500/10 dark:bg-emerald-950/30 p-6 rounded-2xl border border-emerald-500/30">
+                <h4 className="text-emerald-600 dark:text-emerald-400 font-black uppercase text-xs tracking-widest mb-2">Refund Eligible Scenario</h4>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  You make your payment on <strong>June 1st</strong>, and request a refund on <strong>June 5th</strong> (within 7 days of payment).
+                </p>
+              </div>
+              <div className="bg-red-500/10 dark:bg-red-950/30 p-6 rounded-2xl border border-red-500/30">
+                <h4 className="text-red-600 dark:text-red-400 font-black uppercase text-xs tracking-widest mb-2">Refund Ineligible Scenario</h4>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  You make your payment on <strong>June 1st</strong>, and request a refund on <strong>June 10th</strong> (outside the 7-day payment window).
+                </p>
+              </div>
             </div>
           </section>
 
-          <section className="bg-card p-8 rounded-3xl border border-border shadow-sm">
+          <section className="bg-card p-6 md:p-8 rounded-3xl border border-border shadow-sm">
             <h2 className="text-2xl font-bold mb-4 uppercase tracking-tight text-foreground">11. Contact Us</h2>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-muted-foreground text-base md:text-lg">
               For any questions regarding this Privacy Policy:
             </p>
             <div className="mt-4 space-y-2">
-                <p className="flex items-center gap-3 text-foreground font-bold">
+                <p className="flex items-center gap-3 text-foreground font-bold text-sm md:text-base">
                     <span className="material-icons text-primary">email</span>
                     support@vydhra.com
                 </p>
-                <p className="flex items-center gap-3 text-foreground font-bold">
+                <p className="flex items-center gap-3 text-foreground font-bold text-sm md:text-base">
                     <span className="material-icons text-primary">location_on</span>
                     Kolkata, India
                 </p>

@@ -27,7 +27,7 @@ export default function ReviewCard({
         <div className="flex items-center gap-3">
           <div className="size-12 shrink-0 rounded-full border-2 border-primary/10 overflow-hidden relative bg-primary/5 flex items-center justify-center">
             {image ? (
-              <Image src={image} alt={name} fill className="object-cover" />
+              <Image src={image} alt={name} fill className="object-cover" unoptimized />
             ) : (
               <span className="material-icons text-primary/50 text-2xl">
                 person
