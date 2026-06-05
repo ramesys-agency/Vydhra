@@ -20,7 +20,7 @@ export default function MobileNav() {
       {/* <button className="fixed bottom-4 left-4 bg-white dark:bg-slate-800 text-[10px] uppercase font-bold tracking-widest px-4 py-2 rounded-full border border-slate-200 dark:border-slate-700 shadow-lg z-[100] hover:scale-105 transition-transform cursor-pointer">
         Cookie Settings
       </button> */}
-      <div className="lg:hidden fixed bottom-1 left-0 w-full bg-background border-t border-border p-4 flex justify-around items-center z-50">
+      <div className="lg:hidden fixed bottom-0 left-0 w-full bg-background border-t border-border p-4 flex justify-around items-center z-50">
         <Link href="/" className={`flex flex-col items-center hover:text-primary transition-colors cursor-pointer ${isActive("/") ? activeClass : inactiveClass}`}>
           <span className="material-icons">home</span>
           <span className="text-[10px] font-bold mt-1">HOME</span>
@@ -30,11 +30,11 @@ export default function MobileNav() {
           <span className="text-[10px] font-bold mt-1">COURSES</span>
         </Link>
         <Link href="/reviews" className={`flex flex-col items-center hover:text-primary transition-colors cursor-pointer ${isActive("/reviews") ? activeClass : inactiveClass}`}>
-          <span className="material-icons">star</span>
+          <span className="material-icons">rate_review</span>
           <span className="text-[10px] font-bold mt-1">REVIEWS</span>
         </Link>
         <Link href="/about" className={`flex flex-col items-center hover:text-primary transition-colors cursor-pointer ${isActive("/about") ? activeClass : inactiveClass}`}>
-          <span className="material-icons">info</span>
+          <span className="material-icons">explore</span>
           <span className="text-[10px] font-bold mt-1">ABOUT</span>
         </Link>
         <Link href="/contact" className={`flex flex-col items-center hover:text-primary transition-colors cursor-pointer ${isActive("/contact") ? activeClass : inactiveClass}`}>

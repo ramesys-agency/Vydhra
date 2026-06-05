@@ -11,7 +11,13 @@ interface FormState {
   message: string;
 }
 
-const empty: FormState = { firstName: "", lastName: "", email: "", phone: "", message: "" };
+const empty: FormState = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  phone: "",
+  message: "",
+};
 
 export default function ContactPage() {
   const [form, setForm] = useState<FormState>(empty);
@@ -19,14 +25,17 @@ export default function ContactPage() {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const set = (field: keyof FormState) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
-    setForm((prev) => ({ ...prev, [field]: e.target.value }));
+  const set =
+    (field: keyof FormState) =>
+    (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+      setForm((prev) => ({ ...prev, [field]: e.target.value }));
 
   const validate = () => {
     const e: Partial<FormState> = {};
     if (!form.firstName.trim()) e.firstName = "Required";
     if (!form.email.trim()) e.email = "Required";
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = "Invalid email";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
+      e.email = "Invalid email";
     if (!form.message.trim()) e.message = "Required";
     setErrors(e);
     return Object.keys(e).length === 0;
@@ -53,7 +62,9 @@ export default function ContactPage() {
       setForm(empty);
       toast.success("Message sent! We'll get back to you soon.");
     } catch (err: unknown) {
-      toast.error(err instanceof Error ? err.message : "Failed to send message");
+      toast.error(
+        err instanceof Error ? err.message : "Failed to send message",
+      );
     } finally {
       setLoading(false);
     }
@@ -83,29 +94,77 @@ export default function ContactPage() {
             <span className="text-primary">something great.</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-12 max-w-xl leading-relaxed">
-            Have questions about the bootcamps? Need help with your enrollment? Our team is ready to help you take the next step.
+            Have questions about the bootcamps? Need help with your enrollment?
+            Our team is ready to help you take the next step.
           </p>
 
-          <div className="grid sm:grid-cols-2 gap-6">
-            <div className="bg-card p-8 rounded-3xl border border-border group hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <span className="material-icons text-primary text-2xl">email</span>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="bg-card p-6 rounded-3xl border border-border group hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="material-icons text-primary text-2xl">
+                    email
+                  </span>
+                </div>
+                <h3 className="text-lg font-black mb-2 text-foreground">
+                  Email
+                </h3>
+                <p className="text-muted-foreground mb-6 text-xs leading-relaxed">
+                  For general inquiries and support.
+                </p>
               </div>
-              <h3 className="text-xl font-black mb-2 text-foreground">Email</h3>
-              <p className="text-muted-foreground mb-6 text-sm">For general inquiries and support requests.</p>
-              <a href="mailto:info@vydhra.com" className="inline-flex items-center gap-2 font-bold text-primary hover:text-orange-600 transition-colors">
+              <a
+                href="mailto:info@vydhra.com"
+                className="inline-flex items-center gap-1.5 font-bold text-primary hover:text-orange-600 transition-colors text-xs break-all"
+              >
                 info@vydhra.com
                 <span className="material-icons text-sm">arrow_forward</span>
               </a>
             </div>
 
-            <div className="bg-card p-8 rounded-3xl border border-border group hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <span className="material-icons text-primary text-2xl">chat</span>
+            <div className="bg-card p-6 rounded-3xl border border-border group hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="material-icons text-primary text-2xl">
+                    phone
+                  </span>
+                </div>
+                <h3 className="text-lg font-black mb-2 text-foreground">
+                  Phone
+                </h3>
+                <p className="text-muted-foreground mb-6 text-xs leading-relaxed">
+                  Call us directly to speak with an advisor.
+                </p>
               </div>
-              <h3 className="text-xl font-black mb-2 text-foreground">WhatsApp</h3>
-              <p className="text-muted-foreground mb-6 text-sm">Chat with us directly for quick answers.</p>
-              <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-bold text-primary hover:text-orange-600 transition-colors">
+              <a
+                href="tel:+917980624524"
+                className="inline-flex items-center gap-1.5 font-bold text-primary hover:text-orange-600 transition-colors text-xs whitespace-nowrap"
+              >
+                +91 79806 24524
+                <span className="material-icons text-sm">arrow_forward</span>
+              </a>
+            </div>
+
+            <div className="bg-card p-6 rounded-3xl border border-border group hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="material-icons text-primary text-2xl">
+                    chat
+                  </span>
+                </div>
+                <h3 className="text-lg font-black mb-2 text-foreground">
+                  WhatsApp
+                </h3>
+                <p className="text-muted-foreground mb-6 text-xs leading-relaxed">
+                  Chat with us directly for quick answers.
+                </p>
+              </div>
+              <a
+                href="https://wa.me/917980624524"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 font-bold text-primary hover:text-orange-600 transition-colors text-xs whitespace-nowrap"
+              >
                 Start Chat
                 <span className="material-icons text-sm">arrow_forward</span>
               </a>
@@ -115,16 +174,22 @@ export default function ContactPage() {
 
         {/* Right: Form */}
         <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-[2.5rem] blur-2xl -z-10" />
+          <div className="absolute inset-0 bg-linear-to-br from-primary/10 to-transparent rounded-[2.5rem] blur-2xl -z-10" />
           <div className="bg-card p-8 md:p-10 rounded-[2.5rem] border border-border shadow-2xl backdrop-blur-xl relative z-10">
             {submitted ? (
               <div className="flex flex-col items-center justify-center py-12 text-center">
                 <div className="w-20 h-20 rounded-full bg-green-500/15 flex items-center justify-center mb-6">
-                  <span className="material-icons text-green-500 text-4xl">check_circle</span>
+                  <span className="material-icons text-green-500 text-4xl">
+                    check_circle
+                  </span>
                 </div>
                 <h3 className="text-2xl font-black mb-3">Message Sent!</h3>
                 <p className="text-muted-foreground mb-8 max-w-xs">
-                  Thanks for reaching out. We&apos;ll get back to you at <span className="text-primary font-bold">{form.email || "your email"}</span> within 24 hours.
+                  Thanks for reaching out. We&apos;ll get back to you at{" "}
+                  <span className="text-primary font-bold">
+                    {form.email || "your email"}
+                  </span>{" "}
+                  within 24 hours.
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
@@ -135,7 +200,9 @@ export default function ContactPage() {
               </div>
             ) : (
               <>
-                <h3 className="text-2xl font-black mb-8 text-foreground">Send a Message</h3>
+                <h3 className="text-2xl font-black mb-8 text-foreground">
+                  Send a Message
+                </h3>
                 <form onSubmit={handleSubmit} className="space-y-6" noValidate>
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div>
@@ -149,7 +216,11 @@ export default function ContactPage() {
                         value={form.firstName}
                         onChange={set("firstName")}
                       />
-                      {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>}
+                      {errors.firstName && (
+                        <p className="text-red-500 text-xs mt-1">
+                          {errors.firstName}
+                        </p>
+                      )}
                     </div>
                     <div>
                       <label className="block text-xs font-bold uppercase tracking-wider mb-2 text-muted-foreground">
@@ -176,7 +247,11 @@ export default function ContactPage() {
                       value={form.email}
                       onChange={set("email")}
                     />
-                    {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
+                    {errors.email && (
+                      <p className="text-red-500 text-xs mt-1">
+                        {errors.email}
+                      </p>
+                    )}
                   </div>
 
                   <div>
@@ -203,7 +278,11 @@ export default function ContactPage() {
                       value={form.message}
                       onChange={set("message")}
                     />
-                    {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
+                    {errors.message && (
+                      <p className="text-red-500 text-xs mt-1">
+                        {errors.message}
+                      </p>
+                    )}
                   </div>
 
                   <button

@@ -8,9 +8,9 @@ export default async function CoursesPage() {
   // console.log(courses);
   return (
     <div className="min-h-screen bg-background">
-      <main className="max-w-[1440px] mx-auto px-6 py-12 text-foreground">
+      <main className="max-w-[1440px] mx-auto px-6 py-20 text-foreground">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-12">
+          <div className="mb-20">
             <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tight text-primary leading-none mb-6">
               Choose the Right AI & Tech <br />
               Bootcamp for Your <br />

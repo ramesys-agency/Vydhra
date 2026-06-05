@@ -18,6 +18,8 @@ interface CourseHeroProps {
   duration: string;
   requirements: string[];
   slug: string;
+  originalPrice?: number;
+  originalPricing?: Record<string, number>;
 }
 
 export default function CourseHero({
@@ -30,9 +32,19 @@ export default function CourseHero({
   pricing,
   level,
   slug,
+  originalPrice,
+  originalPricing,
 }: CourseHeroProps) {
-  const { formatPrice } = useCurrency();
+  const { formatPrice, formatAmount, getPrice, currencyInfo } = useCurrency();
   const displayPrice = formatPrice(pricing);
+
+  const originalAmount = originalPricing ? getPrice(originalPricing) : null;
+  const formattedOriginalPrice =
+    originalAmount !== null
+      ? `${currencyInfo.symbol}${originalAmount.toLocaleString()}`
+      : originalPrice
+        ? formatAmount(originalPrice)
+        : null;
 
   return (
     <section className="relative overflow-hidden pt-20 pb-32 bg-background">
@@ -119,12 +131,31 @@ export default function CourseHero({
               {description}
             </p>
 
+            <div className="flex flex-col mb-6 dark:bg-blue-950/10 border border-blue-500/10 dark:border-blue-400/5 p-5 rounded-2xl max-w-sm">
+              <span className="text-[10px] text-muted-foreground uppercase tracking-widest font-black">
+                Price
+              </span>
+              <div className="flex items-baseline gap-3 mt-1.5">
+                <span className="text-4xl font-black text-foreground leading-none">
+                  {displayPrice}
+                </span>
+                {formattedOriginalPrice && (
+                  <span className="text-muted-foreground line-through text-lg font-bold opacity-60">
+                    {formattedOriginalPrice}
+                  </span>
+                )}
+                <span className="text-[10px] text-muted-foreground font-black uppercase tracking-widest leading-none self-end pb-0.5">
+                  excl. GST
+                </span>
+              </div>
+            </div>
+
             <div className="flex flex-wrap items-center gap-4 mb-8">
               <Link
                 href={`/courses/${slug}/enroll`}
                 className="bg-primary text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-[#E56000] transition-all shadow-xl shadow-orange-500/20 cursor-pointer hover:scale-105 active:scale-95 no-underline"
               >
-                Enroll Now - {displayPrice}
+                Enroll Now
               </Link>
               <a
                 href="#curriculum"

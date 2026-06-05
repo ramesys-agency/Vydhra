@@ -8,6 +8,7 @@ interface BatchesSectionProps {
   batches?: CourseBatch[];
   slug: string;
   coursePricing: Record<string, number>;
+  courseOriginalPricing?: Record<string, number>;
 }
 
 function formatDate(dateStr: string) {
@@ -18,7 +19,12 @@ function formatDate(dateStr: string) {
   });
 }
 
-export default function BatchesSection({ batches, slug, coursePricing }: BatchesSectionProps) {
+export default function BatchesSection({
+  batches,
+  slug,
+  coursePricing,
+  courseOriginalPricing,
+}: BatchesSectionProps) {
   const { formatPrice } = useCurrency();
   const activeBatches = (batches ?? []).filter((b) => b.status === "ACTIVE" || b.status === "UPCOMING");
 
@@ -33,7 +39,14 @@ export default function BatchesSection({ batches, slug, coursePricing }: Batches
 
       <div className="grid gap-4">
         {activeBatches.map((batch) => {
-          const batchPrice = formatPrice(batch.pricing && Object.keys(batch.pricing).length ? batch.pricing : coursePricing);
+          const hasBatchSpecificPricing = batch.pricing && Object.keys(batch.pricing).length > 0;
+          const pricingToUse = hasBatchSpecificPricing ? batch.pricing! : coursePricing;
+          const originalPricingToUse = hasBatchSpecificPricing ? batch.originalPricing : courseOriginalPricing;
+
+          const batchPrice = formatPrice(pricingToUse);
+          const batchOriginalPrice = originalPricingToUse && Object.keys(originalPricingToUse).length > 0
+            ? formatPrice(originalPricingToUse)
+            : null;
 
           const seatsLeft =
             batch.maxSeats != null ? batch.maxSeats - (batch.enrollmentCount ?? 0) : null;
@@ -72,9 +85,14 @@ export default function BatchesSection({ batches, slug, coursePricing }: Batches
               </div>
 
               <div className="flex items-center gap-4 shrink-0">
-                <div className="text-right">
-                  <p className="text-2xl font-black">{batchPrice}</p>
-                  <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-widest">One-time</p>
+                <div className="text-right space-y-0.5">
+                  <div className="flex items-baseline justify-end gap-2">
+                    <p className="text-2xl font-black">{batchPrice}</p>
+                    {batchOriginalPrice && (
+                      <p className="text-sm text-muted-foreground line-through opacity-70">{batchOriginalPrice}</p>
+                    )}
+                  </div>
+                  <p className="text-[10px] text-muted-foreground font-black uppercase tracking-widest">excl. GST</p>
                 </div>
                 <Link
                   href={`/courses/${slug}/enroll`}

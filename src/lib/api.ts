@@ -30,6 +30,12 @@ function mapCourse(course: any): Course {
     heroImage: details.heroImage || details.image || "/courses/ai-agents.png",
     pricing: mapPricing(course),
     batches: Array.isArray(course.batches) ? course.batches : [],
+    originalPrice: typeof details.originalPrice === "number"
+      ? details.originalPrice
+      : details.originalPrice && !isNaN(parseFloat(details.originalPrice))
+      ? parseFloat(details.originalPrice)
+      : undefined,
+    originalPricing: course.originalPricing || {},
   } as Course;
 }
 

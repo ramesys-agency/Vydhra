@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[80vh] flex items-center overflow-hidden py-20 px-4 md:px-8">
+    <section className="relative lg:h-screen min-h-screen lg:min-h-0 flex items-center overflow-hidden py-12 lg:py-0 px-4 md:px-8">
       <div className="absolute inset-0 grid-pattern pointer-events-none opacity-20 dark:opacity-30"></div>
       {/* <div className="absolute top-0 left-0 w-full bg-muted/50 border-b border-border py-2 overflow-hidden whitespace-nowrap">
         <div className="inline-block animate-[scroll_30s_linear_infinite] uppercase text-[10px] font-bold tracking-widest text-muted-foreground">
@@ -15,7 +15,7 @@ export default function HeroSection() {
           <span className="mx-8">James — Retail to Software Engineer</span>
         </div>
       </div> */}
-      <div className="max-w-[1440px] mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center relative z-10 h-full mt-10">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center relative z-10 lg:h-full">
         <div className="max-w-2xl">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-sm mb-8 border border-primary/20 backdrop-blur-sm">
             <span className="relative flex h-2.5 w-2.5">

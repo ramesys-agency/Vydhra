@@ -11,23 +11,27 @@ export interface Review {
 export const reviews: Review[] = [
   {
     name: "Arjun Mehta",
-    course: "MERN + AI Bootcamp",
+    course: "MERN Stack with AI Integration Bootcamp",
     text: "I joined with basic JavaScript knowledge and honestly didn’t expect this level of depth. The projects were tough but that’s what helped. I actually built things I can show in interviews now.",
     rating: 5,
     category: "Fullstack Development",
     verified: true,
+    image:
+      "https://res.cloudinary.com/daafchadi/image/upload/v1780640922/pexels-subhrajyoti-paul-447200412-36862121_gdl1vn.jpg",
   },
   {
     name: "Sofia Martinez",
-    course: "Python AI Course",
+    course: "Python for AI & Machine Learning Bootcamp",
     text: "I liked that it wasn’t just theory. We actually built things step by step. Sometimes it felt intense, but looking back, that’s what made the difference.",
     rating: 5,
     category: "Programming",
     verified: true,
+    image:
+      "https://res.cloudinary.com/daafchadi/image/upload/v1780641022/pexels-minan1398-1645500_z8giie.jpg",
   },
   {
     name: "Daniel Okoye",
-    course: "SQL Bootcamp",
+    course: "SQL Job-Ready Bootcamp",
     text: "Very practical course. I was already working with data but my SQL was weak. This helped me get confident with queries and interviews.",
     rating: 5,
     category: "Data Engineering",
@@ -35,7 +39,7 @@ export const reviews: Review[] = [
   },
   {
     name: "Emily Carter",
-    course: "Machine Learning Bootcamp",
+    course: "Machine Learning Job-Ready Bootcamp",
     text: "It’s not an easy course, but that’s the point. The mentors actually explain things instead of just showing slides. I feel much more confident applying for ML roles now.",
     rating: 5,
     category: "AI & ML",
@@ -43,7 +47,7 @@ export const reviews: Review[] = [
   },
   {
     name: "Lucas Fernandes",
-    course: "MERN + AI Bootcamp",
+    course: "MERN Stack with AI Integration Bootcamp",
     text: "The AI integration part was the most interesting for me. I had never worked with APIs like that before. Now I’m using it in my own projects.",
     rating: 5,
     category: "Fullstack Development",
@@ -59,7 +63,7 @@ export const reviews: Review[] = [
   },
   {
     name: "Kevin Tan",
-    course: "Python AI Course",
+    course: "Python for AI & Machine Learning Bootcamp",
     text: "Good structure overall. Starts simple and then slowly gets more advanced. I appreciated that they didn’t rush through concepts.",
     rating: 5,
     category: "Programming",
@@ -67,7 +71,7 @@ export const reviews: Review[] = [
   },
   {
     name: "Michael Johnson",
-    course: "Machine Learning Bootcamp",
+    course: "Machine Learning Job-Ready Bootcamp",
     text: "I’ve taken a few online courses before, but this felt different. More focused on actually building things instead of just watching.",
     rating: 5,
     category: "AI & ML",
@@ -75,7 +79,7 @@ export const reviews: Review[] = [
   },
   {
     name: "Priya Sharma",
-    course: "SQL Bootcamp",
+    course: "SQL Job-Ready Bootcamp",
     text: "I was from a non-tech background, so I was a bit nervous. But the way they explained basics made it easier to follow. Practice sessions helped a lot.",
     rating: 5,
     category: "Data Engineering",

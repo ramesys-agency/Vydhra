@@ -40,6 +40,7 @@ export interface CourseBatch {
   endDate: string;
   maxSeats?: number | null;
   pricing?: Record<string, number>;
+  originalPricing?: Record<string, number>;
   status: "UPCOMING" | "ACTIVE" | "COMPLETED" | "CANCELLED";
   enrollmentCount?: number;
   whatsappGroupUrl?: string | null;
@@ -64,4 +65,6 @@ export interface Course {
   features?: string[];
   testimonials?: Testimonial[];
   batches?: CourseBatch[];
+  originalPrice?: number;
+  originalPricing?: Record<string, number>;
 }

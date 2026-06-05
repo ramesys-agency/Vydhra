@@ -12,7 +12,19 @@ export default function ReviewsPage() {
 
   const filteredReviews = useMemo(() => {
     if (activeCategory === "All Reviews") return reviews;
-    return reviews.filter((r) => r.category === activeCategory);
+    return reviews.filter((r) => {
+      const category = r.category;
+      if (activeCategory === "AI & Machine Learning") {
+        return category === "AI & ML" || category === "AI Engineering";
+      }
+      if (activeCategory === "Fullstack Development") {
+        return category === "Fullstack Development" || category === "Programming";
+      }
+      if (activeCategory === "Data & Analytics") {
+        return category === "Data Engineering" || category === "Data Analytics" || category === "Cybersecurity";
+      }
+      return false;
+    });
   }, [activeCategory]);
 
   const displayedReviews = useMemo(() => {

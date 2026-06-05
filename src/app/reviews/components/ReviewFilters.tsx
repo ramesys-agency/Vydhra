@@ -4,10 +4,9 @@ import React from "react";
 
 const categories = [
   "All Reviews",
-  "AI & ML",
+  "AI & Machine Learning",
   "Fullstack Development",
-  "Data Engineering",
-  "Programming",
+  "Data & Analytics",
 ];
 
 interface ReviewFiltersProps {

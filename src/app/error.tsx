@@ -57,7 +57,7 @@ export default function Error({
           If this issue persists, please reach out to our support team on WhatsApp.
         </p>
         <a 
-          href="https://wa.me/919946811222" 
+          href="https://wa.me/917980624524" 
           target="_blank" 
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-primary mt-3 font-medium hover:underline text-sm"

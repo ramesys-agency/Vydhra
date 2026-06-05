@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ThemeToggle } from "../common/ThemeToggle";
-import CurrencySelector from "../ui/CurrencySelector";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import { getCourses } from "@/lib/api";
@@ -51,10 +50,10 @@ export default function Navbar() {
           <Link href="/" className="group inline-flex">
             <Image
               alt="Vydhra Logo"
-              className="h-16 w-auto object-contain scale-[3] group-hover:scale-[3.1] transition-transform duration-300"
+              className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.05]"
               src={logoSrc}
-              width={200}
-              height={250}
+              width={851}
+              height={248}
               priority
             />
           </Link>
@@ -121,7 +120,6 @@ export default function Navbar() {
           </Link>
         </nav>
         <div className="flex items-center gap-3 ml-6">
-          <CurrencySelector />
           <ThemeToggle />
         </div>
       </div>
