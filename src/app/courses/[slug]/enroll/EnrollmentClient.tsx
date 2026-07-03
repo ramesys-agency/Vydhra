@@ -227,7 +227,6 @@ export default function EnrollmentClient({
           country: info.country,
           courseSlug: slug,
           courseName: course.title,
-          amount: total,
           currency,
           couponCode: couponResult?.valid ? couponResult.code : null,
           batchId: selectedBatchId ?? null,
@@ -244,11 +243,18 @@ export default function EnrollmentClient({
       const { orderId, studentId, enrollmentId, courseId, couponId } =
         enrollData;
 
+      // The amount is computed server-side from DB pricing — use it, not the
+      // locally displayed total (rates can drift slightly between the two).
+      const chargedTotal =
+        typeof enrollData.totalAmount === "number"
+          ? enrollData.totalAmount
+          : total;
+
       // 2. Open Razorpay Checkout
       const options = {
         key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
-        amount: Math.round(total * 100),
-        currency,
+        amount: Math.round(chargedTotal * 100),
+        currency: enrollData.currency ?? currency,
         name: "Vydhra",
         description: `Enrollment – ${course.title}`,
         image: "/logo_vydhra_dark.png",
@@ -274,8 +280,6 @@ export default function EnrollmentClient({
                 enrollmentId,
                 courseId,
                 couponId: couponId ?? null,
-                amount: total,
-                currency,
               }),
             });
 
@@ -295,10 +299,10 @@ export default function EnrollmentClient({
                 courseName: course.title,
                 courseImage: course.image,
                 courseCategory: course.category,
-                amount: total,
-                currency,
+                amount: receipt.amount ?? chargedTotal,
+                currency: receipt.currency ?? currency,
                 currencySymbol,
-                discountAmount,
+                discountAmount: enrollData.discountAmount ?? discountAmount,
                 couponCode: couponResult?.valid ? couponResult.code : null,
                 studentName: info.name,
                 studentEmail: info.email,
