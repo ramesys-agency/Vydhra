@@ -23,7 +23,17 @@ interface ReceiptData {
   studentCountry: string;
   paidAt: string;
   whatsappGroupUrl?: string | null;
+  referral?: {
+    code: string;
+    discountType: string;
+    discountValue: number;
+    commissionType: string;
+    commissionValue: number;
+  } | null;
 }
+
+const formatReferralRate = (type: string, value: number) =>
+  type === "PERCENTAGE" ? `${value}%` : `$${value.toLocaleString("en-US")}`;
 
 const FALLBACK_WHATSAPP_URL = process.env.NEXT_PUBLIC_WHATSAPP_GROUP_URL || "https://chat.whatsapp.com/";
 
@@ -31,7 +41,15 @@ export default function EnrollmentSuccessClient({ slug }: { slug: string }) {
   const router = useRouter();
   const [receipt, setReceipt] = useState<ReceiptData | null>(null);
   const [downloading, setDownloading] = useState(false);
+  const [codeCopied, setCodeCopied] = useState(false);
   const receiptRef = useRef<HTMLDivElement>(null);
+
+  const handleCopyReferralCode = () => {
+    if (!receipt?.referral?.code) return;
+    navigator.clipboard.writeText(receipt.referral.code);
+    setCodeCopied(true);
+    setTimeout(() => setCodeCopied(false), 2000);
+  };
 
   useEffect(() => {
     const stored = sessionStorage.getItem("enrollmentReceipt");
@@ -266,6 +284,59 @@ export default function EnrollmentSuccessClient({ slug }: { slug: string }) {
             Join WhatsApp Group
           </a>
         </div>
+
+        {/* Refer & Earn */}
+        {receipt.referral && (
+          <div className="bg-gradient-to-r from-primary/10 to-orange-500/5 border border-primary/30 rounded-3xl p-8 mb-10 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none" />
+            <div className="flex flex-col md:flex-row md:items-center gap-6 justify-between relative z-10">
+              <div>
+                <p className="text-xs font-black uppercase tracking-widest text-primary mb-2 flex items-center gap-1.5">
+                  <Icon name="redeem" size={14} /> Refer &amp; Earn
+                </p>
+                <h3 className="text-xl font-black mb-2">
+                  Share your code, earn{" "}
+                  <span className="text-primary">
+                    {formatReferralRate(
+                      receipt.referral.commissionType,
+                      receipt.referral.commissionValue,
+                    )}
+                  </span>{" "}
+                  per enrollment
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed max-w-md">
+                  Friends who enroll with your code get{" "}
+                  <span className="font-bold text-foreground">
+                    {formatReferralRate(
+                      receipt.referral.discountType,
+                      receipt.referral.discountValue,
+                    )}{" "}
+                    off
+                  </span>{" "}
+                  — and you earn a referral bonus on every successful
+                  enrollment.
+                </p>
+              </div>
+              <button
+                onClick={handleCopyReferralCode}
+                className="flex items-center gap-3 bg-card border-2 border-dashed border-primary/50 hover:border-primary px-6 py-4 rounded-2xl transition-all hover:scale-[1.02] active:scale-95 shrink-0 group"
+              >
+                <span className="font-mono font-black text-lg tracking-widest text-primary">
+                  {receipt.referral.code}
+                </span>
+                <Icon
+                  name={codeCopied ? "check_circle" : "content_copy"}
+                  size={20}
+                  className={
+                    codeCopied
+                      ? "text-green-500"
+                      : "text-muted-foreground group-hover:text-primary"
+                  }
+                />
+              </button>
+            </div>
+          </div>
+        )}
 
         {/* Thank you note */}
         <div className="bg-card/50 border border-border rounded-3xl p-8 text-center">

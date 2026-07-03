@@ -46,6 +46,8 @@ interface StudentInfo {
 interface CouponResult {
   valid: boolean;
   couponId?: string;
+  referral?: boolean;
+  referrerStudentId?: string;
   code?: string;
   discountType?: string;
   discountValue?: number;
@@ -187,11 +189,16 @@ export default function EnrollmentClient({
           code: coupon.trim(),
           amount: basePrice,
           currency,
+          email: info.email || null,
         }),
       });
       const data: CouponResult = await res.json();
       if (data.valid) {
-        toast.success(`Coupon "${data.code}" applied!`);
+        toast.success(
+          data.referral
+            ? `Referral code "${data.code}" applied!`
+            : `Coupon "${data.code}" applied!`,
+        );
       } else {
         toast.error(data.error || "Invalid coupon code");
       }
@@ -240,8 +247,14 @@ export default function EnrollmentClient({
       }
 
       const enrollData = await enrollRes.json();
-      const { orderId, studentId, enrollmentId, courseId, couponId } =
-        enrollData;
+      const {
+        orderId,
+        studentId,
+        enrollmentId,
+        courseId,
+        couponId,
+        referrerStudentId,
+      } = enrollData;
 
       // The amount is computed server-side from DB pricing — use it, not the
       // locally displayed total (rates can drift slightly between the two).
@@ -280,6 +293,7 @@ export default function EnrollmentClient({
                 enrollmentId,
                 courseId,
                 couponId: couponId ?? null,
+                referrerStudentId: referrerStudentId ?? null,
               }),
             });
 
@@ -797,7 +811,7 @@ export default function EnrollmentClient({
             <div className="bg-card/50 backdrop-blur-xl border border-border rounded-3xl p-8 relative z-0">
               <h4 className="text-xl font-bold mb-6 flex items-center gap-2">
                 <Icon name="local_offer" className="text-primary" /> Have a
-                coupon code?
+                coupon or referral code?
               </h4>
 
               {couponResult?.valid ? (
@@ -823,7 +837,7 @@ export default function EnrollmentClient({
                   <div className="flex gap-3">
                     <input
                       type="text"
-                      placeholder="Enter coupon code"
+                      placeholder="Enter coupon or referral code"
                       className="flex-1 bg-background/50 border border-border rounded-2xl px-5 py-4 outline-none focus:border-primary transition-all font-medium text-sm uppercase"
                       value={coupon}
                       onChange={(e) => setCoupon(e.target.value.toUpperCase())}
