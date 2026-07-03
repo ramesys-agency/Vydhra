@@ -13,7 +13,7 @@ export default function PrivacyPage() {
           <section className="bg-card p-6 md:p-8 rounded-3xl border border-border shadow-sm">
             <h2 className="text-2xl font-bold mb-4 uppercase tracking-tight text-foreground">1. Introduction</h2>
             <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
-              Vydhra (“we”, “our”, “us”) is a brand operating under <strong>Ramesys Private Limited</strong>, based in Kolkata, India.
+              Vydhra (“we”, “our”, “us”) is a brand Owned and Operated by <a href="https://www.ramesys.co.uk/" target="_blank" rel="noopener noreferrer" className="hover:underline text-primary font-bold">Ramesys Private Limited</a>, based in Kolkata, India.
             </p>
             <p className="text-muted-foreground leading-relaxed text-base md:text-lg mt-4">
               We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, and safeguard your data when you use our website and services.

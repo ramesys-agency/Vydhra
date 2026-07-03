@@ -27,9 +27,10 @@ export default function FeaturesSection({ features }: FeaturesSectionProps) {
                   check
                 </span>
               </div>
-              <p className="text-lg text-muted-foreground group-hover:text-foreground transition-colors duration-300 py-1">
-                {feature}
-              </p>
+              <p 
+                className="text-lg text-muted-foreground group-hover:text-foreground transition-colors duration-300 py-1"
+                dangerouslySetInnerHTML={{ __html: feature }}
+              />
             </div>
           ))}
         </div>

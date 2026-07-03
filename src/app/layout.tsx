@@ -23,6 +23,7 @@ import Footer from "@/components/layout/Footer";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { CurrencyProvider } from "@/context/CurrencyContext";
 import { Toaster } from "sonner";
+import WhatsAppButton from "@/components/layout/WhatsAppButton";
 
 export default function RootLayout({
   children,
@@ -55,6 +56,7 @@ export default function RootLayout({
           {children}
           <Footer />
           <MobileNav />
+          <WhatsAppButton />
           <Toaster richColors position="top-center" />
           </CurrencyProvider>
         </ThemeProvider>

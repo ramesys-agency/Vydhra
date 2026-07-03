@@ -41,7 +41,7 @@ export default function Footer() {
                 Parent Company
               </span>
               <span className="text-sm font-bold text-foreground/80 mt-1 block">
-                Ramesys Private Limited
+                Owned and Operated by <a href="https://www.ramesys.co.uk/" target="_blank" rel="noopener noreferrer" className="hover:underline text-primary">Ramesys Private Limited</a>
               </span>
             </div>
           </div>
@@ -133,7 +133,7 @@ export default function Footer() {
         {/* Bottom Row */}
         <div className="border-t border-border/60 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-bold uppercase tracking-widest text-muted-foreground/60 text-center md:text-left">
           <p>© {new Date().getFullYear()} Vydhra. All rights reserved.</p>
-          <p>A Wholly Owned Subsidiary of Ramesys Private Limited</p>
+          <p>Owned and Operated by <a href="https://www.ramesys.co.uk/" target="_blank" rel="noopener noreferrer" className="hover:underline text-primary">Ramesys Private Limited</a></p>
         </div>
       </div>
     </footer>

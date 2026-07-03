@@ -17,7 +17,7 @@ export default async function CoursesPage() {
               Career Growth
             </h1>
             <p className="text-gray-500 dark:text-gray-400 max-w-3xl text-base md:text-lg">
-              Explore Vydhra’s live, ISO-certified bootcamps in AI, Machine
+              Explore Vydhra&apos;s live, mentor-led bootcamps in AI, Machine
               Learning, Full-Stack Development, Data Engineering, and
               Cybersecurity—built to make you job-ready in 2–6 months.
             </p>

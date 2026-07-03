@@ -99,7 +99,10 @@ export default function ContactPage() {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <div className="bg-card p-4 rounded-2xl border border-border group hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-lg flex items-center gap-4 flex-1 min-w-[200px]">
+            <a
+              href="mailto:info@vydhra.com"
+              className="bg-card p-4 rounded-2xl border border-border group hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-lg flex items-center gap-4 flex-1 min-w-[200px]"
+            >
               <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
                 <span className="material-icons text-primary text-xl">
                   email
@@ -107,17 +110,17 @@ export default function ContactPage() {
               </div>
               <div className="min-w-0">
                 <h3 className="text-sm font-bold text-foreground">Email</h3>
-                <a
-                  href="mailto:info@vydhra.com"
-                  className="inline-flex items-center gap-1 font-bold text-primary hover:text-orange-600 transition-colors text-xs break-all"
-                >
+                <span className="inline-flex items-center gap-1 font-bold text-primary group-hover:text-orange-600 transition-colors text-xs break-all">
                   info@vydhra.com
                   <span className="material-icons text-xs">arrow_forward</span>
-                </a>
+                </span>
               </div>
-            </div>
+            </a>
 
-            <div className="bg-card p-4 rounded-2xl border border-border group hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-lg flex items-center gap-4 flex-1 min-w-[200px]">
+            <a
+              href="tel:+917980624524"
+              className="bg-card p-4 rounded-2xl border border-border group hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-lg flex items-center gap-4 flex-1 min-w-[200px]"
+            >
               <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
                 <span className="material-icons text-primary text-xl">
                   phone
@@ -125,17 +128,19 @@ export default function ContactPage() {
               </div>
               <div className="min-w-0">
                 <h3 className="text-sm font-bold text-foreground">Phone</h3>
-                <a
-                  href="tel:+917980624524"
-                  className="inline-flex items-center gap-1 font-bold text-primary hover:text-orange-600 transition-colors text-xs whitespace-nowrap"
-                >
+                <span className="inline-flex items-center gap-1 font-bold text-primary group-hover:text-orange-600 transition-colors text-xs whitespace-nowrap">
                   +91 79806 24524
                   <span className="material-icons text-xs">arrow_forward</span>
-                </a>
+                </span>
               </div>
-            </div>
+            </a>
 
-            <div className="bg-card p-4 rounded-2xl border border-border group hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-lg flex items-center gap-4 flex-1 min-w-[200px]">
+            <a
+              href="https://wa.me/917980624524"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-card p-4 rounded-2xl border border-border group hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-lg flex items-center gap-4 flex-1 min-w-[200px]"
+            >
               <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
                 <span className="material-icons text-primary text-xl">
                   chat
@@ -143,15 +148,41 @@ export default function ContactPage() {
               </div>
               <div className="min-w-0">
                 <h3 className="text-sm font-bold text-foreground">WhatsApp</h3>
-                <a
-                  href="https://wa.me/917980624524"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 font-bold text-primary hover:text-orange-600 transition-colors text-xs whitespace-nowrap"
-                >
+                <span className="inline-flex items-center gap-1 font-bold text-primary group-hover:text-orange-600 transition-colors text-xs whitespace-nowrap">
                   Start Chat
                   <span className="material-icons text-xs">arrow_forward</span>
+                </span>
+              </div>
+            </a>
+          </div>
+
+          {/* Address Structure */}
+          <div className="mt-12 p-8 rounded-[2.5rem] bg-card border border-border shadow-sm relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-2xl rounded-full pointer-events-none" />
+            <h2 className="text-2xl font-black text-foreground mb-6 uppercase tracking-tight">Vyhdra</h2>
+            
+            <div className="space-y-6 text-sm text-muted-foreground leading-relaxed">
+              <div>
+                <p className="text-xs uppercase tracking-wider font-black text-muted-foreground/60 mb-2">Owned & Operated by</p>
+                <a href="https://www.ramesys.co.uk/" target="_blank" rel="noopener noreferrer" className="text-foreground font-black text-lg hover:underline text-primary transition-colors">
+                  Ramesys Private Limited
                 </a>
+              </div>
+              
+              <div className="space-y-2">
+                <p className="font-bold text-foreground/80"><span className="text-muted-foreground/60 font-black uppercase text-xs tracking-wider block mb-1">CIN</span> :-</p>
+                <p className="font-bold text-foreground/80"><span className="text-muted-foreground/60 font-black uppercase text-xs tracking-wider block mb-1">GST</span> :-</p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6 pt-6 border-t border-border/60">
+                <div>
+                  <p className="text-xs uppercase tracking-wider font-black text-muted-foreground/60 mb-2">Corporate Address</p>
+                  <p className="font-bold text-foreground/80">:-</p>
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-wider font-black text-muted-foreground/60 mb-2">Registered Address</p>
+                  <p className="font-bold text-foreground/80">:-</p>
+                </div>
               </div>
             </div>
           </div>

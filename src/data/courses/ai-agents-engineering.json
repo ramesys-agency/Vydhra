@@ -131,7 +131,6 @@
   "features": [
     "Design and deploy autonomous AI agents using LangChain & RAG",
     "Multi-agent orchestration with CrewAI or AutoGen",
-    "Production-level AI system design",
-    "ISO-Certified Program"
+    "Production-level AI system design"
   ]
 }

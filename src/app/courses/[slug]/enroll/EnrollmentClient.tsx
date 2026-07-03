@@ -1105,7 +1105,7 @@ const faqs = [
   {
     question: "Do I get a certificate after completion?",
     answer:
-      "Yes, every Vydhra bootcamp includes an ISO-certified digital certificate you can add to LinkedIn and your resume.",
+      "Yes, every Vydhra bootcamp includes a digital certificate of completion you can add to LinkedIn and your resume.",
   },
   {
     question: "Can I pay in installments?",

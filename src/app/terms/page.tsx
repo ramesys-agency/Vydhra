@@ -14,7 +14,7 @@ export default function TermsPage() {
           <section className="bg-card p-6 md:p-8 rounded-3xl border border-border shadow-sm">
             <h2 className="text-2xl font-bold mb-4 uppercase tracking-tight text-foreground">1. Introduction</h2>
             <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
-              Welcome to Vydhra (“we”, “our”, “us”). Vydhra is a brand owned and operated by <strong>Ramesys Private Limited</strong>, a company incorporated under the laws of India, with its registered office in Kolkata, India.
+              Welcome to Vydhra (“we”, “our”, “us”). Vydhra is a brand Owned and Operated by <a href="https://www.ramesys.co.uk/" target="_blank" rel="noopener noreferrer" className="hover:underline text-primary font-bold">Ramesys Private Limited</a>, a company incorporated under the laws of India, with its registered office in Kolkata, India.
             </p>
             <p className="text-muted-foreground leading-relaxed text-base md:text-lg mt-4">
               By accessing our website, enrolling in our courses, and purchasing our training programs, you agree to be bound by these Terms & Conditions. If you do not agree to these terms, please do not use our services.
@@ -94,7 +94,7 @@ export default function TermsPage() {
           <section className="bg-card p-6 md:p-8 rounded-3xl border border-border shadow-sm">
             <h2 className="text-2xl font-bold mb-4 uppercase tracking-tight text-foreground">5. Intellectual Property</h2>
             <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
-              All content provided in our courses, including slides, videos, code challenges, documentation, and exercises, is the intellectual property of Vydhra and Ramesys Private Limited. You are granted a limited, non-transferable, revocable license to access the materials for your personal learning. Sharing, distributing, or copying course materials is strictly prohibited.
+              All content provided in our courses, including slides, videos, code challenges, documentation, and exercises, is the intellectual property of Vydhra and Owned and Operated by <a href="https://www.ramesys.co.uk/" target="_blank" rel="noopener noreferrer" className="hover:underline text-primary font-bold">Ramesys Private Limited</a>. You are granted a limited, non-transferable, revocable license to access the materials for your personal learning. Sharing, distributing, or copying course materials is strictly prohibited.
             </p>
           </section>
 
@@ -110,7 +110,7 @@ export default function TermsPage() {
           <section className="bg-card p-6 md:p-8 rounded-3xl border border-border shadow-sm">
             <h2 className="text-2xl font-bold mb-4 uppercase tracking-tight text-foreground">7. Limitation of Liability</h2>
             <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
-              To the maximum extent permitted by law, Vydhra and Ramesys Private Limited shall not be liable for any indirect, incidental, special, or consequential damages resulting from your participation in or inability to participate in our courses.
+              To the maximum extent permitted by law, Vydhra and Owned and Operated by <a href="https://www.ramesys.co.uk/" target="_blank" rel="noopener noreferrer" className="hover:underline text-primary font-bold">Ramesys Private Limited</a> shall not be liable for any indirect, incidental, special, or consequential damages resulting from your participation in or inability to participate in our courses.
             </p>
           </section>
 

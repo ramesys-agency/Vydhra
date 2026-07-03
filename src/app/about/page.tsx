@@ -123,11 +123,11 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed text-base md:text-lg">
               <p>
-                Vydhra is a wholly owned subsidiary of Ramesys Private Limited,
+                Vydhra is Owned and Operated by <a href="https://www.ramesys.co.uk/" target="_blank" rel="noopener noreferrer" className="hover:underline text-primary font-bold">Ramesys Private Limited</a>,
                 built to solve a real industry problem—not just to teach.
               </p>
               <p>
-                While working on real-world projects at Ramesys, one challenge
+                While working on real-world projects at Owned and Operated by <a href="https://www.ramesys.co.uk/" target="_blank" rel="noopener noreferrer" className="hover:underline text-primary font-bold">Ramesys Private Limited</a>, one challenge
                 kept repeating: finding truly skilled developers. The issue
                 wasn’t a lack of candidates—it was a lack of real capability.
                 Most learners understood concepts. Very few could apply them in
@@ -136,13 +136,13 @@ export default function AboutPage() {
               <p>
                 That gap led to a clear decision: instead of searching for
                 talent, build it. What began as internal training and mentorship
-                inside Ramesys evolved into Vydhra—a platform focused on
+                inside Owned and Operated by <a href="https://www.ramesys.co.uk/" target="_blank" rel="noopener noreferrer" className="hover:underline text-primary font-bold">Ramesys Private Limited</a> evolved into Vydhra—a platform focused on
                 creating professionals who can contribute from day one.
               </p>
             </div>
             <div className="pt-4 border-t border-border">
               <div className="font-bold text-foreground text-xl uppercase tracking-widest">
-                Ramesys Private Limited
+                Owned and Operated by <a href="https://www.ramesys.co.uk/" target="_blank" rel="noopener noreferrer" className="hover:underline text-primary">Ramesys Private Limited</a>
               </div>
               <div className="text-primary text-sm font-bold uppercase tracking-widest">
                 Parent Company

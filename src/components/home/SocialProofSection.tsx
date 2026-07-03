@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 
 export default function SocialProofSection() {
   return (
@@ -14,9 +15,12 @@ export default function SocialProofSection() {
               See what working professionals are saying about their transition
               into tech with our live cohorts.
             </p>
-            <button className="w-fit border-2 border-foreground py-3 px-8 rounded-full font-bold uppercase text-sm hover:bg-foreground hover:text-background transition-all cursor-pointer">
-              Read all alumni stories
-            </button>
+            <Link 
+              href="/reviews" 
+              className="w-fit border-2 border-foreground py-3 px-8 rounded-full font-bold uppercase text-sm hover:bg-foreground hover:text-background transition-all cursor-pointer block text-center"
+            >
+              Read all reviews
+            </Link>
           </div>
           <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex flex-col gap-6">
