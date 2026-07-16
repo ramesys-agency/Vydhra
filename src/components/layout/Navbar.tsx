@@ -45,7 +45,7 @@ export default function Navbar() {
   const activeTextClass = "text-primary";
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
-      <div className="max-w-[1440px] mx-auto flex items-center h-20 px-6 md:px-12 text-foreground">
+      <div className="mx-auto max-w-7xl px-6 md:px-12 flex items-center h-20 text-foreground">
         <div className="flex items-center mr-auto h-full border-border">
           <Link href="/" className="group inline-flex">
             <Image
@@ -96,6 +96,16 @@ export default function Navbar() {
               className={`font-semibold text-sm transition-colors group-hover:text-primary ${isActive("/reviews") ? activeTextClass : ""}`}
             >
               Reviews
+            </span>
+          </Link>
+          <Link
+            className={`px-6 h-full flex flex-col justify-center border-border hover:bg-primary/5 dark:hover:bg-primary/10 group transition-colors ${isActive("/referrals") ? activeLinkClass : ""}`}
+            href="/referrals"
+          >
+            <span
+              className={`font-semibold text-sm transition-colors group-hover:text-primary ${isActive("/referrals") ? activeTextClass : ""}`}
+            >
+              Referrals
             </span>
           </Link>
           <Link

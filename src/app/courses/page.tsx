@@ -8,7 +8,7 @@ export default async function CoursesPage() {
   // console.log(courses);
   return (
     <div className="min-h-screen bg-background">
-      <main className="max-w-[1440px] mx-auto px-6 md:px-12 py-12 md:py-20 text-foreground">
+      <main className="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-20 text-foreground">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12 md:mb-20">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black uppercase tracking-tight text-primary leading-none mb-6">

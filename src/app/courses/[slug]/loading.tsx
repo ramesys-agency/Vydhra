@@ -10,7 +10,7 @@ export default function CourseDetailLoading() {
             <div className="absolute bottom-[-15%] left-[-5%] w-[35%] h-[55%] bg-orange-400/10 rounded-full blur-[120px]"></div>
           </div>
 
-          <div className="max-w-7xl mx-auto px-8 relative z-10">
+          <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
             <div className="grid lg:grid-cols-10 gap-16 items-center">
               {/* Left Column Skeleton */}
               <div className="lg:col-span-5 space-y-6">
@@ -60,7 +60,7 @@ export default function CourseDetailLoading() {
         </section>
 
         {/* Content Grid Skeleton */}
-        <div className="max-w-7xl mx-auto px-8 py-20">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
           <div className="grid lg:grid-cols-3 gap-16 items-start">
             {/* Left Content Column */}
             <div className="lg:col-span-2 space-y-16">

@@ -37,7 +37,7 @@ export default function TestimonialsSection({
 
   return (
     <section className="bg-background py-24 border-t border-border">
-      <div className="max-w-7xl mx-auto px-8">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="mb-16">
           <span className="text-primary font-bold tracking-widest uppercase text-xs">
             Testimonials

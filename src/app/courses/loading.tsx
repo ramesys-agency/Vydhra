@@ -3,7 +3,7 @@ import React from "react";
 export default function CoursesLoading() {
   return (
     <div className="min-h-screen bg-background">
-      <main className="max-w-[1440px] mx-auto px-6 py-12 text-foreground">
+      <main className="max-w-7xl mx-auto px-6 md:px-12 py-12 text-foreground">
         <div className="max-w-7xl mx-auto">
           {/* Header Skeleton */}
           <div className="mb-12 space-y-4">

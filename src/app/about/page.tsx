@@ -26,7 +26,7 @@ export default function AboutPage() {
             </h1>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl">
               Vydhra was created to redefine how people enter the tech
-              industry—through real capability, not just theoretical knowledge.
+              industry-through real capability, not just theoretical knowledge.
             </p>
           </div>
           <div className="relative">
@@ -53,7 +53,7 @@ export default function AboutPage() {
               Our Mission
             </h2>
             <p className="text-base md:text-lg lg:text-xl text-muted-foreground">
-              To build a new standard of tech education—one that focuses on
+              To build a new standard of tech education-one that focuses on
               real-world capability, not passive learning. We aim to equip
               learners with the skills, thinking, and practical experience
               required to succeed in AI, software development, and data-driven
@@ -67,13 +67,13 @@ export default function AboutPage() {
                 icon: "engineering",
                 title: "Industry-Driven Learning",
                 description:
-                  "Learn from professionals actively working in AI and software development—not traditional instructors disconnected from real-world systems.",
+                  "Learn from professionals actively working in AI and software development-not traditional instructors disconnected from real-world systems.",
               },
               {
                 icon: "psychology",
                 title: "Real Capability Over Theory",
                 description:
-                  "We focus on building skills that translate directly into real work—projects, systems, and problem-solving.",
+                  "We focus on building skills that translate directly into real work-projects, systems, and problem-solving.",
               },
               {
                 icon: "public",
@@ -123,29 +123,46 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed text-base md:text-lg">
               <p>
-                Vydhra is Owned and Operated by <a href="https://www.ramesys.co.uk/" target="_blank" rel="noopener noreferrer" className="hover:underline text-primary font-bold">Ramesys Private Limited</a>,
-                built to solve a real industry problem—not just to teach.
+                Vydhra is Owned and Operated by{" "}
+                <a
+                  href="https://www.ramesys.co.uk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline text-primary font-bold"
+                >
+                  Ramesys Private Limited
+                </a>
+                , built to solve a real industry problem - not just to teach.
               </p>
               <p>
-                While working on real-world projects at Owned and Operated by <a href="https://www.ramesys.co.uk/" target="_blank" rel="noopener noreferrer" className="hover:underline text-primary font-bold">Ramesys Private Limited</a>, one challenge
-                kept repeating: finding truly skilled developers. The issue
-                wasn’t a lack of candidates—it was a lack of real capability.
-                Most learners understood concepts. Very few could apply them in
-                production environments.
+                While working on real-world projects at Ramesys Private Limited
+                , one challenge kept repeating: finding truly skilled
+                developers. The issue wasn’t a lack of candidates-it was a lack
+                of real capability. Most learners understood concepts. Very few
+                could apply them in production environments.
               </p>
               <p>
                 That gap led to a clear decision: instead of searching for
                 talent, build it. What began as internal training and mentorship
-                inside Owned and Operated by <a href="https://www.ramesys.co.uk/" target="_blank" rel="noopener noreferrer" className="hover:underline text-primary font-bold">Ramesys Private Limited</a> evolved into Vydhra—a platform focused on
-                creating professionals who can contribute from day one.
+                inside Ramesys Private Limited evolved into Vydhra-a platform
+                focused on creating professionals who can contribute from day
+                one.
               </p>
             </div>
             <div className="pt-4 border-t border-border">
-              <div className="font-bold text-foreground text-xl uppercase tracking-widest">
-                Owned and Operated by <a href="https://www.ramesys.co.uk/" target="_blank" rel="noopener noreferrer" className="hover:underline text-primary">Ramesys Private Limited</a>
-              </div>
-              <div className="text-primary text-sm font-bold uppercase tracking-widest">
+              <div className="text-primary text-xs font-bold uppercase tracking-widest">
                 Parent Company
+              </div>
+              <div className="font-bold text-foreground text-md uppercase tracking-widest">
+                Owned and Operated by{" "}
+                <a
+                  href="https://www.ramesys.co.uk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline text-primary"
+                >
+                  Ramesys Private Limited
+                </a>
               </div>
             </div>
           </div>

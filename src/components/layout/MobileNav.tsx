@@ -33,6 +33,10 @@ export default function MobileNav() {
           <span className="material-icons">rate_review</span>
           <span className="text-[10px] font-bold mt-1">REVIEWS</span>
         </Link>
+        <Link href="/referrals" className={`flex flex-col items-center hover:text-primary transition-colors cursor-pointer ${isActive("/referrals") ? activeClass : inactiveClass}`}>
+          <span className="material-icons">card_giftcard</span>
+          <span className="text-[10px] font-bold mt-1">REFER</span>
+        </Link>
         <Link href="/about" className={`flex flex-col items-center hover:text-primary transition-colors cursor-pointer ${isActive("/about") ? activeClass : inactiveClass}`}>
           <span className="material-icons">explore</span>
           <span className="text-[10px] font-bold mt-1">ABOUT</span>

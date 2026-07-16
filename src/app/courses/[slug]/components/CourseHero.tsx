@@ -104,7 +104,7 @@ export default function CourseHero({
         </svg>
       </div>
 
-      <div className="max-w-7xl mx-auto px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="grid lg:grid-cols-10 gap-16 items-center">
           {/* Left Content */}
           <div className="lg:col-span-5">

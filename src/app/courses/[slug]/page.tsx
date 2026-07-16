@@ -43,7 +43,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
           originalPricing={course.originalPricing}
         />
 
-        <div className="max-w-7xl mx-auto px-8 py-20 gap-16">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 gap-16">
           <div className="grid lg:grid-cols-3 gap-16 items-start">
             <div className="lg:col-span-2 space-y-16">
               <Curriculum modules={course.curriculum} />

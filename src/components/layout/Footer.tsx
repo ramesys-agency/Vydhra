@@ -19,7 +19,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-border pt-20 pb-28 lg:pb-20 bg-card text-foreground">
-      <div className="max-w-[1440px] mx-auto px-6 md:px-12">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 pb-16">
           {/* Brand Column */}
           <div className="space-y-6 lg:col-span-2">
@@ -74,6 +74,14 @@ export default function Footer() {
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Reviews
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/referrals"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Referral Program
                 </Link>
               </li>
               <li>

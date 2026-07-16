@@ -79,7 +79,7 @@ export default function ContactPage() {
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full pointer-events-none -z-10" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full pointer-events-none -z-10" />
 
-      <div className="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
         {/* Left: Info */}
         <div>
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-sm mb-8 border border-primary/20 backdrop-blur-sm">
@@ -136,7 +136,9 @@ export default function ContactPage() {
             </a>
 
             <a
-              href="https://wa.me/917980624524"
+              href={`https://wa.me/917980624524?text=${encodeURIComponent(
+                "Hi Vydhra,\n\nI hope you are doing well. I would like to make an enquiry regarding your courses. Could you please share more details about the curriculum, upcoming batch schedules, and enrollment options?\n\nThank you!"
+              )}`}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-card p-4 rounded-2xl border border-border group hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-lg flex items-center gap-4 flex-1 min-w-[200px]"
