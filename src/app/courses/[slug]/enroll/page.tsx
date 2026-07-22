@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { getCourseBySlug } from "@/lib/api";
 import EnrollmentClient from "./EnrollmentClient";
 
@@ -24,6 +24,10 @@ export default async function EnrollmentPage({ params }: PageProps) {
 
   if (!course) {
     notFound();
+  }
+
+  if (course.status === "COMING_SOON") {
+    redirect(`/courses/${slug}`);
   }
 
   return (

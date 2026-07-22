@@ -20,6 +20,7 @@ interface CourseHeroProps {
   slug: string;
   originalPrice?: number;
   originalPricing?: Record<string, number>;
+  comingSoon?: boolean;
 }
 
 export default function CourseHero({
@@ -34,6 +35,7 @@ export default function CourseHero({
   slug,
   originalPrice,
   originalPricing,
+  comingSoon = false,
 }: CourseHeroProps) {
   const { formatPrice, formatAmount, getPrice, currencyInfo } = useCurrency();
   const displayPrice = formatPrice(pricing);
@@ -151,12 +153,18 @@ export default function CourseHero({
             </div>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
-              <Link
-                href={`/courses/${slug}/enroll`}
-                className="bg-primary text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-[#E56000] transition-all shadow-xl shadow-orange-500/20 cursor-pointer hover:scale-105 active:scale-95 no-underline"
-              >
-                Enroll Now
-              </Link>
+              {comingSoon ? (
+                <span className="bg-muted text-muted-foreground px-10 py-5 rounded-2xl font-bold text-lg border border-border select-none">
+                  Coming Soon
+                </span>
+              ) : (
+                <Link
+                  href={`/courses/${slug}/enroll`}
+                  className="bg-primary text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-[#E56000] transition-all shadow-xl shadow-orange-500/20 cursor-pointer hover:scale-105 active:scale-95 no-underline"
+                >
+                  Enroll Now
+                </Link>
+              )}
               <a
                 href="#curriculum"
                 className="bg-background text-foreground px-10 py-5 rounded-2xl font-bold text-lg border border-border hover:bg-muted transition-all shadow-sm cursor-pointer no-underline inline-block"

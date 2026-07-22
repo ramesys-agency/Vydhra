@@ -46,8 +46,11 @@ export interface CourseBatch {
   whatsappGroupUrl?: string | null;
 }
 
+export type CourseStatus = "LIVE" | "COMING_SOON";
+
 export interface Course {
   slug: string;
+  status: CourseStatus;
   title: string;
   subtitle: string;
   description: string;

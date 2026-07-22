@@ -24,6 +24,8 @@ export default async function CourseDetailPage({ params }: PageProps) {
     notFound();
   }
 
+  const comingSoon = course.status === "COMING_SOON";
+
   return (
     <div className="min-h-screen">
       <main>
@@ -41,6 +43,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
           slug={slug}
           originalPrice={course.originalPrice}
           originalPricing={course.originalPricing}
+          comingSoon={comingSoon}
         />
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 gap-16">
@@ -57,6 +60,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
                 slug={slug}
                 coursePricing={course.pricing}
                 courseOriginalPricing={course.originalPricing}
+                comingSoon={comingSoon}
               />
 
               <RequirementsSection requirements={course.requirements} />
@@ -70,6 +74,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
                 slug={slug}
                 originalPrice={course.originalPrice}
                 originalPricing={course.originalPricing}
+                comingSoon={comingSoon}
               />
             </aside>
           </div>

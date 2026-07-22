@@ -14,6 +14,7 @@ interface CourseCardProps {
   originalPricing?: Record<string, number>;
   image: string;
   link: string;
+  comingSoon?: boolean;
 }
 
 export default function CourseCard({
@@ -25,6 +26,7 @@ export default function CourseCard({
   originalPricing,
   image,
   link,
+  comingSoon = false,
 }: CourseCardProps) {
   const { formatPrice, formatAmount, getPrice, currencyInfo } = useCurrency();
   const displayPrice = formatPrice(pricing);
@@ -52,6 +54,11 @@ export default function CourseCard({
           <div className="absolute top-4 left-4 bg-background/80 backdrop-blur-md text-primary px-4 py-1.5 text-[10px] font-black uppercase tracking-widest rounded-full shadow-lg border border-border">
             {category}
           </div>
+          {comingSoon && (
+            <div className="absolute top-4 right-4 bg-primary text-white px-4 py-1.5 text-[10px] font-black uppercase tracking-widest rounded-full shadow-lg">
+              Coming Soon
+            </div>
+          )}
         </div>
 
         <div className="flex flex-col grow px-1">

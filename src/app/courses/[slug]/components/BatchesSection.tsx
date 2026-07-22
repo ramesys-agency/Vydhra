@@ -9,6 +9,7 @@ interface BatchesSectionProps {
   slug: string;
   coursePricing: Record<string, number>;
   courseOriginalPricing?: Record<string, number>;
+  comingSoon?: boolean;
 }
 
 function formatDate(dateStr: string) {
@@ -24,6 +25,7 @@ export default function BatchesSection({
   slug,
   coursePricing,
   courseOriginalPricing,
+  comingSoon = false,
 }: BatchesSectionProps) {
   const { formatPrice } = useCurrency();
   const activeBatches = (batches ?? []).filter((b) => b.status === "ACTIVE" || b.status === "UPCOMING");
@@ -94,16 +96,22 @@ export default function BatchesSection({
                   </div>
                   <p className="text-[10px] text-muted-foreground font-black uppercase tracking-widest">excl. GST</p>
                 </div>
-                <Link
-                  href={`/courses/${slug}/enroll`}
-                  className={`px-6 py-3 rounded-xl font-bold text-sm transition-all no-underline ${
-                    isFull
-                      ? "bg-muted text-muted-foreground cursor-not-allowed pointer-events-none"
-                      : "bg-primary text-white hover:bg-orange-600 hover:scale-105 active:scale-95 shadow-lg shadow-primary/25"
-                  }`}
-                >
-                  {isFull ? "Batch Full" : "Enroll Now"}
-                </Link>
+                {comingSoon ? (
+                  <span className="px-6 py-3 rounded-xl font-bold text-sm bg-muted text-muted-foreground border border-border select-none">
+                    Coming Soon
+                  </span>
+                ) : (
+                  <Link
+                    href={`/courses/${slug}/enroll`}
+                    className={`px-6 py-3 rounded-xl font-bold text-sm transition-all no-underline ${
+                      isFull
+                        ? "bg-muted text-muted-foreground cursor-not-allowed pointer-events-none"
+                        : "bg-primary text-white hover:bg-orange-600 hover:scale-105 active:scale-95 shadow-lg shadow-primary/25"
+                    }`}
+                  >
+                    {isFull ? "Batch Full" : "Enroll Now"}
+                  </Link>
+                )}
               </div>
             </div>
           );

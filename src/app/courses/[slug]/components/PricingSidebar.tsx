@@ -8,6 +8,7 @@ interface PricingSidebarProps {
   slug: string;
   originalPrice?: number;
   originalPricing?: Record<string, number>;
+  comingSoon?: boolean;
 }
 
 export default function PricingSidebar({
@@ -15,6 +16,7 @@ export default function PricingSidebar({
   slug,
   originalPrice,
   originalPricing,
+  comingSoon = false,
 }: PricingSidebarProps) {
   const { formatPrice, formatAmount, getPrice, currencyInfo } = useCurrency();
   const displayPrice = formatPrice(pricing);
@@ -48,12 +50,18 @@ export default function PricingSidebar({
             </span>
           </div>
         </div>
-        <Link
-          href={`/courses/${slug}/enroll`}
-          className="w-full bg-primary text-white py-5 rounded-xl font-bold text-lg hover:bg-orange-600 transition-all mb-8 shadow-lg shadow-primary/25 cursor-pointer hover:scale-105 active:scale-95 flex items-center justify-center no-underline"
-        >
-          ENROLL NOW
-        </Link>
+        {comingSoon ? (
+          <div className="w-full bg-muted text-muted-foreground py-5 rounded-xl font-bold text-lg border border-border mb-8 flex items-center justify-center select-none">
+            COMING SOON
+          </div>
+        ) : (
+          <Link
+            href={`/courses/${slug}/enroll`}
+            className="w-full bg-primary text-white py-5 rounded-xl font-bold text-lg hover:bg-orange-600 transition-all mb-8 shadow-lg shadow-primary/25 cursor-pointer hover:scale-105 active:scale-95 flex items-center justify-center no-underline"
+          >
+            ENROLL NOW
+          </Link>
+        )}
         <div className="space-y-4 mb-8">
           <div className="flex items-center gap-3 text-sm">
             <span className="material-icons text-green-500">check_circle</span>

@@ -22,6 +22,7 @@ function mapCourse(course: any): Course {
   return {
     ...details,
     id: course.id,
+    status: details.status === "COMING_SOON" ? "COMING_SOON" : "LIVE",
     slug: course.slug || details.slug || `course-${course.id}`,
     title: details.title || course.name || "Untitled Course",
     description: details.description || course.description || "",
