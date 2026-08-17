@@ -128,15 +128,17 @@ export default function TermsPage() {
             <p className="text-muted-foreground text-base md:text-lg">
               If you have any questions or clarifications regarding these Terms & Conditions, please contact us:
             </p>
-            <div className="mt-4 space-y-2">
+            <div className="mt-4 space-y-3">
               <p className="flex items-center gap-3 text-foreground font-bold text-sm md:text-base">
                 <span className="text-primary font-bold">Email:</span>
                 support@vydhra.com
               </p>
-              <p className="flex items-center gap-3 text-foreground font-bold text-sm md:text-base">
-                <span className="text-primary font-bold">Location:</span>
-                Kolkata, West Bengal, India
-              </p>
+              <div className="flex items-start gap-3 text-foreground text-sm md:text-base">
+                <span className="text-primary font-bold whitespace-nowrap">Corporate Address:</span>
+                <span className="font-semibold text-foreground/90">
+                  Godrej Genesis, 16th Floor Unit 1604, Street Number 18, EP & GP Block, Salt Lake Sector V, Bidhannagar, Kolkata, West Bengal - 700091
+                </span>
+              </div>
             </div>
           </section>
         </div>

@@ -36,13 +36,23 @@ export default function Footer() {
               Redefining tech education through real capability, hands-on
               production systems, and mentor-led bootcamps.
             </p>
-            <div className="pt-2">
-              <span className="text-xs font-black uppercase tracking-wider text-muted-foreground/60 block">
-                Parent Company
-              </span>
-              <span className="text-sm font-bold text-foreground/80 mt-1 block">
-                Owned and Operated by <a href="https://www.ramesys.co.uk/" target="_blank" rel="noopener noreferrer" className="hover:underline text-primary">Ramesys Private Limited</a>
-              </span>
+            <div className="pt-2 space-y-3">
+              <div>
+                <span className="text-xs font-black uppercase tracking-wider text-muted-foreground/60 block">
+                  Parent Company
+                </span>
+                <span className="text-sm font-bold text-foreground/80 mt-1 block">
+                  Owned and Operated by <a href="https://www.ramesys.co.uk/" target="_blank" rel="noopener noreferrer" className="hover:underline text-primary">Ramesys Private Limited</a>
+                </span>
+              </div>
+              <div>
+                <span className="text-xs font-black uppercase tracking-wider text-muted-foreground/60 block">
+                  Corporate Address
+                </span>
+                <span className="text-xs font-medium text-muted-foreground mt-0.5 block max-w-sm leading-relaxed">
+                  Godrej Genesis, 16th Floor Unit 1604, Street Number 18, EP & GP Block, Salt Lake Sector V, Bidhannagar, Kolkata, West Bengal - 700091
+                </span>
+              </div>
             </div>
           </div>
 

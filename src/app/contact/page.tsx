@@ -161,7 +161,7 @@ export default function ContactPage() {
           {/* Address Structure */}
           <div className="mt-12 p-8 rounded-[2.5rem] bg-card border border-border shadow-sm relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-2xl rounded-full pointer-events-none" />
-            <h2 className="text-2xl font-black text-foreground mb-6 uppercase tracking-tight">Vyhdra</h2>
+            <h2 className="text-2xl font-black text-foreground mb-6 uppercase tracking-tight">Vydhra</h2>
             
             <div className="space-y-6 text-sm text-muted-foreground leading-relaxed">
               <div>
@@ -179,7 +179,9 @@ export default function ContactPage() {
               <div className="grid md:grid-cols-2 gap-6 pt-6 border-t border-border/60">
                 <div>
                   <p className="text-xs uppercase tracking-wider font-black text-muted-foreground/60 mb-2">Corporate Address</p>
-                  <p className="font-bold text-foreground/80">:-</p>
+                  <p className="font-bold text-foreground/80 leading-snug">
+                    Godrej Genesis, 16th Floor Unit 1604, Street Number 18, EP & GP Block, Salt Lake Sector V, Bidhannagar, Kolkata, West Bengal - 700091
+                  </p>
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-wider font-black text-muted-foreground/60 mb-2">Registered Address</p>

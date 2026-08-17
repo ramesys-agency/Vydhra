@@ -105,15 +105,20 @@ export default function PrivacyPage() {
             <p className="text-muted-foreground text-base md:text-lg">
               For any questions regarding this Privacy Policy:
             </p>
-            <div className="mt-4 space-y-2">
+            <div className="mt-4 space-y-3">
                 <p className="flex items-center gap-3 text-foreground font-bold text-sm md:text-base">
                     <span className="material-icons text-primary">email</span>
                     support@vydhra.com
                 </p>
-                <p className="flex items-center gap-3 text-foreground font-bold text-sm md:text-base">
-                    <span className="material-icons text-primary">location_on</span>
-                    Kolkata, India
-                </p>
+                <div className="flex items-start gap-3 text-foreground text-sm md:text-base">
+                    <span className="material-icons text-primary mt-0.5">location_on</span>
+                    <div>
+                      <strong className="block text-xs uppercase tracking-wider text-muted-foreground mb-0.5">Corporate Address</strong>
+                      <span className="font-semibold text-foreground/90">
+                        Godrej Genesis, 16th Floor Unit 1604, Street Number 18, EP & GP Block, Salt Lake Sector V, Bidhannagar, Kolkata, West Bengal - 700091
+                      </span>
+                    </div>
+                </div>
             </div>
           </section>
         </div>
