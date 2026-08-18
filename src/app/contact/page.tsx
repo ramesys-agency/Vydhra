@@ -137,7 +137,7 @@ export default function ContactPage() {
 
             <a
               href={`https://wa.me/917980624524?text=${encodeURIComponent(
-                "Hi Vydhra,\n\nI hope you are doing well. I would like to make an enquiry regarding your courses. Could you please share more details about the curriculum, upcoming batch schedules, and enrollment options?\n\nThank you!"
+                "Hi Vydhra,\n\nI hope you are doing well. I would like to make an enquiry regarding your courses. Could you please share more details about the curriculum, upcoming batch schedules, and enrollment options?\n\nThank you!",
               )}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -161,47 +161,80 @@ export default function ContactPage() {
           {/* Address & Legal Structure */}
           <div className="mt-12 p-8 rounded-[2.5rem] bg-card border border-border shadow-sm relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-2xl rounded-full pointer-events-none" />
-            <h2 className="text-2xl font-black text-foreground mb-6 uppercase tracking-tight">Vydhra</h2>
-            
+            <h2 className="text-2xl font-black text-foreground mb-6 uppercase tracking-tight">
+              Vydhra
+            </h2>
+
             <div className="space-y-6 text-sm text-muted-foreground leading-relaxed">
               <div>
-                <p className="text-xs uppercase tracking-wider font-black text-muted-foreground/60 mb-2">Owned & Operated by</p>
-                <a href="https://www.ramesys.co.uk/" target="_blank" rel="noopener noreferrer" className="text-foreground font-black text-lg hover:underline text-primary transition-colors">
+                <p className="text-xs uppercase tracking-wider font-black text-muted-foreground/60 mb-2">
+                  Owned & Operated by
+                </p>
+                <a
+                  href="https://www.ramesys.co.uk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground font-black text-lg hover:underline text-primary transition-colors"
+                >
                   Ramesys Private Limited
                 </a>
               </div>
-              
+
               <div className="space-y-4">
                 <div>
-                  <span className="text-muted-foreground/60 font-black uppercase text-xs tracking-wider block mb-1">CIN</span>
-                  <p className="font-bold text-foreground/90">U62011WR2026PTC292702</p>
+                  <span className="text-muted-foreground/60 font-black uppercase text-xs tracking-wider block mb-1">
+                    CIN
+                  </span>
+                  <p className="font-bold text-foreground/90">
+                    U62011WR2026PTC292702
+                  </p>
                 </div>
                 <div>
-                  <span className="text-muted-foreground/60 font-black uppercase text-xs tracking-wider block mb-1">GST</span>
-                  <p className="font-bold text-foreground/90">19AAPCR6449A1Z2</p>
+                  <span className="text-muted-foreground/60 font-black uppercase text-xs tracking-wider block mb-1">
+                    GST
+                  </span>
+                  <p className="font-bold text-foreground/90">
+                    19AAPCR6449A1Z2
+                  </p>
                 </div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6 pt-6 border-t border-border/60">
                 <div>
-                  <p className="text-xs uppercase tracking-wider font-black text-muted-foreground/60 mb-2">Corporate Address</p>
+                  <p className="text-xs uppercase tracking-wider font-black text-muted-foreground/60 mb-2">
+                    Corporate Address
+                  </p>
                   <p className="font-bold text-foreground/80 leading-snug">
-                    Godrej Genesis, 16th Floor Unit 1604, Street Number 18, EP & GP Block, Salt Lake Sector V, Bidhannagar, Kolkata, West Bengal - 700091
+                    Godrej Genesis, 16th Floor Unit 1604, Street Number 18, EP &
+                    GP Block, Salt Lake Sector V, Bidhannagar, Kolkata, West
+                    Bengal , 700091
                   </p>
                 </div>
                 <div>
-                  <p className="text-xs uppercase tracking-wider font-black text-muted-foreground/60 mb-2">Registered Address</p>
+                  <p className="text-xs uppercase tracking-wider font-black text-muted-foreground/60 mb-2">
+                    Registered Address
+                  </p>
                   <p className="font-bold text-foreground/80 leading-snug">
-                    Uttarpara, Hooghly,712258, 1 Radhika Charan Chatter, Uttarpara, Hooghly, Serampur Uttarpara, West Bengal, India, 712258
+                    Uttarpara, Hooghly,712258, 1 Radhika Charan Chatter,
+                    Uttarpara, Hooghly, Serampur Uttarpara, West Bengal, India,
+                    712258
                   </p>
                 </div>
               </div>
 
               {/* Disclaimer */}
               <div className="pt-6 border-t border-border/60">
-                <p className="text-xs uppercase tracking-wider font-black text-primary mb-2">Disclaimer</p>
+                <p className="text-xs uppercase tracking-wider font-black text-primary mb-2">
+                  Disclaimer
+                </p>
                 <p className="text-xs text-muted-foreground/90 leading-relaxed italic">
-                  Vydhra is a brand solely owned and operated by Ramesys Pvt. Ltd. All certificates, acknowledgments, and other official documents issued under the Vydhra brand are issued by Ramesys Pvt. Ltd. on behalf of Vydhra and shall be deemed valid and legally binding. References to &quot;Vydhra&quot; on this website are made in its capacity as a brand operated by Ramesys Pvt. Ltd.
+                  Vydhra is a brand solely owned and operated by Ramesys Pvt.
+                  Ltd. All certificates, acknowledgments, and other official
+                  documents issued under the Vydhra brand are issued by Ramesys
+                  Pvt. Ltd. on behalf of Vydhra and shall be deemed valid and
+                  legally binding. References to &quot;Vydhra&quot; on this
+                  website are made in its capacity as a brand operated by
+                  Ramesys Pvt. Ltd.
                 </p>
               </div>
             </div>

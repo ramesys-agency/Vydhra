@@ -42,12 +42,26 @@ export default function Footer() {
                   Parent Company
                 </span>
                 <span className="text-sm font-bold text-foreground/80 mt-1 block">
-                  Owned and Operated by <a href="https://www.ramesys.co.uk/" target="_blank" rel="noopener noreferrer" className="hover:underline text-primary">Ramesys Private Limited</a>
+                  Owned and Operated by{" "}
+                  <a
+                    href="https://www.ramesys.co.uk/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline text-primary"
+                  >
+                    Ramesys Private Limited
+                  </a>
                 </span>
               </div>
               <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs">
-                <span><strong className="text-foreground/70">CIN:</strong> U62011WR2026PTC292702</span>
-                <span><strong className="text-foreground/70">GST:</strong> 19AAPCR6449A1Z2</span>
+                <span>
+                  <strong className="text-foreground/70">CIN:</strong>{" "}
+                  U62011WR2026PTC292702
+                </span>
+                <span>
+                  <strong className="text-foreground/70">GST:</strong>{" "}
+                  19AAPCR6449A1Z2
+                </span>
               </div>
               <div className="grid sm:grid-cols-2 gap-3 pt-1">
                 <div>
@@ -55,7 +69,9 @@ export default function Footer() {
                     Corporate Address
                   </span>
                   <span className="text-xs font-medium text-muted-foreground mt-0.5 block leading-relaxed">
-                    Godrej Genesis, 16th Floor Unit 1604, Street Number 18, EP & GP Block, Salt Lake Sector V, Bidhannagar, Kolkata, West Bengal - 700091
+                    Godrej Genesis, 16th Floor Unit 1604, Street Number 18, EP &
+                    GP Block, Salt Lake Sector V, Bidhannagar, Kolkata, West
+                    Bengal , 700091
                   </span>
                 </div>
                 <div>
@@ -63,7 +79,9 @@ export default function Footer() {
                     Registered Address
                   </span>
                   <span className="text-xs font-medium text-muted-foreground mt-0.5 block leading-relaxed">
-                    Uttarpara, Hooghly,712258, 1 Radhika Charan Chatter, Uttarpara, Hooghly, Serampur Uttarpara, West Bengal, India, 712258
+                    Uttarpara, Hooghly,712258, 1 Radhika Charan Chatter,
+                    Uttarpara, Hooghly, Serampur Uttarpara, West Bengal, India,
+                    712258
                   </span>
                 </div>
               </div>
@@ -164,13 +182,33 @@ export default function Footer() {
 
         {/* Disclaimer Note */}
         <div className="border-t border-border/60 pt-6 pb-2 text-[11px] text-muted-foreground/80 leading-relaxed italic">
-          <p><strong className="text-primary not-italic font-bold">Disclaimer:</strong> Vydhra is a brand solely owned and operated by Ramesys Pvt. Ltd. All certificates, acknowledgments, and other official documents issued under the Vydhra brand are issued by Ramesys Pvt. Ltd. on behalf of Vydhra and shall be deemed valid and legally binding. References to &quot;Vydhra&quot; on this website are made in its capacity as a brand operated by Ramesys Pvt. Ltd.</p>
+          <p>
+            <strong className="text-primary not-italic font-bold">
+              Disclaimer:
+            </strong>{" "}
+            Vydhra is a brand solely owned and operated by Ramesys Pvt. Ltd. All
+            certificates, acknowledgments, and other official documents issued
+            under the Vydhra brand are issued by Ramesys Pvt. Ltd. on behalf of
+            Vydhra and shall be deemed valid and legally binding. References to
+            &quot;Vydhra&quot; on this website are made in its capacity as a
+            brand operated by Ramesys Pvt. Ltd.
+          </p>
         </div>
 
         {/* Bottom Row */}
         <div className="border-t border-border/60 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-bold uppercase tracking-widest text-muted-foreground/60 text-center md:text-left">
           <p>© {new Date().getFullYear()} Vydhra. All rights reserved.</p>
-          <p>Owned and Operated by <a href="https://www.ramesys.co.uk/" target="_blank" rel="noopener noreferrer" className="hover:underline text-primary">Ramesys Private Limited</a></p>
+          <p>
+            Owned and Operated by{" "}
+            <a
+              href="https://www.ramesys.co.uk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline text-primary"
+            >
+              Ramesys Private Limited
+            </a>
+          </p>
         </div>
       </div>
     </footer>
