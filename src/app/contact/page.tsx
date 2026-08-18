@@ -158,7 +158,7 @@ export default function ContactPage() {
             </a>
           </div>
 
-          {/* Address Structure */}
+          {/* Address & Legal Structure */}
           <div className="mt-12 p-8 rounded-[2.5rem] bg-card border border-border shadow-sm relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-2xl rounded-full pointer-events-none" />
             <h2 className="text-2xl font-black text-foreground mb-6 uppercase tracking-tight">Vydhra</h2>
@@ -171,9 +171,15 @@ export default function ContactPage() {
                 </a>
               </div>
               
-              <div className="space-y-2">
-                <p className="font-bold text-foreground/80"><span className="text-muted-foreground/60 font-black uppercase text-xs tracking-wider block mb-1">CIN</span> :-</p>
-                <p className="font-bold text-foreground/80"><span className="text-muted-foreground/60 font-black uppercase text-xs tracking-wider block mb-1">GST</span> :-</p>
+              <div className="space-y-4">
+                <div>
+                  <span className="text-muted-foreground/60 font-black uppercase text-xs tracking-wider block mb-1">CIN</span>
+                  <p className="font-bold text-foreground/90">U62011WR2026PTC292702</p>
+                </div>
+                <div>
+                  <span className="text-muted-foreground/60 font-black uppercase text-xs tracking-wider block mb-1">GST</span>
+                  <p className="font-bold text-foreground/90">19AAPCR6449A1Z2</p>
+                </div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6 pt-6 border-t border-border/60">
@@ -185,8 +191,18 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-wider font-black text-muted-foreground/60 mb-2">Registered Address</p>
-                  <p className="font-bold text-foreground/80">:-</p>
+                  <p className="font-bold text-foreground/80 leading-snug">
+                    Uttarpara, Hooghly,712258, 1 Radhika Charan Chatter, Uttarpara, Hooghly, Serampur Uttarpara, West Bengal, India, 712258
+                  </p>
                 </div>
+              </div>
+
+              {/* Disclaimer */}
+              <div className="pt-6 border-t border-border/60">
+                <p className="text-xs uppercase tracking-wider font-black text-primary mb-2">Disclaimer</p>
+                <p className="text-xs text-muted-foreground/90 leading-relaxed italic">
+                  Vydhra is a brand solely owned and operated by Ramesys Pvt. Ltd. All certificates, acknowledgments, and other official documents issued under the Vydhra brand are issued by Ramesys Pvt. Ltd. on behalf of Vydhra and shall be deemed valid and legally binding. References to &quot;Vydhra&quot; on this website are made in its capacity as a brand operated by Ramesys Pvt. Ltd.
+                </p>
               </div>
             </div>
           </div>

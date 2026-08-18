@@ -122,22 +122,46 @@ export default function TermsPage() {
             </p>
           </section>
 
-          {/* Section 9: Contact */}
+          {/* Section 9: Contact & Corporate Information */}
           <section className="bg-card p-6 md:p-8 rounded-3xl border border-border shadow-sm">
-            <h2 className="text-2xl font-bold mb-4 uppercase tracking-tight text-foreground">9. Contact Us</h2>
-            <p className="text-muted-foreground text-base md:text-lg">
+            <h2 className="text-2xl font-bold mb-4 uppercase tracking-tight text-foreground">9. Corporate & Legal Contact Information</h2>
+            <p className="text-muted-foreground text-base md:text-lg mb-4">
               If you have any questions or clarifications regarding these Terms & Conditions, please contact us:
             </p>
-            <div className="mt-4 space-y-3">
+            <div className="space-y-4">
               <p className="flex items-center gap-3 text-foreground font-bold text-sm md:text-base">
                 <span className="text-primary font-bold">Email:</span>
                 support@vydhra.com
               </p>
-              <div className="flex items-start gap-3 text-foreground text-sm md:text-base">
-                <span className="text-primary font-bold whitespace-nowrap">Corporate Address:</span>
-                <span className="font-semibold text-foreground/90">
-                  Godrej Genesis, 16th Floor Unit 1604, Street Number 18, EP & GP Block, Salt Lake Sector V, Bidhannagar, Kolkata, West Bengal - 700091
-                </span>
+              <div className="grid md:grid-cols-2 gap-4 pt-2 border-t border-border/60">
+                <p className="text-sm font-semibold text-foreground/90">
+                  <span className="text-primary font-bold block mb-1">CIN:</span>
+                  U62011WR2026PTC292702
+                </p>
+                <p className="text-sm font-semibold text-foreground/90">
+                  <span className="text-primary font-bold block mb-1">GST:</span>
+                  19AAPCR6449A1Z2
+                </p>
+              </div>
+              <div className="grid md:grid-cols-2 gap-4 pt-2 border-t border-border/60">
+                <div className="text-sm">
+                  <span className="text-primary font-bold block mb-1">Corporate Address:</span>
+                  <span className="font-semibold text-foreground/90 leading-relaxed">
+                    Godrej Genesis, 16th Floor Unit 1604, Street Number 18, EP & GP Block, Salt Lake Sector V, Bidhannagar, Kolkata, West Bengal - 700091
+                  </span>
+                </div>
+                <div className="text-sm">
+                  <span className="text-primary font-bold block mb-1">Registered Address:</span>
+                  <span className="font-semibold text-foreground/90 leading-relaxed">
+                    Uttarpara, Hooghly,712258, 1 Radhika Charan Chatter, Uttarpara, Hooghly, Serampur Uttarpara, West Bengal, India, 712258
+                  </span>
+                </div>
+              </div>
+              <div className="pt-4 border-t border-border/60">
+                <span className="text-primary font-bold block mb-1 text-xs uppercase tracking-wider">Disclaimer</span>
+                <p className="text-xs text-muted-foreground leading-relaxed italic">
+                  Vydhra is a brand solely owned and operated by Ramesys Pvt. Ltd. All certificates, acknowledgments, and other official documents issued under the Vydhra brand are issued by Ramesys Pvt. Ltd. on behalf of Vydhra and shall be deemed valid and legally binding. References to &quot;Vydhra&quot; on this website are made in its capacity as a brand operated by Ramesys Pvt. Ltd.
+                </p>
               </div>
             </div>
           </section>
