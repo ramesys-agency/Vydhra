@@ -85,6 +85,15 @@ import {
   Package,
   Briefcase,
   LineChart,
+  Mail,
+  Phone,
+  CreditCard,
+  Download,
+  Gift,
+  Copy,
+  Heart,
+  Home,
+  GraduationCap,
 } from "lucide-react";
 import { IconType } from "react-icons";
 import {
@@ -199,6 +208,20 @@ export const iconMapping: Record<string, IconComponentType> = {
   tidyverse: Package,
   web: Globe,
   work: Briefcase,
+
+  // Enrollment Success Icons
+  person: User,
+  email: Mail,
+  phone: Phone,
+  language: Globe,
+  calendar_today: Calendar,
+  credit_card: CreditCard,
+  download: Download,
+  redeem: Gift,
+  content_copy: Copy,
+  favorite: Heart,
+  home: Home,
+  school: GraduationCap,
 
   // Fallbacks
   science: SiScikitlearn,

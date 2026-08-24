@@ -206,7 +206,7 @@ export default function CourseHero({
                 alt="Course Hero Visual"
                 width={1400}
                 height={1400}
-                className="w-full h-auto object-contain mix-blend-multiply dark:mix-blend-normal transition-transform duration-700 dark:brightness-110 rounded-3xl"
+                className="w-full h-auto object-contain transition-transform duration-700 rounded-3xl bg-card"
                 priority
               />
             </div>

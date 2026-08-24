@@ -13,22 +13,41 @@ function mapPricing(course: Record<string, unknown>): Record<string, number> {
   return fallback;
 }
 
+const IMAGE_MAP: Record<string, string> = {
+  "ai-agents-engineering": "https://res.cloudinary.com/daafchadi/image/upload/v1779183243/vydhra/courses/qify1r7ayf4ignmp2wel.png",
+  "mern-stack-ai": "https://res.cloudinary.com/daafchadi/image/upload/v1779183219/vydhra/courses/f7e0z6d4fcxtq1bd0lq3.png",
+  "ml-job-ready": "https://res.cloudinary.com/daafchadi/image/upload/v1779183183/vydhra/courses/ujuische1fvdswebjo4v.png",
+  "python-ai": "https://res.cloudinary.com/daafchadi/image/upload/v1779183132/vydhra/courses/rm0iwunug5bpczwbcyke.png",
+  "sql-job-ready": "https://res.cloudinary.com/daafchadi/image/upload/v1779183110/vydhra/courses/vcf0qrijwlslnfjvyebb.png",
+  "python-data-analysis": "https://res.cloudinary.com/daafchadi/image/upload/v1779183051/vydhra/courses/w3ulxvedathhokyfba8o.png",
+  "r-data-analysis": "https://res.cloudinary.com/daafchadi/image/upload/v1779183032/vydhra/courses/eigtbayb9wf1jkvabykj.png",
+  "html-css-js-front-end": "https://res.cloudinary.com/daafchadi/image/upload/v1779182983/vydhra/courses/bn4ime7s1cmwueyyaon0.png",
+  "cybersecurity": "https://res.cloudinary.com/daafchadi/image/upload/v1779182923/vydhra/courses/oy2rtiev8jzwd43d0oct.png",
+  "deep-learning": "https://res.cloudinary.com/daafchadi/image/upload/v1779182944/vydhra/courses/yf7xk3ttnec7cyzl0p2r.png",
+  "power-bi-analytics": "https://res.cloudinary.com/daafchadi/image/upload/v1779174362/vydhra/courses/iakyo5bxfjik5qnqziej.png",
+  "ai-prompt-engineering": "https://res.cloudinary.com/daafchadi/image/upload/v1779183001/vydhra/courses/m11h6j0xcb77gqnd8nc3.png",
+  "data-engineering": "https://res.cloudinary.com/daafchadi/image/upload/v1779182960/vydhra/courses/xaaqmbgtt7j7nh0nixnt.png"
+};
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function mapCourse(course: any): Course {
   const details = typeof course.details === "string"
     ? JSON.parse(course.details)
     : (course.details || {});
 
+  const slug = course.slug || details.slug || `course-${course.id}`;
+  const overrideImage = IMAGE_MAP[slug];
+
   return {
     ...details,
     id: course.id,
     status: details.status === "COMING_SOON" ? "COMING_SOON" : "LIVE",
-    slug: course.slug || details.slug || `course-${course.id}`,
+    slug,
     title: details.title || course.name || "Untitled Course",
     description: details.description || course.description || "",
     category: details.category || "Course",
-    image: details.image || "/courses/ai-agents.png",
-    heroImage: details.heroImage || details.image || "/courses/ai-agents.png",
+    image: overrideImage || details.image || "/courses/ai-agents.png",
+    heroImage: overrideImage || details.heroImage || details.image || "/courses/ai-agents.png",
     pricing: mapPricing(course),
     batches: Array.isArray(course.batches) ? course.batches : [],
     originalPrice: typeof details.originalPrice === "number"

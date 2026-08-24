@@ -103,24 +103,14 @@ export default function AboutPage() {
 
       {/* Origin & Founder Story Section */}
       <section className="py-20 md:py-32 px-6 md:px-12 bg-background border-b border-border">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center">
-          <div className="w-full md:w-1/2">
-            <div className="aspect-square rounded-2xl overflow-hidden bg-muted relative group">
-              <div className="absolute inset-0 flex items-center justify-center bg-background group-hover:scale-110 transition-transform duration-700">
-                <span className="material-icons text-9xl text-muted-foreground/50">
-                  business
-                </span>
-              </div>
-            </div>
+        <div className="max-w-4xl mx-auto space-y-6">
+          <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-bold text-xs tracking-wider uppercase">
+            The Founder
           </div>
-          <div className="w-full md:w-1/2 space-y-6">
-            <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-bold text-xs tracking-wider uppercase">
-              The Founder
-            </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground uppercase tracking-tighter leading-tight">
-              From Building Systems <br className="hidden md:inline" /> to
-              Building Talent
-            </h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground uppercase tracking-tighter leading-tight">
+            From Building Systems <br className="hidden md:inline" /> to
+            Building Talent
+          </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed text-base md:text-lg">
               <p>
                 Vydhra is Owned and Operated by{" "}
@@ -166,7 +156,6 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </div>
       </section>
 
       {/* Vision Section */}
