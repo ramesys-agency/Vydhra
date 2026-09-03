@@ -12,7 +12,6 @@ import {
   SiTailwindcss,
   SiPostgresql,
   SiPrisma,
-  SiOpenai,
   SiLangchain,
   SiVercel,
   SiApacheairflow,
@@ -101,6 +100,7 @@ import {
   MdOutlineAutoAwesome,
   MdOutlineCleaningServices,
 } from "react-icons/md";
+import { RiOpenaiFill } from "react-icons/ri";
 
 export type IconComponentType = IconType | React.ComponentType<LucideProps>;
 
@@ -138,7 +138,7 @@ export const iconMapping: Record<string, IconComponentType> = {
   tailwind: SiTailwindcss,
   postgresql: SiPostgresql,
   prisma: SiPrisma,
-  openai: SiOpenai,
+  openai: RiOpenaiFill,
   langchain: SiLangchain,
   vercel: SiVercel,
 
