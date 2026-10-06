@@ -118,7 +118,7 @@ export default function ContactPage() {
             </a>
 
             <a
-              href="tel:+917980624524"
+              href="tel:+919477912256"
               className="bg-card p-4 rounded-2xl border border-border group hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-lg flex items-center gap-4 flex-1 min-w-[200px]"
             >
               <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
@@ -129,14 +129,14 @@ export default function ContactPage() {
               <div className="min-w-0">
                 <h3 className="text-sm font-bold text-foreground">Phone</h3>
                 <span className="inline-flex items-center gap-1 font-bold text-primary group-hover:text-orange-600 transition-colors text-xs whitespace-nowrap">
-                  +91 79806 24524
+                  +91 94779 12256
                   <span className="material-icons text-xs">arrow_forward</span>
                 </span>
               </div>
             </a>
 
             <a
-              href={`https://wa.me/917980624524?text=${encodeURIComponent(
+              href={`https://wa.me/919477912256?text=${encodeURIComponent(
                 "Hi Vydhra,\n\nI hope you are doing well. I would like to make an enquiry regarding your courses. Could you please share more details about the curriculum, upcoming batch schedules, and enrollment options?\n\nThank you!",
               )}`}
               target="_blank"

@@ -22,7 +22,7 @@ export default function WhatsAppButton() {
     message = `Hi Vydhra,\n\nI hope you are doing well. I would like to make an enquiry regarding your courses. Could you please share more details about the curriculum, upcoming batch schedules, and enrollment options?\n\nThank you!`;
   }
 
-  const whatsappUrl = `https://wa.me/917980624524?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = `https://wa.me/919477912256?text=${encodeURIComponent(message)}`;
 
   return (
     <a

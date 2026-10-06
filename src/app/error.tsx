@@ -57,7 +57,7 @@ export default function Error({
           If this issue persists, please reach out to our support team on WhatsApp.
         </p>
         <a 
-          href={`https://wa.me/917980624524?text=${encodeURIComponent(
+          href={`https://wa.me/919477912256?text=${encodeURIComponent(
             `Hi Vydhra,\n\nI encountered an unexpected error while using the website${error.digest ? ` (Error Digest: ${error.digest})` : ""}. Could you please assist me with this support query?\n\nThank you!`
           )}`}
           target="_blank" 
