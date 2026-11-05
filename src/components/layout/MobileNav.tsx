@@ -15,9 +15,6 @@ export default function MobileNav() {
   const activeClass = "text-primary";
   const inactiveClass = "text-muted-foreground";
 
-  // Campaign landing pages use their own sticky CTA bar
-  if (pathname?.startsWith("/demo")) return null;
-
   return (
     <>
       {/* <button className="fixed bottom-4 left-4 bg-white dark:bg-slate-800 text-[10px] uppercase font-bold tracking-widest px-4 py-2 rounded-full border border-slate-200 dark:border-slate-700 shadow-lg z-[100] hover:scale-105 transition-transform cursor-pointer">
