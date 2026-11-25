@@ -87,7 +87,7 @@ export async function getCourses(): Promise<Course[]> {
 
 export async function getCourseBySlug(slug: string): Promise<Course | null> {
   try {
-    const res = await fetch(`${API_URL}/api/public/vydhra/courses/${slug}`, { cache: "no-store" });
+    const res = await fetch(`${API_URL}/api/public/vydhra/courses/${encodeURIComponent(slug)}`, { cache: "no-store" });
 
     if (!res.ok) {
       if (res.status === 404) return null;
