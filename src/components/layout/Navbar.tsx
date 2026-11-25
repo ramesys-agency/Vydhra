@@ -43,6 +43,10 @@ export default function Navbar() {
 
   const activeLinkClass = "relative bg-primary/5 dark:bg-primary/10";
   const activeTextClass = "text-primary";
+
+  // Campaign landing pages render their own header with in-page navigation
+  if (pathname?.startsWith("/demo")) return null;
+
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-6 md:px-12 flex items-center h-20 text-foreground">
